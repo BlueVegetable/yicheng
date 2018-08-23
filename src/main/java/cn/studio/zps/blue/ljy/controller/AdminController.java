@@ -25,7 +25,7 @@ public class AdminController {
     @ResponseBody
     public Map<String,Object> addAdmin(@RequestBody Admin admin) {
         if(adminService.addAdmin(admin)) {
-            return Response.getResponseMap(1,"添加成功",null);
+            return Response.getResponseMap(0,"添加成功",null);
         } else {
             return Response.getResponseMap(1,"添加失败",null);
         }

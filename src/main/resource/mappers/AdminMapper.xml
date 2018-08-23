@@ -8,7 +8,7 @@
     </resultMap>
 
     <insert id="addAdmin" parameterType="Admin" >
-        insert into admin (name, password) value (#{name},#{password})
+        insert into admin (name, password) value (#{name},md5(#{password}))
     </insert>
 
     <delete id="deleteAdmin" parameterType="Integer" >

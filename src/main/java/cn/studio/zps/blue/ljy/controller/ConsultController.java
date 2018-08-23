@@ -3,11 +3,13 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.domain.Consult;
 import cn.studio.zps.blue.ljy.service.ConsultService;
 import cn.studio.zps.blue.ljy.utils.RemoteURL;
+import cn.studio.zps.blue.ljy.utils.Response;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -62,18 +64,17 @@ public class ConsultController {
     }
 
     @RequestMapping("/getConsults")
-    public void getConsults(int page,int limit,HttpServletResponse response) throws IOException {
+    @ResponseBody
+    public Map getConsults(int page,int limit) throws IOException {
         List<Consult> consults=consultService.getConsults(page,limit);
-        JSONObject json=new JSONObject();
-        json.put("code",0);
-        json.put("count",consultService.getAllCount());
-        json.put("msg","");
-        json.put("data",consults);
-        response.getWriter().println(json);
+        Map map = Response.getResponseMap(0,"",consults);
+        map.put("count",consultService.getAllCount());
+        return map;
     }
 
     @RequestMapping("/getConsultsLimit")
-    public void getConsultsLimit(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    @ResponseBody
+    public Map getConsultsLimit(HttpServletRequest request,HttpServletResponse response) throws IOException {
         Integer id=null;
         int page=Integer.parseInt(request.getParameter("page"));
         int limit=Integer.parseInt(request.getParameter("limit"));
@@ -106,12 +107,9 @@ public class ConsultController {
 
         List<Consult> consults=consultService.selectConsults(map);
 
-        JSONObject json=new JSONObject();
-        json.put("code",0);
-        json.put("count",consultService.limitConsultCount(id,name,remark,phoneNumber));
-        json.put("msg","");
-        json.put("data",consults);
-        response.getWriter().println(json);
+        Map responseMap = Response.getResponseMap(0,"",consults);
+        responseMap.put("count",consultService.limitConsultCount(id,name,remark,phoneNumber));
+        return responseMap;
     }
 
     @RequestMapping("/getConsultById")
