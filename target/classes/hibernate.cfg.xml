@@ -4,9 +4,9 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url"/>
-    <property name="connection.driver_class"/>
-	<mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
+    <property name="connection.url">jdbc:mysql://localhost:3306/blue14</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Banner"/>
     <mapping class="cn.studio.zps.blue.ljy.domain.Admin"/>
     <!-- <property name="connection.username"/> -->

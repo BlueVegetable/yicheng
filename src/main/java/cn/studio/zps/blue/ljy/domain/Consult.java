@@ -10,11 +10,14 @@ import java.sql.Timestamp;
 public class Consult {
     private int id;
     private String name;
-    private String remark;
     private String phoneNumber;
     private Integer state;
     private Timestamp createTime;
     private String attribution;
+    private Integer academy;
+    private Integer profession;
+    private Short level;
+    private Short type;
 
     @Id
     @Column(name = "id")
@@ -34,16 +37,6 @@ public class Consult {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Basic
-    @Column(name = "remark")
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 
     @Basic
@@ -95,7 +88,6 @@ public class Consult {
 
         if (id != consult.id) return false;
         if (name != null ? !name.equals(consult.name) : consult.name != null) return false;
-        if (remark != null ? !remark.equals(consult.remark) : consult.remark != null) return false;
         if (phoneNumber != null ? !phoneNumber.equals(consult.phoneNumber) : consult.phoneNumber != null) return false;
         if (state != null ? !state.equals(consult.state) : consult.state != null) return false;
         if (createTime != null ? !createTime.equals(consult.createTime) : consult.createTime != null) return false;
@@ -108,7 +100,6 @@ public class Consult {
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (remark != null ? remark.hashCode() : 0);
         result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
@@ -121,11 +112,50 @@ public class Consult {
         return "Consult{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", remark='" + remark + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", state=" + state +
                 ", createTime=" + createTime +
                 ", attribution='" + attribution + '\'' +
                 '}';
+    }
+
+    @Basic
+    @Column(name = "academy")
+    public Integer getAcademy() {
+        return academy;
+    }
+
+    public void setAcademy(Integer academy) {
+        this.academy = academy;
+    }
+
+    @Basic
+    @Column(name = "profession")
+    public Integer getProfession() {
+        return profession;
+    }
+
+    public void setProfession(Integer profession) {
+        this.profession = profession;
+    }
+
+    @Basic
+    @Column(name = "level")
+    public Short getLevel() {
+        return level;
+    }
+
+    public void setLevel(Short level) {
+        this.level = level;
+    }
+
+    @Basic
+    @Column(name = "type")
+    public Short getType() {
+        return type;
+    }
+
+    public void setType(Short type) {
+        this.type = type;
     }
 }

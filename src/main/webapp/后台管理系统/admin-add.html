@@ -77,12 +77,19 @@
 
         form.on('submit(onup)', function(data) {
             delete data.field.re_password;
+
+            var token = sessionStorage.getItem('token');
             $.ajax({
                 type: "POST",
                 url:  remoteURL+"/admin/addAdmin.do",
                 contentType:"application/json;charset=utf-8",
                 data: JSON.stringify(data.field),
                 dataType: "json",
+                headers: {
+                    'Content-Type' : 'application/json',
+                    'access-token' : token,
+                    'charset' : 'utf-8'
+                },
                 success: function(data){
                     console.log(data);
                     if(data.code==1) {

@@ -7,13 +7,13 @@
         <result column="state" property="state" />
         <result column="createTime" property="createTime" />
         <result column="name" property="name" />
-        <result column="remark" property="remark" />
         <result column="phoneNumber" property="phoneNumber" />
         <result column="attribution" property="attribution" />
     </resultMap>
 
     <insert id="addConsult" parameterType="Consult">
-        insert into consult (name,remark,phoneNumber,state,createTime,attribution) values (#{name},#{remark},#{phoneNumber},#{state},#{createTime},#{attribution})
+        insert into consult (name,phoneNumber,state,createTime,attribution,academy,profession,level,type)
+         values (#{name},#{phoneNumber},#{state},#{createTime},#{attribution},#{academy},#{profession},#{level},#{type})
     </insert>
 
     <delete id="deleteConsult" parameterType="Integer" >
@@ -40,9 +40,6 @@
         <if test="name!=null">
             and name like CONCAT(CONCAT('%',#{name},'%'))
         </if>
-        <if test="remark!=null">
-            and remark like CONCAT(CONCAT('%',#{remark},'%'))
-        </if>
         <if test="phoneNumber!=null" >
             and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
         </if>
@@ -60,9 +57,6 @@
         <if test="name!=null">
             and name like CONCAT(CONCAT('%',#{name},'%'))
         </if>
-        <if test="remark!=null">
-            and remark like CONCAT(CONCAT('%',#{remark},'%'))
-        </if>
         <if test="phoneNumber!=null" >
             and phoneNumber like CONCAT(CONCAT('%',#{phoneNumber},'%'))
         </if>
@@ -76,7 +70,7 @@
     </select>
 
     <update id="updateConsult" parameterType="Consult" >
-        update consult set name=#{name}, remark=#{remark}, createTime=#{createTime},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
+        update consult set name=#{name}, createTime=#{createTime},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
     </update>
 
     <update id="alterState" parameterType="java.util.Map" >

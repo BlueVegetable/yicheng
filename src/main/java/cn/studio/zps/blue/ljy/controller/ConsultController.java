@@ -7,6 +7,7 @@ import cn.studio.zps.blue.ljy.utils.Response;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,13 +33,16 @@ public class ConsultController {
     private static final String PARAMETER="appkey=1d447a09ea953c29d4e9141b49c369d3";
     private static final String URL="https://way.jd.com/jisuapi/query4";
 
-    @RequestMapping(value="/addConsult",method = RequestMethod.POST)
-    public void addConsult(Consult consult, HttpServletResponse response) throws IOException {
+    @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
+    @ResponseBody
+    public Map addConsultSmiple(Consult consult) throws IOException {
         Map<String,Object> phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
 
         //设置Consult中的一个字段attribution
-        if(phoneNumberInfo.get("status").equals("202"))
-            consult.setAttribution("");
+        if(phoneNumberInfo.get("status").equals("202")
+                ||((Map)phoneNumberInfo.get("result")).get("province").equals("")
+                ||((Map)phoneNumberInfo.get("result")).get("city").equals(""))
+            consult.setAttribution("未知");
         else {
             Map<String,String> values=(Map)phoneNumberInfo.get("result");
             consult.setAttribution(values.get("province")+"省"+values.get("city")+"市");
@@ -49,9 +53,15 @@ public class ConsultController {
         consult.setCreateTime(new Timestamp(System.currentTimeMillis()));
 
         if(consultService.addConsult(consult))
-            response.getWriter().println(1);
+            return Response.getResponseMap(0,"添加成功",null);
         else
-            response.getWriter().println(0);
+            return Response.getResponseMap(1,"添加失败",null);
+    }
+
+    @RequestMapping(value="/addConsult",method = RequestMethod.POST)
+    @ResponseBody
+    public Map addConsult(@RequestBody Consult consult) throws IOException {
+        return addConsultSmiple(consult);
     }
 
     @RequestMapping("/deleteConsult")
