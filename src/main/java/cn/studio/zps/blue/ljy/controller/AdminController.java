@@ -11,11 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
 @RequestMapping(value="admin")
 public class AdminController {
+
+    private Map<String, HttpSession> sessions = new HashMap<String,HttpSession>();
 
     @Autowired
     private AdminService adminService;
@@ -52,10 +56,26 @@ public class AdminController {
         }
         else {
             Map map=Response.getResponseMap(0,"",admin);
-            String token= Token.createToken(admin,KEY);
-            request.getSession().setAttribute("token",token);
+            String token= Token.createToken(admin);
+            HttpSession session = request.getSession();
+            session.setAttribute("token",token);
+            sessions.put(token,session);
             map.put("token", token );
             return map;
+        }
+    }
+
+    @RequestMapping("exit")
+    @ResponseBody
+    public Map<String,Object> exit(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        String token = (String) session.getAttribute("token");
+        if(sessions.containsKey(token)) {
+            session.invalidate();
+            sessions.remove(token);
+            return Response.getResponseMap(0,"退出成功",null);
+        } else {
+            return Response.getResponseMap(1,"用户未登录",null);
         }
     }
 

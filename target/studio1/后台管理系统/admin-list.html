@@ -58,6 +58,7 @@
         table.render({
             elem: '#admin-list'
             ,url:remoteURL+"/admin/getAdmins.do"
+            ,headers:{token:sessionStorage.getItem("token")}
             ,page:true
             ,cols: [[
                 {field:'id', title: 'ID',align:"center", sort: true}
