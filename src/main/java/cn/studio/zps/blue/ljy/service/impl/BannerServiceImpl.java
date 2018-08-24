@@ -44,7 +44,13 @@ public class BannerServiceImpl implements BannerService {
         return bannerDao.smaller(bannerId);
     }
 
-    public int getMaxPosition() { return bannerDao.getMaxBannerPosition(); }
+    public int getMaxPosition() {
+        Integer maxPosition = bannerDao.getMaxBannerPosition();
+        if(maxPosition==null)
+            return 0;
+        else
+            return maxPosition;
+    }
 
     public boolean alterVisible(int id,boolean visible ) {
         return bannerDao.alterVisible(id,visible)>0;

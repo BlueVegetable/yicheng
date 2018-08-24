@@ -35,8 +35,19 @@ public class ConsultController {
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
     @ResponseBody
-    public Map addConsultSmiple(Consult consult) throws IOException {
-        Map<String,Object> phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
+    public Map addConsultSmiple(@RequestBody Consult consult) throws IOException {
+
+        Map<String,Object> phoneNumberInfo=null;
+        Map<String,Object> result = Response.getResponseMap(0,"添加成功",null);
+        try{
+            phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
+        } catch(Exception e) {
+            phoneNumberInfo=new LinkedHashMap<>();
+            phoneNumberInfo.put("status","202");
+            result.replace("code",1);
+            result.replace("msg","手机号码存在问题");
+            e.printStackTrace();
+        }
 
         //设置Consult中的一个字段attribution
         if(phoneNumberInfo.get("status").equals("202")
@@ -52,10 +63,11 @@ public class ConsultController {
         consult.setState(0);
         consult.setCreateTime(new Timestamp(System.currentTimeMillis()));
 
-        if(consultService.addConsult(consult))
-            return Response.getResponseMap(0,"添加成功",null);
-        else
-            return Response.getResponseMap(1,"添加失败",null);
+        if(!consultService.addConsult(consult)){
+            result.replace("code",1);
+            result.replace("msg","添加失败");
+        }
+        return result;
     }
 
     @RequestMapping(value="/addConsult",method = RequestMethod.POST)

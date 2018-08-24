@@ -21,7 +21,7 @@ public class FileUpload {
         String name=""+System.currentTimeMillis()+""+file.hashCode()+""+directory.hashCode()+""+path.hashCode();
         File fileTo=Paths.get(directory+"/"+name).toFile();
         Files.createFile(Paths.get(directory+"/"+name));
-        new Thread(new MyThread(fileTo,file)).start();
+        new Thread(new MyThread(fileTo,file)).run();
         return name;
     }
 }

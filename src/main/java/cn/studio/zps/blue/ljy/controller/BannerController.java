@@ -7,6 +7,7 @@ import cn.studio.zps.blue.ljy.utils.Response;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -35,20 +36,31 @@ public class BannerController {
      */
     private static final String DIRECTORY="/banner-image";
 
-    @RequestMapping("/addBanner")
-    public void addBanner(MultipartFile file,HttpServletRequest request,HttpServletResponse response) throws IOException {
+    @ResponseBody
+    @RequestMapping("upload")
+    public Map uploadBanner(MultipartFile file,HttpServletRequest request) throws IOException {
         String directory=request.getSession().getServletContext().getRealPath(DIRECTORY);
-        String name= FileUpload.copy(file,directory);
-        Banner banner=new Banner();
-        banner.setPath(DIRECTORY+"/"+name);
+        String name = FileUpload.copy(file,directory);
+        Map<String,Object> data = new HashMap<>(2);
+        data.put("path",DIRECTORY+"/"+name);
+        data.put("type",file.getContentType());
+        Map<String,Object> result = new HashMap<>(3);
+        result.put("code",0);
+        result.put("msg","");
+        result.put("data",data);
+        return result;
+    }
+
+    @RequestMapping("/addBanner")
+    @ResponseBody
+    public Map<String, Object> addBanner(@RequestBody Banner banner) {
         banner.setVisible(true);
-        banner.setType(file.getContentType());
-        bannerService.addBanner(banner);
-        JSONObject json=new JSONObject();
-        json.put("code",0);
-        json.put("msg","");
-        json.put("data",DIRECTORY+"/"+name);
-        Response.sendJSONObject(json,response);
+        banner.setPosition(bannerService.getMaxPosition()+1);
+        if(bannerService.addBanner(banner)){
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"轮播图添加失败",null);
+        }
     }
 
     @RequestMapping("/deleteBanner")

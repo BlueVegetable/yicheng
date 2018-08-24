@@ -12,6 +12,7 @@ public class Banner {
     private boolean visible;
     private int position;
     private String type;
+    private String url;
 
     @Id
     @Column(name = "id")
@@ -98,5 +99,15 @@ public class Banner {
                 ", position=" + position +
                 ", type='" + type + '\'' +
                 '}';
+    }
+
+    @Basic
+    @Column(name = "url")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

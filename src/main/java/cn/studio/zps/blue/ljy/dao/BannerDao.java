@@ -23,7 +23,7 @@ public interface BannerDao {
 
     int smaller(int bannerId);
 
-    int getMaxBannerPosition();
+    Integer getMaxBannerPosition();
 
     String getBannerPath(int imageName);
 

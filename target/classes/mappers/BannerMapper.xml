@@ -10,7 +10,7 @@
     </resultMap>
 
     <insert id="addBanner" parameterType="Banner" >
-        insert into banner (path,visible,position,type) values(#{path},#{visible},#{position},#{type})
+        insert into banner (path,visible,position,type,url) values(#{path},#{visible},#{position},#{type},#{url})
     </insert>
 
     <delete id="deleteBanner" parameterType="Integer" >
