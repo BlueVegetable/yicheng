@@ -2,302 +2,14 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="studio1:war exploded" />
+      <artifact name="yicheng" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03e2d7b-7c58-4fae-85f8-21c1c847e406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394511971081403830-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394512181533335871-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394512391373810567-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394512402075214960-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/153433945127013144195-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/1534339451277474697596-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394515221898862221-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394515971814779952-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/1534339451671779219764-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394520371005611968-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394520371916742535-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394522001639529722-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/15343394522141934639404-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/1534339452366399927126-1722368986-1570124794" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/banner-image/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/admin-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/admin-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/admin-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/banner-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/banner-show.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/consult-add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/consult-edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/consult-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/css/component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/css/x-admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/images/banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/images/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/img/demo-1-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/img/login_ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/EasePack.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/TweenLite.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/demo-1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/html5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/jquery-3.1.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/rAF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/url.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/x-admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/js/x-layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/rate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/layui/小笔记.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/laydate/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/laydate/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/dest/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/lib/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/lib/layui/layui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/manager.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-link.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-qq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-set.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/sys-shield.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/upimg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/upload.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/后台管理系统/welcome.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -351,8 +63,9 @@
     <session id="-1381280570">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -363,13 +76,13 @@
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1930" />
-          <entry key="java" value="6685" />
+          <entry key="java" value="6708" />
           <entry key="properties" value="47" />
           <entry key="sql" value="11" />
           <entry key="txt" value="6" />
@@ -379,7 +92,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1930" />
-          <entry key="JAVA" value="6685" />
+          <entry key="JAVA" value="6708" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="47" />
           <entry key="SQL" value="6" />
@@ -421,23 +134,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -448,7 +149,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
+            <state relative-caret-position="360">
               <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="n#insert#0;n#mapper#0;n#!!top" />
@@ -461,17 +162,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+            <state relative-caret-position="59">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#addArticle#0;class#ArticleController#0" />
                 <element signature="method#deleteArticle#0;class#ArticleController#0" />
                 <element signature="method#getArticle#0;class#ArticleController#0" />
                 <element signature="method#getAllArticles#0;class#ArticleController#0" />
+                <element signature="method#updateArticle#0;class#ArticleController#0" />
               </folding>
             </state>
           </provider>
@@ -492,10 +193,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="306">
+              <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -568,12 +271,12 @@
         <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/Article.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
       </list>
     </option>
   </component>
@@ -616,6 +319,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -759,8 +464,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -769,9 +472,9 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="afe75a30-c985-4e12-8202-79ea2862f951" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535265602910" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535265779882" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vegetable15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -801,7 +504,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArticalDaoTest.test1">
+  <component name="RunManager" selected="Tomcat Server.tomcat">
     <configuration name="ArticalDaoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="studio1" />
       <extension name="coverage">
@@ -943,7 +646,8 @@
       <workItem from="1535250445269" duration="3814000" />
       <workItem from="1535254770696" duration="1765000" />
       <workItem from="1535256628840" duration="2698000" />
-      <workItem from="1535263788323" duration="1806000" />
+      <workItem from="1535263788323" duration="2164000" />
+      <workItem from="1535265994120" duration="56000" />
     </task>
     <servers />
   </component>
@@ -980,13 +684,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62182000" />
+    <option name="totallyTimeSpent" value="62596000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.560477" visible="true" weight="0.2159091" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.560477" visible="true" weight="0.2189394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.439523" side_tool="true" weight="0.20984848" />
       <window_info id="Designer" order="3" />
@@ -1007,7 +711,7 @@
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32879046" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32879046" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32879046" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -1277,13 +981,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDao.java" />
     <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/utils/TokenTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1295,20 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-          <folding>
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#500#501#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,35 +1000,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
+        <state relative-caret-position="360">
           <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
@@ -1368,14 +1029,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="59">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#addArticle#0;class#ArticleController#0" />
             <element signature="method#deleteArticle#0;class#ArticleController#0" />
             <element signature="method#getArticle#0;class#ArticleController#0" />
             <element signature="method#getAllArticles#0;class#ArticleController#0" />
+            <element signature="method#updateArticle#0;class#ArticleController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

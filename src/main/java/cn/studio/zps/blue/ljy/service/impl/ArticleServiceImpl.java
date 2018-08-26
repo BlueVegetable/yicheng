@@ -6,6 +6,8 @@ import cn.studio.zps.blue.ljy.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ArticleServiceImpl implements ArticleService {
 
@@ -25,6 +27,11 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Article getArticle(int articleID) {
         return articleDao.getArticle(articleID);
+    }
+
+    @Override
+    public List<Article> getAllArticle() {
+        return articleDao.getAllArticles();
     }
 
     @Override

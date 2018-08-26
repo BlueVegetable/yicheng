@@ -12,7 +12,7 @@ public interface ArticleDao {
 
     Article getArticle(int articleID);
 
-    List<Integer> getAllArticles();
+    List<Article> getAllArticles();
 
     int updateArticle(Article article);
 
