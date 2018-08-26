@@ -81,4 +81,15 @@ public class Article {
     public int hashCode() {
         return Objects.hash(id, title, content, lastModify, type);
     }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", lastModify=" + lastModify +
+                ", type='" + type + '\'' +
+                '}';
+    }
 }

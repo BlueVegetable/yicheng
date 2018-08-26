@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -28,6 +29,41 @@ public class ArticleController {
             return Response.getResponseMap(0,"",null);
         } else {
             return Response.getResponseMap(1,"添加失败",null);
+        }
+    }
+
+    @ResponseBody
+    @RequestMapping("deleteArticle")
+    public Map<String,Object> deleteArticle(int articleID) {
+        if(articleService.deleteArticle(articleID)) {
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"删除失败",null);
+        }
+    }
+
+    @RequestMapping("getArticle")
+    @ResponseBody
+    public Map<String,Object> getArticle(int articleID) {
+        Article article = articleService.getArticle(articleID);
+        return Response.getResponseMap(0,"",article);
+    }
+
+    @ResponseBody
+    @RequestMapping("getAllArticles")
+    public Map<String,Object> getAllArticles() {
+        List<Article> articles = articleService.getAllArticle();
+        return Response.getResponseMap(0,"",articles);
+    }
+
+    @ResponseBody
+    @RequestMapping("updateArticle")
+    public Map<String,Object> updateArticle(@RequestBody Article article) {
+        article.setLastModify(new Timestamp(System.currentTimeMillis()));
+        if(articleService.updateArticle(article)) {
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"修改失败",null);
         }
     }
 

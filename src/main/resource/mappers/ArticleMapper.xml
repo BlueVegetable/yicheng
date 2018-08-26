@@ -13,5 +13,21 @@
     <insert id="addArticle" parameterType="Article" >
         insert into article (title,content,lastModify,type) values(#{title},#{content},#{lastModify},#{type})
     </insert>
+
+    <delete id="deleteArticle" parameterType="Integer">
+        delete from article where id=#{id}
+    </delete>
+
+    <select id="getArticle" parameterType="Integer" resultType="Article">
+        select * from article where id=#{id}
+    </select>
+
+    <select id="getAllArticles" resultMap="ArticleMap">
+        select * from article
+    </select>
+
+    <update id="updateArticle" parameterType="Article">
+        update article set title=#{title},content=#{content},lastModify=#{lastModify},type=#{type} where id=#{id}
+    </update>
     
 </mapper>
