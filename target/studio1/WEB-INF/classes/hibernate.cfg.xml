@@ -9,7 +9,8 @@
       <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Banner"/>
     <mapping class="cn.studio.zps.blue.ljy.domain.Admin"/>
-    <!-- <property name="connection.username"/> -->
+      <mapping class="cn.studio.zps.blue.ljy.domain.Article"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->

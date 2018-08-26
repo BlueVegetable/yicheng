@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.ArticleDao">
+
+    <resultMap id="ArticleMap" type="Article">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="lastModify" property="lastModify" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <insert id="addArticle" parameterType="Article" >
+        insert into article (title,content,lastModify,type) values(#{title},#{content},#{lastModify},#{type})
+    </insert>
+    
+</mapper>
