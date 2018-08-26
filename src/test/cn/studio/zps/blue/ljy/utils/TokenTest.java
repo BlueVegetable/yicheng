@@ -2,6 +2,7 @@ package cn.studio.zps.blue.ljy.utils;
 
 import cn.studio.zps.blue.ljy.dao.AdminDao;
 import cn.studio.zps.blue.ljy.domain.Admin;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,10 @@ public class TokenTest {
 
     @Test
     public void test1(){
-        String jwt=Token.createToken(adminDao.getAdminById(1));
-        System.out.println(jwt);
-//        System.out.println(Token.parseToken(jwt, Admin.class));
+//        Admin admin = adminDao.getAdminById(1);
+//        String jwt=Token.createToken(admin);
+//        System.out.println(Token.parseToken(jwt,Admin.class));
+        System.out.println(Token.parseToken("sadfkljasdlkfjasofdj",Admin.class));
     }
 
 }

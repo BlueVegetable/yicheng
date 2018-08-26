@@ -8,22 +8,28 @@
         <result column="content" property="content" />
         <result column="lastModify" property="lastModify" />
         <result column="type" property="type" />
+        <result column="adminId" property="adminId" />
     </resultMap>
 
     <insert id="addArticle" parameterType="Article" >
-        insert into article (title,content,lastModify,type) values(#{title},#{content},#{lastModify},#{type})
+        insert into article (title,content,lastModify,type,adminID)
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.type},#{adminID})
     </insert>
 
     <delete id="deleteArticle" parameterType="Integer">
         delete from article where id=#{id}
     </delete>
 
+    <select id="countLimit" parameterType="java.util.Map" resultType="Integer" >
+        select count(id) from article where adminID=#{adminID} and title=#{title}
+    </select>
+
     <select id="getArticle" parameterType="Integer" resultType="Article">
         select * from article where id=#{id}
     </select>
 
     <select id="getAllArticles" resultMap="ArticleMap">
-        select * from article
+        select * from article where adminID=#{adminID}
     </select>
 
     <update id="updateArticle" parameterType="Article">

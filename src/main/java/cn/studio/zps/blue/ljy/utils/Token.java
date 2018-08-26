@@ -1,14 +1,12 @@
 package cn.studio.zps.blue.ljy.utils;
 
-import cn.studio.zps.blue.ljy.domain.Admin;
-import io.jsonwebtoken.*;
-import jdk.nashorn.internal.parser.JSONParser;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import net.sf.json.JSONObject;
 
-import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
-import java.security.Key;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,58 +27,6 @@ public class Token {
         header.put("alg","HS256");
     }
 
-//    public static String createToken(Admin admin, String key) {
-//        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(key);
-//        Key signingKey = new SecretKeySpec(apiKeySecretBytes,SignatureAlgorithm.HS256.getJcaName());
-//        JSONObject jsonObject=new JSONObject();
-//        jsonObject.put("admin",admin);
-//        JwtBuilder builder = Jwts.builder()
-//                .setHeaderParam("typ","JWT")
-//                .setHeaderParam("alg","HS256")
-//                .setPayload(jsonObject.toString())
-//                .signWith(SignatureAlgorithm.HS256,signingKey);
-//        return builder.compact();
-//    }
-//    public static String createToken(String id, String subject, long ttlMillis,
-//                                     String key, Map<String,Object> header ,
-//                                     Map<String,Object> claims) {
-//        SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-//
-//        long nowMillis = System.currentTimeMillis();
-//        Date now = new Date(nowMillis);
-//
-//        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(key);
-//        Key signingKey = new SecretKeySpec(apiKeySecretBytes,signatureAlgorithm.getJcaName());
-//
-//        JwtBuilder builder = Jwts.builder()
-//                .setHeader(header)
-//                .setId(id)
-//                .setIssuedAt(now)
-//                .setSubject(subject)
-//                .setIssuer(ISSURE)
-//                .setClaims(claims)
-//                .signWith(signatureAlgorithm,signingKey);
-//
-//        if(ttlMillis >= 0) {
-//            long expMillis = nowMillis + ttlMillis;
-//            Date exp = new Date(expMillis);
-//            builder.setExpiration(exp);
-//        }
-//
-//        return builder.compact();
-//    }
-
-//    public void parseJWT(String jwt,String apiKey) {
-//        //This line will throw an exception if it is not a signed JWS (as expected)
-//        Claims claims = Jwts.parser()
-//                .setSigningKey(DatatypeConverter.parseBase64Binary(apiKey))
-//                .parseClaimsJws(jwt).getBody();
-//        System.out.println("ID: " + claims.getId());
-//        System.out.println("Subject: " + claims.getSubject());
-//        System.out.println("Issuer: " + claims.getIssuer());
-//        System.out.println("Expiration: " + claims.getExpiration());
-//    }
-
     public static String createToken(Object object) {
         JSONObject json = JSONObject.fromObject(object);
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
@@ -94,16 +40,29 @@ public class Token {
         return builder.compact();
     }
 
-//    public static Object parseToken(String jwt,Class className) {
-//        Claims claims = Jwts.parser()
-//                .setSigningKey(DatatypeConverter.parseBase64Binary(KEY))
-//                .parseClaimsJws(jwt).getBody();
-//        System.out.println("head:"+Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(KEY)).parseClaimsJws(jwt).getHeader());
-//        String string=claims.toString();
-//        System.out.println(string);
-//        JSONObject object = new JSONObject().fromObject(string);
-//        System.out.println(object);
-//        return JSONObject.toBean(object,className);
-//    }
+    public static Object parseToken(String jwt,Class className) {
+        Claims claims;
+        try{
+            claims = Jwts.parser()
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(KEY))
+                    .parseClaimsJws(jwt).getBody();
+        } catch (Exception e) {
+            return null;
+        }
+        String origin = claims.toString();
+
+        Map<String,String> properties = new HashMap<>();
+        origin = origin.replaceAll(" ","");
+        if(origin.length()<=2)
+            return null;
+        origin = origin.substring(1,origin.length()-1);
+        System.out.println(origin);
+        String[] proverbs = origin.split(",");
+        for(String proverb:proverbs) {
+            String[] entry = proverb.split("=");
+            properties.put(entry[0],entry[1]);
+        }
+        return com.alibaba.fastjson.JSONObject.parseObject(com.alibaba.fastjson.JSONObject.toJSONString(properties),className);
+    }
 
 }

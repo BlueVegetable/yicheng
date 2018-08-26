@@ -1,5 +1,8 @@
 package cn.studio.zps.blue.ljy.filters;
 
+import cn.studio.zps.blue.ljy.domain.Admin;
+import cn.studio.zps.blue.ljy.utils.Token;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServlet;
@@ -17,14 +20,12 @@ public class AccessFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
         String uri=request.getRequestURI();
-        if(uri.endsWith("/admin/login.do")||uri.endsWith(".html")||uri.endsWith(".css")||uri.endsWith(".js")) {
+        if(uri.endsWith("/admin/login.do")) {
             chain.doFilter(req, resp);
             return ;
         }
-        String token = request.getHeader("token");
-        HttpSession session = request.getSession();
-        String tokenTrue = (String) session.getAttribute("token");
-        if(token!=null&&token.equals(tokenTrue)) {
+        String token = request.getParameter("token");
+        if(token!=null&& Token.parseToken(token, Admin.class)!=null) {
             chain.doFilter(req,resp);
             return ;
         }

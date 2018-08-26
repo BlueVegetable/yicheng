@@ -15,8 +15,13 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleDao articleDao;
 
     @Override
-    public boolean addArticle(Article article) {
-        return articleDao.addArticle(article)>0;
+    public boolean addArticle(Article article,int adminID) {
+        return articleDao.addArticle(article,adminID)>0;
+    }
+
+    @Override
+    public boolean exist(int adminID, String title) {
+        return articleDao.countLimit(adminID,title)>0;
     }
 
     @Override
@@ -30,8 +35,8 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getAllArticle() {
-        return articleDao.getAllArticles();
+    public List<Article> getAllArticle(int adminID) {
+        return articleDao.getAllArticles(adminID);
     }
 
     @Override

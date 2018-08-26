@@ -6,13 +6,15 @@ import java.util.List;
 
 public interface ArticleService {
 
-    boolean addArticle(Article article);
+    boolean addArticle(Article article,int adminID);
 
     boolean deleteArticle(int articleID);
 
+    boolean exist(int adminID,String title);
+
     Article getArticle(int articleID);
 
-    List<Article> getAllArticle();
+    List<Article> getAllArticle(int adminID);
 
     boolean updateArticle(Article article);
 
