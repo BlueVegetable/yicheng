@@ -12,7 +12,7 @@ public interface ArticleDao {
     int deleteArticle(int articleID);
 
     /**
-     * 计算有用户，标题限定的数量
+     * 计算在限定管理员，限定标题的文章的数量
      * @param adminID
      * @param title
      * @return
@@ -22,6 +22,8 @@ public interface ArticleDao {
     Article getArticle(int articleID);
 
     List<Article> getAllArticles(int adminID);
+
+    int getAllArticlesCount(int adminID);
 
     int updateArticle(Article article);
 

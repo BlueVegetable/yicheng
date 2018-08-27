@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +31,7 @@ public class ArticleController {
         article.setLastModify(new Timestamp(System.currentTimeMillis()));
 
         if(articleService.exist(admin.getId(),article.getTitle())) {
-            return updateArticle(article);
+            return Response.getResponseMap(1,"文章已存在",null);
         }
         if(articleService.addArticle(article,admin.getId())) {
             return Response.getResponseMap(0,"",null);
@@ -60,11 +59,13 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping("getAllArticles")
-    public Map<String,Object> getAllArticles(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        int adminID = ((Admin) session.getAttribute("admin")).getId();
+    public Map<String,Object> getAllArticles(String token) {
+        Admin admin = (Admin) Token.parseToken(token,Admin.class);
+        int adminID = admin.getId();
         List<Article> articles = articleService.getAllArticle(adminID);
-        return Response.getResponseMap(0,"",articles);
+        Map<String,Object>result = Response.getResponseMap(0,"",articles);
+        result.put("count",0);
+        return result;
     }
 
     @ResponseBody

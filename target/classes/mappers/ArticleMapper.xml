@@ -8,10 +8,9 @@
         <result column="content" property="content" />
         <result column="lastModify" property="lastModify" />
         <result column="type" property="type" />
-        <result column="adminId" property="adminId" />
     </resultMap>
 
-    <insert id="addArticle" parameterType="Article" >
+    <insert id="addArticle" parameterType="java.util.Map" >
         insert into article (title,content,lastModify,type,adminID)
         values(#{article.title},#{article.content},#{article.lastModify},#{article.type},#{adminID})
     </insert>
@@ -28,8 +27,8 @@
         select * from article where id=#{id}
     </select>
 
-    <select id="getAllArticles" resultMap="ArticleMap">
-        select * from article where adminID=#{adminID}
+    <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
+        select id,title,type,lastModify from article where adminID=#{adminID}
     </select>
 
     <update id="updateArticle" parameterType="Article">
