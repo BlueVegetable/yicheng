@@ -58,6 +58,10 @@
 		SELECT path FROM banner WHERE id=#{id}
 	</select>
 
+    <update id="updateBanner" parameterType="Banner">
+        update banner set url=#{url} where id=#{id}
+    </update>
+
     <update id="alterVisible" parameterType="java.util.Map">
         UPDATE banner SET visible=#{visible} WHERE id=#{id}
     </update>

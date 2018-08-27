@@ -22,6 +22,8 @@ public interface BannerService {
 
     int getMaxPosition();
 
+    boolean updateBanner(Banner banner);
+
     boolean alterVisible(int id,boolean visible );
 
     boolean exchange(int id,int anotherID);

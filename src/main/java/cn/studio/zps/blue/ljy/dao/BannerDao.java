@@ -27,6 +27,8 @@ public interface BannerDao {
 
     String getBannerPath(int imageName);
 
+    int updateBanner(Banner banner);
+
     int alterVisible(@Param("id") int id,@Param("visible") boolean state);
 
     int change(@Param("id") int id,@Param("newPosition") int position);

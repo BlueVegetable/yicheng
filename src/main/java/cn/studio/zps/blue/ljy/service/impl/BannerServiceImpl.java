@@ -44,6 +44,11 @@ public class BannerServiceImpl implements BannerService {
         return bannerDao.smaller(bannerId);
     }
 
+    @Override
+    public boolean updateBanner(Banner banner) {
+        return bannerDao.updateBanner(banner)>0;
+    }
+
     public int getMaxPosition() {
         Integer maxPosition = bannerDao.getMaxBannerPosition();
         if(maxPosition==null)

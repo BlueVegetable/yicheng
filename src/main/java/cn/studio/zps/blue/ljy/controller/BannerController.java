@@ -80,13 +80,22 @@ public class BannerController {
 
     @RequestMapping("/getBanners")
     @ResponseBody
-    public Map getBanners(@RequestParam(value="visible",required=false) String visible, HttpServletResponse response) throws IOException {
+    public Map getBanners(@RequestParam(value="visible",required=false) String visible) throws IOException {
         if(visible==null||!visible.equals("1")) visible="0";
         boolean visity=Integer.parseInt(visible)!=0;
         Map values=new HashMap<String,Object>(2);
         values.put("data",bannerService.getBanner(visity));
         values.put("number",bannerService.getCount(visity));
         return values;
+    }
+
+    @ResponseBody
+    @RequestMapping("updateBanner")
+    public Map updateBanner(@RequestBody Banner banner) {
+        if(bannerService.updateBanner(banner))
+            return Response.getResponseMap(0,"",null);
+        else
+            return Response.getResponseMap(1,"修改失败",null);
     }
 
     @RequestMapping("/updateState")
