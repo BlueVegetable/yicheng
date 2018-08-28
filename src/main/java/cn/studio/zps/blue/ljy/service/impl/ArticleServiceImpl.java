@@ -6,7 +6,8 @@ import cn.studio.zps.blue.ljy.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
@@ -35,8 +36,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getAllArticle(int adminID) {
-        return articleDao.getAllArticles(adminID);
+    public Map<String, Object> getAllArticle(int adminID) {
+        Map<String,Object> result = new HashMap<>(2);
+        result.put("data",articleDao.getAllArticles(adminID));
+        result.put("count",articleDao.getAllArticlesCount(adminID));
+        return result;
     }
 
     @Override

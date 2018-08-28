@@ -31,6 +31,10 @@
         select id,title,type,lastModify from article where adminID=#{adminID}
     </select>
 
+    <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
+        SELECT COUNT(id) FROM article WHERE adminID = #{adminID}
+    </select>
+
     <update id="updateArticle" parameterType="Article">
         update article set title=#{title},content=#{content},lastModify=#{lastModify},type=#{type} where id=#{id}
     </update>

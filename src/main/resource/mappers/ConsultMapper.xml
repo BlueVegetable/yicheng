@@ -29,7 +29,7 @@
     </select>
 
     <select id="getAllConsult" parameterType="java.util.Map" resultMap="ConsultMap" >
-        select * from consult order by state limit #{start},#{number}
+        select * from consult order by state,createTime desc limit #{start},#{number}
     </select>
 
     <select id="getConsultLimited" parameterType="java.util.Map" resultMap="ConsultMap" >
@@ -46,7 +46,7 @@
         <if test="createTime!=null" >
             and createTime &gt;= CONCAT(#{createTime},' 00:00:00') AND createTime &lt;= CONCAT(#{createTime},' 23:59:59')
         </if>
-        order by state limit #{start},#{number}
+        order by state,createTime desc limit #{start},#{number}
     </select>
 
     <select id="getLimitedCount" parameterType="java.util.Map" resultType="Integer">

@@ -2,7 +2,7 @@ package cn.studio.zps.blue.ljy.service;
 
 import cn.studio.zps.blue.ljy.domain.Article;
 
-import java.util.List;
+import java.util.Map;
 
 public interface ArticleService {
 
@@ -14,7 +14,7 @@ public interface ArticleService {
 
     Article getArticle(int articleID);
 
-    List<Article> getAllArticle(int adminID);
+    Map<String, Object> getAllArticle(int adminID);
 
     boolean updateArticle(Article article);
 

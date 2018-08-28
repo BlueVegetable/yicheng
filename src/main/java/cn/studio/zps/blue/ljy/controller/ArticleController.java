@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -62,9 +60,9 @@ public class ArticleController {
     public Map<String,Object> getAllArticles(String token) {
         Admin admin = (Admin) Token.parseToken(token,Admin.class);
         int adminID = admin.getId();
-        List<Article> articles = articleService.getAllArticle(adminID);
-        Map<String,Object>result = Response.getResponseMap(0,"",articles);
-        result.put("count",0);
+        Map<String,Object>result = articleService.getAllArticle(adminID);
+        result.put("code",0);
+        result.put("msg","");
         return result;
     }
 
