@@ -9,26 +9,25 @@
     <list default="true" id="c03e2d7b-7c58-4fae-85f8-21c1c847e406" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/filters/AccessFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/filters/AccessFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/utils/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/utils/Token.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ConsultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ConsultMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/dao/ArticleDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/filters/AccessFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/filters/AccessFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/service/ArticleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/utils/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/utils/Token.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/mappers/ConsultMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/mappers/ConsultMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yicheng.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/yicheng.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,7 +81,7 @@
     <session id="-1381280570">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="28" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.102" value="1" />
@@ -90,68 +89,70 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.57" value="2" />
+          <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.67" value="2" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.85" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1930" />
-          <entry key="java" value="9734" />
+          <entry key="java" value="11176" />
           <entry key="properties" value="87" />
           <entry key="sql" value="11" />
           <entry key="txt" value="6" />
-          <entry key="xml" value="1099" />
+          <entry key="xml" value="1110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1930" />
-          <entry key="JAVA" value="9734" />
+          <entry key="JAVA" value="11176" />
           <entry key="PLAIN_TEXT" value="6" />
           <entry key="Properties" value="87" />
           <entry key="SQL" value="10" />
           <entry key="Scratch" value="11" />
-          <entry key="XML" value="1089" />
+          <entry key="XML" value="1100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="article" value="2" />
-          <entry key="class" value="2" />
+          <entry key="class" value="3" />
           <entry key="css" value="1" />
           <entry key="html" value="29" />
-          <entry key="java" value="138" />
+          <entry key="java" value="148" />
           <entry key="js" value="4" />
           <entry key="properties" value="13" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="39" />
+          <entry key="xml" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
+          <entry key="CLASS" value="3" />
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="2" />
           <entry key="HTML" value="29" />
-          <entry key="JAVA" value="138" />
+          <entry key="JAVA" value="148" />
           <entry key="JavaScript" value="4" />
           <entry key="Properties" value="13" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="39" />
+          <entry key="XML" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -164,43 +165,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="111">
+              <caret line="52" column="61" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#deleteArticle#0;class#ArticleController#0" />
-                <element signature="method#getArticle#0;class#ArticleController#0" />
+                <element signature="method#addArticle#0;class#ArticleController#0" />
+                <element signature="method#getAllArticles#0;class#ArticleController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ConsultDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Consult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="220">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -260,28 +243,29 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Banner.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/Article.java" />
-        <option value="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Article.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/utils/TokenTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/BannerDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/BannerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/BannerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/BannerController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/BannerMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Request.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java" />
       </list>
     </option>
   </component>
@@ -360,85 +344,6 @@
               <item name="studio1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="filters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ljy" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resource" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -483,6 +388,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="ljy" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="ljy" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -508,9 +421,9 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="afe75a30-c985-4e12-8202-79ea2862f951" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535438293792" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535555998362" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../studio1_view1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -733,8 +646,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TokenTest.test1" />
         <item itemvalue="JUnit.ArticalDaoTest.test1" />
+        <item itemvalue="JUnit.TokenTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -774,19 +687,15 @@
       <workItem from="1535426797203" duration="272000" />
       <workItem from="1535427486383" duration="6251000" />
       <workItem from="1535441244365" duration="1766000" />
+      <workItem from="1535466222090" duration="678000" />
+      <workItem from="1535545750204" duration="8929000" />
+      <workItem from="1535557041738" duration="2458000" />
+      <workItem from="1535594935751" duration="7962000" />
+      <workItem from="1535624195108" duration="4365000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TokenTest_test1 - 2018.08.26 at 21h 57m 39s.xml">
-      <configuration name="TokenTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenTest_test1 - 2018.08.26 at 21h 58m 23s.xml">
-      <configuration name="TokenTest.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TokenTest_test1 - 2018.08.26 at 21h 59m 13s.xml">
-      <configuration name="TokenTest.test1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TokenTest_test1 - 2018.08.26 at 21h 59m 50s.xml">
       <configuration name="TokenTest.test1" configurationId="JUnit" />
     </history-entry>
@@ -808,25 +717,35 @@
     <history-entry file="TokenTest_test1 - 2018.08.26 at 22h 20m 36s.xml">
       <configuration name="TokenTest.test1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ArticalDaoTest_test1 - 2018.08.29 at 20h 43m 01s.xml">
+      <configuration name="ArticalDaoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticalDaoTest_test1 - 2018.08.29 at 20h 43m 32s.xml">
+      <configuration name="ArticalDaoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArticalDaoTest_test1 - 2018.08.29 at 20h 43m 46s.xml">
+      <configuration name="ArticalDaoTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107087000" />
+    <option name="totallyTimeSpent" value="132142000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55706984" visible="true" weight="0.2689394" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55837566" visible="true" weight="0.23787878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.44293016" side_tool="true" weight="0.22651514" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.43441227" side_tool="true" weight="0.2060606" />
+      <window_info id="Favorites" order="5" sideWeight="0.44162437" side_tool="true" weight="0.2689394" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Image Layers" order="7" />
       <window_info id="Web" order="8" sideWeight="0.4345898" side_tool="true" weight="0.2060606" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18057922" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14650767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,7 +755,7 @@
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32879046" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32879046" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32027256" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" />
@@ -863,7 +782,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java</url>
-          <line>59</line>
+          <line>58</line>
           <properties class="cn.studio.zps.blue.ljy.controller.ArticleController" method="getAllArticles">
             <option name="EMULATED" value="true" />
           </properties>
@@ -873,8 +792,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/consult-edit.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/css/component.css" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/js/demo-1.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/consult-list.html" />
@@ -928,13 +845,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/Article.java" />
     <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-629" />
@@ -975,13 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="297" column="17" selection-start-line="297" selection-start-column="17" selection-end-line="297" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/AdminDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -993,13 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="18" selection-start-line="20" selection-start-column="49" selection-end-line="22" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1062,36 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1099,34 +965,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="91" column="27" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/log4j.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#deleteArticle#0;class#ArticleController#0" />
-            <element signature="method#getArticle#0;class#ArticleController#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1135,24 +975,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Consult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+        <state relative-caret-position="120">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="418" column="16" lean-forward="true" selection-start-line="418" selection-start-column="16" selection-end-line="418" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ConsultDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="280">
+          <caret line="18" column="87" selection-start-line="18" selection-start-column="87" selection-end-line="18" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Consult.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ConsultMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="393">
+          <caret line="48" column="63" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/cn/studio/zps/blue/ljy/dao/ArticalDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="23" column="53" lean-forward="true" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../eclipse-ee/apache-tomcat-9.0.8/lib/servlet-api.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/Request.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="52" column="61" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addArticle#0;class#ArticleController#0" />
+            <element signature="method#getAllArticles#0;class#ArticleController#0" />
+          </folding>
         </state>
       </provider>
     </entry>

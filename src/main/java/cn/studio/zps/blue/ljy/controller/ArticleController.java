@@ -4,7 +4,6 @@ import cn.studio.zps.blue.ljy.domain.Admin;
 import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.service.ArticleService;
 import cn.studio.zps.blue.ljy.utils.Response;
-import cn.studio.zps.blue.ljy.utils.Token;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
 import java.util.Map;
 
@@ -24,13 +24,12 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping(value="addArticle",method = RequestMethod.POST)
-    public Map<String,Object> addArticle(@RequestBody Article article , String token) {
-        Admin admin = (Admin) Token.parseToken(token,Admin.class);
-        article.setLastModify(new Timestamp(System.currentTimeMillis()));
-
+    public Map<String,Object> addArticle(@RequestBody Article article , HttpServletRequest request) {
+        Admin admin = (Admin) request.getAttribute("admin");
         if(articleService.exist(admin.getId(),article.getTitle())) {
             return Response.getResponseMap(1,"文章已存在",null);
         }
+        article.setLastModify(new Timestamp(System.currentTimeMillis()));
         if(articleService.addArticle(article,admin.getId())) {
             return Response.getResponseMap(0,"",null);
         } else {
@@ -57,8 +56,8 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping("getAllArticles")
-    public Map<String,Object> getAllArticles(String token) {
-        Admin admin = (Admin) Token.parseToken(token,Admin.class);
+    public Map<String,Object> getAllArticles(HttpServletRequest request) {
+        Admin admin = (Admin) request.getAttribute("admin");
         int adminID = admin.getId();
         Map<String,Object>result = articleService.getAllArticle(adminID);
         result.put("code",0);

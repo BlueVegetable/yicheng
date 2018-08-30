@@ -56,7 +56,6 @@ public class Token {
         if(origin.length()<=2)
             return null;
         origin = origin.substring(1,origin.length()-1);
-        System.out.println(origin);
         String[] proverbs = origin.split(",");
         for(String proverb:proverbs) {
             String[] entry = proverb.split("=");

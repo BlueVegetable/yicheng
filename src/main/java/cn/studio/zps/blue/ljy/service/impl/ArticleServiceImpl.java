@@ -22,7 +22,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public boolean exist(int adminID, String title) {
-        return articleDao.countLimit(adminID,title)>0;
+        return articleDao.exist(adminID,title);
     }
 
     @Override

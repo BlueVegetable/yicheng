@@ -11,13 +11,7 @@ public interface ArticleDao {
 
     int deleteArticle(int articleID);
 
-    /**
-     * 计算在限定管理员，限定标题的文章的数量
-     * @param adminID
-     * @param title
-     * @return
-     */
-    int countLimit(@Param("adminID") int adminID,@Param("title") String title);
+    boolean exist(@Param("adminID") int adminID,@Param("title") String title);
 
     Article getArticle(int articleID);
 

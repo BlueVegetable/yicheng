@@ -19,8 +19,8 @@
         delete from article where id=#{id}
     </delete>
 
-    <select id="countLimit" parameterType="java.util.Map" resultType="Integer" >
-        select count(id) from article where adminID=#{adminID} and title=#{title}
+    <select id="exist" parameterType="java.util.Map" resultType="Boolean" >
+        SELECT COUNT(id)>0 exist FROM article WHERE adminID=#{adminID} AND title=#{title}
     </select>
 
     <select id="getArticle" parameterType="Integer" resultType="Article">

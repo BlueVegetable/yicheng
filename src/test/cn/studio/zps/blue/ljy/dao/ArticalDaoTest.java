@@ -15,7 +15,7 @@ public class ArticalDaoTest {
 
     @Test
     public void test1() {
-//        System.out.println(articleDao.getAllArticles());
+        System.out.println(articleDao.exist(1,"第篇"));
     }
 
 }
