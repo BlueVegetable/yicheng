@@ -22,7 +22,7 @@ public class AccessFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
         String uri = request.getRequestURI();
-        if(uri.endsWith("getArticle.do")||isValid(request)) {
+        if(uri.endsWith("getArticle.do")||uri.endsWith("getAllArticles.do")||isValid(request)) {
             chain.doFilter(req,resp);
         } else {
             //这句话的意思，是让浏览器用utf8来解析返回的数据
