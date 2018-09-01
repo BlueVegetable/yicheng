@@ -42,7 +42,7 @@ public class AccessFilter implements Filter {
     private boolean isValid(HttpServletRequest request) throws IOException {
         String token = request.getParameter("token");
         if(token==null)
-            token = (String) request.getHeader("token");
+            token = request.getHeader("token");
         if(token==null)
             return false;
         Admin admin = (Admin) Token.parseToken(token,Admin.class);

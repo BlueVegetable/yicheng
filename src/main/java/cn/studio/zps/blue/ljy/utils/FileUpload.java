@@ -2,70 +2,77 @@ package cn.studio.zps.blue.ljy.utils;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FileUpload {
+
+    private final static int LENGTH=1024;
+    private final static String DELETE_PATH = "D:\\Application\\apache-tomcat-main\\upload\\";
+    private final static String PATH = DELETE_PATH + "banner-image\\";
+
     /**
      * @param file 将要被复制的文件
-     * @param directory 文件路径
      * @return 新文件的名称
      * @throws IOException
      */
-    public static String copy(MultipartFile file, String directory) throws IOException {
-        Path path=Paths.get(directory);
-        if(!Files.exists(path))
-            Files.createDirectory(path);
-        String name=""+System.currentTimeMillis()+""+file.hashCode()+""+directory.hashCode()+""+path.hashCode();
-        File fileTo=Paths.get(directory+"/"+name).toFile();
-        Files.createFile(Paths.get(directory+"/"+name));
-        new Thread(new MyThread(fileTo,file)).run();
-        return name;
-    }
-}
-class MyThread implements Runnable{
+    public static Map<String,Object> copyFile(MultipartFile file) {
+        String fileName = System.currentTimeMillis()+"-"+file.hashCode()+"-"+Math.random();
+        String filePath = PATH+fileName;
+        String type = file.getContentType();
+        String code = "SUCCESS";
 
-    private File fileTo;
-    private MultipartFile fileOriginal;
-
-    public MyThread(File fileTo,MultipartFile fileOriginal) {
-        this.fileOriginal=fileOriginal;
-        this.fileTo=fileTo;
-    }
-
-    @Override
-    public void run() {
-        // TODO Auto-generated method stub
-        InputStream is=null;
-        OutputStream os=null;
+        InputStream is = null;
+        OutputStream os = null;
         try {
-            is=fileOriginal.getInputStream();
-            os=new FileOutputStream(fileTo);
-            byte[]buffer=new byte[1024];
+            is = file.getInputStream();
+            os = new FileOutputStream(Paths.get(filePath).toFile());
+            byte[] buffer = new byte[LENGTH];
             int size;
-
-            while((size=is.read(buffer, 0, 1024))>0) {
-                os.write(buffer, 0, size);
+            while((size=is.read(buffer,0,LENGTH))>0) {
+                os.write(buffer,0,size);
             }
-
         } catch (IOException e) {
-            // TODO Auto-generated catch block
+            code = "FAILED";
             e.printStackTrace();
         } finally {
             try {
-                if(os!=null)
+                if(os!=null) {
                     os.close();
-            } catch(IOException e) {
-                e.printStackTrace();
+                }
+            } catch (IOException e1) {
+                e1.printStackTrace();
             } finally {
                 try {
-                    if(is!=null)
-                        is.close();
-                } catch(IOException e2) {
+                    is.close();
+                } catch (IOException e2) {
                     e2.printStackTrace();
                 }
+            }
+        }
+
+        Map<String,Object> result = new HashMap<>(4);
+        result.put("code",code);
+        result.put("fileName",fileName);
+        result.put("filePath",filePath);
+        result.put("fileType",type);
+        return result;
+    }
+
+    public static void deleteFile(String filePath) {
+        Path path = Paths.get(DELETE_PATH + filePath);
+        if(Files.exists(path)) {
+            try {
+                Files.delete(path);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

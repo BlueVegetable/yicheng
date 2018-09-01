@@ -4,7 +4,6 @@ import cn.studio.zps.blue.ljy.domain.Banner;
 import cn.studio.zps.blue.ljy.service.BannerService;
 import cn.studio.zps.blue.ljy.utils.FileUpload;
 import cn.studio.zps.blue.ljy.utils.Response;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,9 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,15 +34,19 @@ public class BannerController {
 
     @ResponseBody
     @RequestMapping("upload")
-    public Map uploadBanner(MultipartFile file,HttpServletRequest request) throws IOException {
-        String directory=request.getSession().getServletContext().getRealPath(DIRECTORY);
-        String name = FileUpload.copy(file,directory);
+    public Map uploadBanner(MultipartFile file) throws IOException {
+        Map<String,Object> value = FileUpload.copyFile(file);
+        String name = (String) value.get("fileName");
+        String msg = value.get("code").equals("SUCCESS")?"":"上传失败";
+        int code = value.get("code").equals("SUCCESS")?0:1;
+
         Map<String,Object> data = new HashMap<>(2);
         data.put("path",DIRECTORY+"/"+name);
-        data.put("type",file.getContentType());
+        data.put("type", value.get("fileType"));
+
         Map<String,Object> result = new HashMap<>(3);
-        result.put("code",0);
-        result.put("msg","");
+        result.put("code",code);
+        result.put("msg",msg);
         result.put("data",data);
         return result;
     }
@@ -68,10 +68,7 @@ public class BannerController {
         Banner banner=bannerService.getBanner(id);
         if(bannerService.deleteBanner(id)) {
             //如果数据库成功就删除文件
-            String pathValue= request.getSession().getServletContext().getRealPath("");
-            Path path=Paths.get(pathValue+banner.getPath());
-            if(Files.exists(path))
-                Files.delete(path);
+            FileUpload.deleteFile(banner.getPath());
             Response.writeString("1",response);
         }
         else
