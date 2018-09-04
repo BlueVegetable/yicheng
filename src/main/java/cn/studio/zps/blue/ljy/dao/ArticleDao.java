@@ -15,9 +15,9 @@ public interface ArticleDao {
 
     Article getArticle(int articleID);
 
-    List<Article> getAllArticles(int adminID);
+    List<Article> getAllArticles();
 
-    int getAllArticlesCount(int adminID);
+    int getAllArticlesCount();
 
     int updateArticle(Article article);
 

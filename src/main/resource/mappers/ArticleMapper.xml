@@ -28,11 +28,11 @@
     </select>
 
     <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
-        select id,title,type,lastModify from article where adminID=#{adminID}
+        select id,title,type,lastModify from article
     </select>
 
     <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
-        SELECT COUNT(id) FROM article WHERE adminID = #{adminID}
+        SELECT COUNT(id) FROM article
     </select>
 
     <update id="updateArticle" parameterType="Article">

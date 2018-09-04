@@ -1,3 +1,4 @@
-# 代码迁移需要修改的值
-1. ueditor/jsp/config.json中的 "imageUrlPrefix"
-2. ManagerSystem/js/url.js
+﻿# 代码迁移需要修改的值
+1. 数据库连接密码
+2. config.json网址的变更
+3. 文件复制网址变更

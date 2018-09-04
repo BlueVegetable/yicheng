@@ -15,23 +15,24 @@ import java.util.Map;
 public class FileUpload {
 
     private final static int LENGTH=1024;
-    private final static String DELETE_PATH = "D:\\Application\\apache-tomcat-main\\upload\\";
-    private final static String PATH = DELETE_PATH + "banner-image\\";
+//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private final static String BANNER_PATH = "/banner-image/";
+    private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
+    private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";
 
-    /**
-     * @param file 将要被复制的文件
-     * @return 新文件的名称
-     * @throws IOException
-     */
-    public static Map<String,Object> copyFile(MultipartFile file) {
-        String fileName = System.currentTimeMillis()+"-"+file.hashCode()+"-"+Math.random();
-        String filePath = PATH+fileName;
+    public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
+        String typeValue = type.substring(type.lastIndexOf('/')+1);
+        String fileName = System.currentTimeMillis()+"-"+file.hashCode()+"-"+(int)(100000000000000000L*Math.random())+"."+typeValue;
+        String filePath = path+fileName;
         String code = "SUCCESS";
 
         InputStream is = null;
         OutputStream os = null;
         try {
+            if(!Files.exists(Paths.get(path)))
+                Files.createDirectories(Paths.get(path));
             is = file.getInputStream();
             os = new FileOutputStream(Paths.get(filePath).toFile());
             byte[] buffer = new byte[LENGTH];
@@ -66,8 +67,26 @@ public class FileUpload {
         return result;
     }
 
-    public static void deleteFile(String filePath) {
-        Path path = Paths.get(DELETE_PATH + filePath);
+    public static Map<String,Object> copyBanner(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + BANNER_PATH);
+        result.put("relativePath" , BANNER_PATH);
+        return result;
+    }
+
+    public static Map<String,Object> copyUeditorImage(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + UEDITOR_IMAGE_PATH);
+        result.put("relativePath",UEDITOR_IMAGE_PATH + result.get("fileName"));
+        return result;
+    }
+
+    public static Map<String,Object> copyUeditorVideo(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + UEDITOR_VIDEO_PATH);
+        result.put("relativePath",UEDITOR_VIDEO_PATH + result.get("fileName"));
+        return result;
+    }
+
+    public static void deleteFile(String deletePath, String filePath) {
+        Path path = Paths.get(deletePath + filePath);
         if(Files.exists(path)) {
             try {
                 Files.delete(path);
@@ -76,4 +95,17 @@ public class FileUpload {
             }
         }
     }
+
+    public static void deleteBanner(String relativePath) {
+        deleteFile(PATH,relativePath);
+    }
+
+    public static void deleteUeditorImage(String ueditorImageName) {
+        deleteFile(PATH + UEDITOR_IMAGE_PATH,ueditorImageName);
+    }
+
+    public static void deleteUeditorVideo(String ueditorVideoName) {
+        deleteFile(PATH + UEDITOR_VIDEO_PATH,ueditorVideoName);
+    }
+
 }

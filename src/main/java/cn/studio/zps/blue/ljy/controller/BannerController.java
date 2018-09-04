@@ -35,7 +35,7 @@ public class BannerController {
     @ResponseBody
     @RequestMapping("upload")
     public Map uploadBanner(MultipartFile file) throws IOException {
-        Map<String,Object> value = FileUpload.copyFile(file);
+        Map<String,Object> value = FileUpload.copyBanner(file);
         String name = (String) value.get("fileName");
         String msg = value.get("code").equals("SUCCESS")?"":"上传失败";
         int code = value.get("code").equals("SUCCESS")?0:1;
@@ -68,7 +68,7 @@ public class BannerController {
         Banner banner=bannerService.getBanner(id);
         if(bannerService.deleteBanner(id)) {
             //如果数据库成功就删除文件
-            FileUpload.deleteFile(banner.getPath());
+            FileUpload.deleteBanner(banner.getPath());
             Response.writeString("1",response);
         }
         else

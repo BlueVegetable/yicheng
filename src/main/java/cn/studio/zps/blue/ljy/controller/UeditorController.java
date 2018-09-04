@@ -3,6 +3,7 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.utils.FileUpload;
 import cn.studio.zps.blue.ljy.utils.ueditor.ActionEnter;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 @Controller
@@ -21,12 +25,12 @@ public class UeditorController {
 
     @RequestMapping(value="/server")
     public void config(HttpServletRequest request, HttpServletResponse response,
-                       @RequestParam("action") String action,
-                       @RequestParam(value="upfile",required = false) MultipartFile file) throws ServletException, IOException {
-
+                       @RequestParam("action") String action) throws ServletException, IOException {
         String url;
         switch (action) {
             case "uploadimage":url="./uploadimage.do";break;
+            case "uploadscrawl":url=".uploadimage.do";break;
+            case "uploadvideo":url="./uploadVideo.do";break;
             default :url=null;break;
         }
         if(url!=null) {
@@ -51,16 +55,33 @@ public class UeditorController {
 
     @RequestMapping("uploadimage")
     @ResponseBody
-    public Properties uploadimage(HttpServletRequest request, HttpServletResponse response,
-                                  @RequestParam(value="upfile",required = false) MultipartFile file) throws IOException {
-        System.out.println(file);
-        System.out.println(request.getServletContext().getRealPath(""));
-        FileUpload.copyFile(file);
+    public Properties uploadimage(@RequestParam(value="upfile") MultipartFile file) {
+        Map<String,Object> value = FileUpload.copyUeditorImage(file);
         Properties result = new Properties();
+        result.put("state",value.get("code"));
+        result.put("url",value.get("relativePath"));
+        result.put("title",""+value.get("fileName"));
+        result.put("original",value.get("fileName"));
+        return result;
+    }
+
+    @RequestMapping("uploadVideo")
+    @ResponseBody
+    public Properties uploadVideo(@RequestParam(value="upfile") MultipartFile file) {
+        Map<String,Object> value = FileUpload.copyUeditorVideo(file);
+        Properties result = new Properties();
+        result.put("state",value.get("code"));
+        result.put("url",value.get("relativePath"));
+        result.put("title",""+value.get("fileName"));
+        result.put("original",value.get("fileName"));
+        return result;
+    }
+
+    @RequestMapping("catchImage")
+    @ResponseBody
+    public Map<String,Object> catchImage(@RequestBody List<String> source) {
+        Map<String,Object> result = new HashMap<>();
         result.put("state","SUCCESS");
-        result.put("url","/upload/"+file.hashCode());
-        result.put("title",""+file.hashCode());
-        result.put("original",""+file.hashCode());
         return result;
     }
 

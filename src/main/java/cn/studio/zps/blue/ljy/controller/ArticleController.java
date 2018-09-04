@@ -57,9 +57,9 @@ public class ArticleController {
     @ResponseBody
     @RequestMapping("getAllArticles")
     public Map<String,Object> getAllArticles(HttpServletRequest request) {
-        Admin admin = (Admin) request.getAttribute("admin");
-        int adminID = admin.getId();
-        Map<String,Object>result = articleService.getAllArticle(adminID);
+//        Admin admin = (Admin) request.getAttribute("admin");
+//        int adminID = admin.getId();
+        Map<String,Object>result = articleService.getAllArticle();
         result.put("code",0);
         result.put("msg","");
         return result;
