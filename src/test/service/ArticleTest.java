@@ -17,10 +17,7 @@ public class ArticleTest {
 
     @Test
     public void test1() {
-//        articleServiceImpl.deleteArticleFile("<img src='' />");
-        String article = null;
-        article = "<img src='aaa.jpg' /> <video src='bbb.mp4' >";
-//        System.out.println(articleService.getArticleFile(article));
+        System.out.println(articleService.getAllArticle());
     }
 
 }

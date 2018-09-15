@@ -18,6 +18,7 @@ public class Consult {
     private Integer profession;
     private Short level;
     private Short type;
+    private String origin;
 
     @Id
     @Column(name = "id")
@@ -157,5 +158,15 @@ public class Consult {
 
     public void setType(Short type) {
         this.type = type;
+    }
+
+    @Basic
+    @Column(name = "origin")
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 }

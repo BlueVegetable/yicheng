@@ -7,10 +7,7 @@ import cn.studio.zps.blue.ljy.utils.Response;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,13 +31,18 @@ public class ConsultController {
     private static final String URL="https://way.jd.com/jisuapi/query4";
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
-    @ResponseBody
-    public Map addConsultSmiple(@RequestBody Consult consult) throws IOException {
+    public @ResponseBody Map addConsultSmiple(@RequestBody Consult consult) throws IOException {
 
-        Map<String,Object> phoneNumberInfo=null;
+        Map<String,Object> phoneNumberInfo;
         Map<String,Object> result = Response.getResponseMap(0,"添加成功",null);
         try{
             phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
+            if(phoneNumberInfo==null) {
+                phoneNumberInfo=new LinkedHashMap<>();
+                phoneNumberInfo.put("status","202");
+                result.replace("code",1);
+                result.replace("msg","查询号码归属地出错");
+            }
         } catch(Exception e) {
             phoneNumberInfo=new LinkedHashMap<>();
             phoneNumberInfo.put("status","202");
@@ -52,8 +54,9 @@ public class ConsultController {
         //设置Consult中的一个字段attribution
         if(phoneNumberInfo.get("status").equals("202")
                 ||((Map)phoneNumberInfo.get("result")).get("province").equals("")
-                ||((Map)phoneNumberInfo.get("result")).get("city").equals(""))
+                ||((Map)phoneNumberInfo.get("result")).get("city").equals("")) {
             consult.setAttribution("未知");
+        }
         else {
             Map<String,String> values=(Map)phoneNumberInfo.get("result");
             consult.setAttribution(values.get("province")+"省"+values.get("city")+"市");
@@ -154,6 +157,11 @@ public class ConsultController {
             success(response);
         else
             fail(response);
+    }
+
+    @RequestMapping("countUnDealing")
+    public @ResponseBody int countUnDealing() {
+        return consultService.countByState(ConsultService.UN_DEALING_STATE);
     }
 
     /**

@@ -9,11 +9,15 @@
         <result column="name" property="name" />
         <result column="phoneNumber" property="phoneNumber" />
         <result column="attribution" property="attribution" />
+        <result column="origin" property="origin" />
     </resultMap>
 
     <insert id="addConsult" parameterType="Consult">
-        insert into consult (name,phoneNumber,state,createTime,attribution,academy,profession,level,type)
-         values (#{name},#{phoneNumber},#{state},#{createTime},#{attribution},#{academy},#{profession},#{level},#{type})
+        insert into
+        consult
+        (name,phoneNumber,state,createTime,attribution,academy,profession,level,type,origin)
+        values
+        (#{name},#{phoneNumber},#{state},#{createTime},#{attribution},#{academy},#{profession},#{level},#{type},#{origin})
     </insert>
 
     <delete id="deleteConsult" parameterType="Integer" >
@@ -22,6 +26,10 @@
 
     <select id="getAllCount" resultType="Integer" >
         select count(id) from consult
+    </select>
+
+    <select id="countByState" parameterType="java.util.Map" resultType="Integer">
+        select count(id) from consult where state=#{state}
     </select>
 
     <select id="getConsultById" parameterType="Integer" resultType="Consult" >
@@ -70,7 +78,11 @@
     </select>
 
     <update id="updateConsult" parameterType="Consult" >
-        update consult set name=#{name}, createTime=#{createTime},phoneNumber=#{phoneNumber},attribution=#{attribution} where id=#{id}
+        update
+        consult
+        set
+        name=#{name}, createTime=#{createTime},phoneNumber=#{phoneNumber},attribution=#{attribution}
+        where id=#{id}
     </update>
 
     <update id="alterState" parameterType="java.util.Map" >

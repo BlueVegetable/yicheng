@@ -16,31 +16,43 @@ public class ConsultServiceImpl implements ConsultService {
     @Autowired
     private ConsultDao consultDao;
 
+    @Override
     public boolean addConsult(Consult consult){
         return consultDao.addConsult(consult)>0;
     }
 
+    @Override
     public boolean deleteConsult(int id){
         return consultDao.deleteConsult(id)>0;
     }
 
+    @Override
     public int getAllCount(){
         return consultDao.getAllCount();
     }
 
+    @Override
+    public int countByState(int state) {
+        return consultDao.countByState(state);
+    }
+
+    @Override
     public Consult getConsultById(int consultId){
         return consultDao.getConsultById(consultId);
     }
 
+    @Override
     public List<Consult> getConsults(int page,int number){
         int start=(page-1)*number;
         return consultDao.getAllConsult(start,number);
     }
 
+    @Override
     public List<Consult> selectConsults(Map map) {
         return consultDao.getConsultLimited(map);
     }
 
+    @Override
     public int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber) {
         Map<String,Object>map=new LinkedHashMap<>();
 
@@ -52,6 +64,7 @@ public class ConsultServiceImpl implements ConsultService {
         return consultDao.getLimitedCount(map);
     }
 
+    @Override
     public Map<String,Long> classifyCount(){
         List<Map<String,Object>> values=consultDao.getAllAttribution();
         Map<String,Long> all=new LinkedHashMap<>();
@@ -61,10 +74,12 @@ public class ConsultServiceImpl implements ConsultService {
         return all;
     }
 
+    @Override
     public boolean updateConsult(Consult consult){
         return consultDao.updateConsult(consult)>0;
     }
 
+    @Override
     public boolean alterState(int id,int state) { return consultDao.alterState(id,state)>0; }
 
 }

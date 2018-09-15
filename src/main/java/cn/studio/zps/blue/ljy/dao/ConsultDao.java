@@ -14,6 +14,8 @@ public interface ConsultDao {
 
     int getAllCount();
 
+    int countByState(@Param("state") int state);
+
     Consult getConsultById(int consultId);
 
     List<Consult> getAllConsult(@Param("start") int start,@Param("number") int number);

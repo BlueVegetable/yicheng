@@ -7,11 +7,15 @@ import java.util.Map;
 
 public interface ConsultService {
 
+    int UN_DEALING_STATE = 0;
+
     boolean addConsult(Consult consult);
 
     boolean deleteConsult(int id);
 
     int getAllCount();
+
+    int countByState(int state);
 
     Consult getConsultById(int consultId);
 
