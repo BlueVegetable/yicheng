@@ -19,6 +19,10 @@ public class Consult {
     private Short level;
     private Short type;
     private String origin;
+    private Short applyMethod;
+    private Integer currentEducation;
+    private Short age;
+    private Short securityTime;
 
     @Id
     @Column(name = "id")
@@ -168,5 +172,45 @@ public class Consult {
 
     public void setOrigin(String origin) {
         this.origin = origin;
+    }
+
+    @Basic
+    @Column(name = "applyMethod")
+    public Short getApplyMethod() {
+        return applyMethod;
+    }
+
+    public void setApplyMethod(Short applyMethod) {
+        this.applyMethod = applyMethod;
+    }
+
+    @Basic
+    @Column(name = "currentEducation")
+    public Integer getCurrentEducation() {
+        return currentEducation;
+    }
+
+    public void setCurrentEducation(Integer currentEducation) {
+        this.currentEducation = currentEducation;
+    }
+
+    @Basic
+    @Column(name = "age")
+    public Short getAge() {
+        return age;
+    }
+
+    public void setAge(Short age) {
+        this.age = age;
+    }
+
+    @Basic
+    @Column(name = "securityTime")
+    public Short getSecurityTime() {
+        return securityTime;
+    }
+
+    public void setSecurityTime(Short securityTime) {
+        this.securityTime = securityTime;
     }
 }

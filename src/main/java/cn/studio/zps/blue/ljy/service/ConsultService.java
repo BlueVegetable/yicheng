@@ -13,17 +13,17 @@ public interface ConsultService {
 
     boolean deleteConsult(int id);
 
-    int getAllCount();
+    int getAllCount(short applyMethod);
 
-    int countByState(int state);
+    List<Map<String,Object>> countByState();
 
     Consult getConsultById(int consultId);
 
-    List<Consult> getConsults(int page,int number);
+    List<Consult> getConsults(int page,int number,short applyMethod);
 
     List<Consult> selectConsults(Map map);
 
-    int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber);
+    int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber,Short applyMethod);
 
     Map<String,Long> classifyCount();
 

@@ -30,9 +30,20 @@ public class ConsultController {
     private static final String PARAMETER="appkey=1d447a09ea953c29d4e9141b49c369d3";
     private static final String URL="https://way.jd.com/jisuapi/query4";
 
-    @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
-    public @ResponseBody Map addConsultSmiple(@RequestBody Consult consult) throws IOException {
+    /**
+     * 四种报名方式所代表的常量：简单报名，普通报名，开放大学报名，入户报名
+     */
+    private static final Short SIMPLE_CONSULT = 0;
+    private static final Short CONSULT = 0;
+    private static final Short COLLEGE_CONSULT = 2;
+    private static final Short RESIDENCE_CONSULT = 3;
 
+    @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
+    public @ResponseBody Map addConsultSmiple(@RequestBody Consult consult) {
+
+        if(consult.getApplyMethod()==null){
+            consult.setApplyMethod(SIMPLE_CONSULT);
+        }
         Map<String,Object> phoneNumberInfo;
         Map<String,Object> result = Response.getResponseMap(0,"添加成功",null);
         try{
@@ -40,13 +51,13 @@ public class ConsultController {
             if(phoneNumberInfo==null) {
                 phoneNumberInfo=new LinkedHashMap<>();
                 phoneNumberInfo.put("status","202");
-                result.replace("code",1);
+                result.replace("code",2);
                 result.replace("msg","查询号码归属地出错");
             }
         } catch(Exception e) {
             phoneNumberInfo=new LinkedHashMap<>();
             phoneNumberInfo.put("status","202");
-            result.replace("code",1);
+            result.replace("code",2);
             result.replace("msg","手机号码存在问题");
             e.printStackTrace();
         }
@@ -74,37 +85,52 @@ public class ConsultController {
     }
 
     @RequestMapping(value="/addConsult",method = RequestMethod.POST)
-    @ResponseBody
-    public Map addConsult(@RequestBody Consult consult) throws IOException {
+    public @ResponseBody Map addConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addCollegeConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addCollegeConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(COLLEGE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addResidenceConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addResidenceConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(RESIDENCE_CONSULT);
         return addConsultSmiple(consult);
     }
 
     @RequestMapping("/deleteConsult")
     public void deleteConsult(HttpServletRequest request,HttpServletResponse response) throws IOException {
         int id=Integer.parseInt(request.getParameter("id"));
-        if(consultService.deleteConsult(id))
+        if(consultService.deleteConsult(id)) {
             success(response);
-        else
+        }
+        else {
             fail(response);
+        }
     }
 
     @RequestMapping("/getConsults")
     @ResponseBody
-    public Map getConsults(int page,int limit) throws IOException {
-        List<Consult> consults=consultService.getConsults(page,limit);
+    public Map getConsults(int page,int limit,short applyMethod) throws IOException {
+        List<Consult> consults=consultService.getConsults(page,limit,applyMethod);
         Map map = Response.getResponseMap(0,"",consults);
-        map.put("count",consultService.getAllCount());
+        map.put("count",consultService.getAllCount(applyMethod));
         return map;
     }
 
     @RequestMapping("/getConsultsLimit")
     @ResponseBody
-    public Map getConsultsLimit(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public Map getConsultsLimit(HttpServletRequest request,@RequestParam("applyMethod")Short applyMethod) {
         Integer id=null;
         int page=Integer.parseInt(request.getParameter("page"));
         int limit=Integer.parseInt(request.getParameter("limit"));
-        if(request.getParameter("id")!=null&&isInteger(request.getParameter("id")))
-            id=Integer.parseInt(request.getParameter("id"));
+        if(request.getParameter("id")!=null&&isInteger(request.getParameter("id"))) {
+            id = Integer.parseInt(request.getParameter("id"));
+        }
         String name=request.getParameter("name");
         String remark=request.getParameter("remark");
         String phoneNumber=request.getParameter("phoneNumber");
@@ -129,11 +155,12 @@ public class ConsultController {
         map.put("start",start);
         map.put("number",limit);
         map.put("createTime",createTime);
+        map.put("applyMethod",applyMethod);
 
         List<Consult> consults=consultService.selectConsults(map);
 
         Map responseMap = Response.getResponseMap(0,"",consults);
-        responseMap.put("count",consultService.limitConsultCount(id,name,remark,phoneNumber));
+        responseMap.put("count",consultService.limitConsultCount(id,name,remark,phoneNumber,applyMethod));
         return responseMap;
     }
 
@@ -160,8 +187,8 @@ public class ConsultController {
     }
 
     @RequestMapping("countUnDealing")
-    public @ResponseBody int countUnDealing() {
-        return consultService.countByState(ConsultService.UN_DEALING_STATE);
+    public @ResponseBody List<Map<String, Object>> countUnDealing() {
+        return consultService.countByState();
     }
 
     /**

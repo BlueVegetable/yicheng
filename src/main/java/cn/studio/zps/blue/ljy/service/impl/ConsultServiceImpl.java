@@ -6,6 +6,7 @@ import cn.studio.zps.blue.ljy.service.ConsultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,13 +28,13 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public int getAllCount(){
-        return consultDao.getAllCount();
+    public int getAllCount(short applyMethod){
+        return consultDao.getAllCount(applyMethod);
     }
 
     @Override
-    public int countByState(int state) {
-        return consultDao.countByState(state);
+    public List<Map<String,Object>> countByState() {
+        return consultDao.getAllUnDealingNumber();
     }
 
     @Override
@@ -42,9 +43,9 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public List<Consult> getConsults(int page,int number){
+    public List<Consult> getConsults(int page,int number,short applyMethod){
         int start=(page-1)*number;
-        return consultDao.getAllConsult(start,number);
+        return consultDao.getAllConsult(start,number,applyMethod);
     }
 
     @Override
@@ -53,13 +54,14 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber) {
+    public int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber,Short applyMethod ) {
         Map<String,Object>map=new LinkedHashMap<>();
 
         map.put("id",consultId);
         map.put("name",name);
         map.put("remark",remark);
         map.put("phoneNumber",phoneNumber);
+        map.put("applyMethod",applyMethod);
 
         return consultDao.getLimitedCount(map);
     }
