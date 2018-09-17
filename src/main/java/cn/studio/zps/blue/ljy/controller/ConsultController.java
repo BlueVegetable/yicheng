@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,21 +47,27 @@ public class ConsultController {
         }
         Map<String,Object> phoneNumberInfo;
         Map<String,Object> result = Response.getResponseMap(0,"添加成功",null);
-        try{
-            phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
-            if(phoneNumberInfo==null) {
-                phoneNumberInfo=new LinkedHashMap<>();
-                phoneNumberInfo.put("status","202");
-                result.replace("code",2);
-                result.replace("msg","查询号码归属地出错");
-            }
-        } catch(Exception e) {
-            phoneNumberInfo=new LinkedHashMap<>();
+        {
+            phoneNumberInfo = new HashMap<>();
             phoneNumberInfo.put("status","202");
             result.replace("code",2);
-            result.replace("msg","手机号码存在问题");
-            e.printStackTrace();
+            result.replace("msg","暂时无法查到归属地");
         }
+//        try{
+//            phoneNumberInfo=new RemoteURL().getPhoneNumberInfo(URL,consult.getPhoneNumber(),PARAMETER);
+//            if(phoneNumberInfo==null) {
+//                phoneNumberInfo=new LinkedHashMap<>();
+//                phoneNumberInfo.put("status","202");
+//                result.replace("code",2);
+//                result.replace("msg","查询号码归属地出错");
+//            }
+//        } catch(Exception e) {
+//            phoneNumberInfo=new LinkedHashMap<>();
+//            phoneNumberInfo.put("status","202");
+//            result.replace("code",2);
+//            result.replace("msg","手机号码存在问题");
+//            e.printStackTrace();
+//        }
 
         //设置Consult中的一个字段attribution
         if(phoneNumberInfo.get("status").equals("202")
@@ -99,6 +106,12 @@ public class ConsultController {
     @RequestMapping(value = "addResidenceConsult",method = RequestMethod.POST)
     public @ResponseBody Map addResidenceConsult(@RequestBody Consult consult) {
         consult.setApplyMethod(RESIDENCE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addConsultTest",method = RequestMethod.POST)
+    public @ResponseBody Map addConsultTest(@RequestBody Consult consult) {
+        consult.setApplyMethod(SIMPLE_CONSULT);
         return addConsultSmiple(consult);
     }
 
