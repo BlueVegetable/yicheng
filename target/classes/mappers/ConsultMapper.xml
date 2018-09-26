@@ -17,11 +17,13 @@
         consult
         (name,phoneNumber,state,createTime,attribution,
         applyMethod,origin,academy,profession,level,
-        type,currentEducation,age,securityTime)
+        type,currentEducation,age,securityTime,
+        workTime)
         values
         (#{name},#{phoneNumber},#{state},#{createTime},#{attribution},
         #{applyMethod},#{origin},#{academy},#{profession},#{level},
-        #{type},#{currentEducation},#{age},#{securityTime})
+        #{type},#{currentEducation},#{age},#{securityTime},
+        #{workTime})
     </insert>
 
     <delete id="deleteConsult" parameterType="Integer" >
@@ -32,8 +34,8 @@
         select count(id) from consult where applyMethod = #{applyMethod}
     </select>
 
-    <select id="getAllUnDealingNumber" resultType="java.util.HashMap">
-        select applyMethod, count(id) number from consult where state=0 group by applyMethod
+    <select id="getUnDealingNumber" parameterType="Short" resultType="java.util.HashMap">
+        SELECT applyMethod,COUNT(id) number FROM consult WHERE applyMethod=#{applyMethod} and state=0
     </select>
 
     <select id="getConsultById" parameterType="Integer" resultType="Consult" >

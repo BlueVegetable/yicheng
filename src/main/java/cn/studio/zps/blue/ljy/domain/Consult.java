@@ -23,6 +23,7 @@ public class Consult {
     private Integer currentEducation;
     private Short age;
     private Short securityTime;
+    private Short workTime;
 
     @Id
     @Column(name = "id")
@@ -212,5 +213,15 @@ public class Consult {
 
     public void setSecurityTime(Short securityTime) {
         this.securityTime = securityTime;
+    }
+
+    @Basic
+    @Column(name = "workTime")
+    public Short getWorkTime() {
+        return workTime;
+    }
+
+    public void setWorkTime(Short workTime) {
+        this.workTime = workTime;
     }
 }

@@ -6,7 +6,7 @@ import cn.studio.zps.blue.ljy.service.ConsultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,8 +33,14 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public List<Map<String,Object>> countByState() {
-        return consultDao.getAllUnDealingNumber();
+    public List<Map<String,Object>> countByState(List<Short> applyMethods) {
+        List<Map<String,Object>> results = new ArrayList<>();
+        for(Short applyMethod:applyMethods) {
+            Map<String,Object> result = consultDao.getUnDealingNumber(applyMethod);
+            result.put("applyMethod",applyMethod);
+            results.add(result);
+        }
+        return results;
     }
 
     @Override

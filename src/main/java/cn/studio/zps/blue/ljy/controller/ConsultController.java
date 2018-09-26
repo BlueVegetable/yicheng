@@ -13,10 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Pattern;
 
 @Controller
@@ -32,12 +29,25 @@ public class ConsultController {
     private static final String URL="https://way.jd.com/jisuapi/query4";
 
     /**
-     * 四种报名方式所代表的常量：简单报名，普通报名，开放大学报名，入户报名
+     * 四种报名方式所代表的常量：简单报名，普通报名，开放大学报名，入户报名，劳动关系协调师
      */
-    private static final Short SIMPLE_CONSULT = 0;
-    private static final Short CONSULT = 0;
+    private static final Short SIMPLE_CONSULT = 1;
+    private static final Short CONSULT = 1;
     private static final Short COLLEGE_CONSULT = 2;
     private static final Short RESIDENCE_CONSULT = 3;
+    private static final Short WORK_CONSULT = 4;
+    private static final Short WORK_SIMPLE_CONSULT = 5;
+
+    private static final List<Short> CONSULT_LIST = new ArrayList<>();
+
+    static {
+        CONSULT_LIST.add(SIMPLE_CONSULT);
+        CONSULT_LIST.add(CONSULT);
+        CONSULT_LIST.add(COLLEGE_CONSULT);
+        CONSULT_LIST.add(RESIDENCE_CONSULT);
+        CONSULT_LIST.add(WORK_CONSULT);
+        CONSULT_LIST.add(WORK_SIMPLE_CONSULT);
+    }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
     public @ResponseBody Map addConsultSmiple(@RequestBody Consult consult) {
@@ -109,6 +119,18 @@ public class ConsultController {
         return addConsultSmiple(consult);
     }
 
+    @RequestMapping(value = "addWorkConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addWorkConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(WORK_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addWorkSimpleConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addWorkSimpleConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(WORK_SIMPLE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
     @RequestMapping(value = "addConsultTest",method = RequestMethod.POST)
     public @ResponseBody Map addConsultTest(@RequestBody Consult consult) {
         consult.setApplyMethod(SIMPLE_CONSULT);
@@ -128,7 +150,7 @@ public class ConsultController {
 
     @RequestMapping("/getConsults")
     @ResponseBody
-    public Map getConsults(int page,int limit,short applyMethod) throws IOException {
+    public Map getConsults(int page,int limit,short applyMethod) {
         List<Consult> consults=consultService.getConsults(page,limit,applyMethod);
         Map map = Response.getResponseMap(0,"",consults);
         map.put("count",consultService.getAllCount(applyMethod));
@@ -200,8 +222,17 @@ public class ConsultController {
     }
 
     @RequestMapping("countUnDealing")
-    public @ResponseBody List<Map<String, Object>> countUnDealing() {
-        return consultService.countByState();
+    public @ResponseBody Map<String, Object> countUnDealing() {
+        Map<String,Object> result = new HashMap<>();
+        long number = 0;
+        List<Map<String,Object>> datas = consultService.countByState(CONSULT_LIST);
+        for(Map<String,Object> data:datas) {
+            number += (Long)data.get("number");
+        }
+        result.put("code",0);
+        result.put("data",datas);
+        result.put("count",number);
+        return result;
     }
 
     /**

@@ -27,7 +27,7 @@ public interface ConsultDao {
 
     int getAllCount(@Param("applyMethod") short applyMethod);
 
-    List<Map<String,Object>> getAllUnDealingNumber();
+    Map<String,Object> getUnDealingNumber(short applyMethod);
 
     Consult getConsultById(int consultId);
 

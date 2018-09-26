@@ -15,7 +15,7 @@ public interface ConsultService {
 
     int getAllCount(short applyMethod);
 
-    List<Map<String,Object>> countByState();
+    List<Map<String,Object>> countByState(List<Short> applyMethods);
 
     Consult getConsultById(int consultId);
 
