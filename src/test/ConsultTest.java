@@ -37,4 +37,9 @@ public class ConsultTest {
         System.out.println();
     }
 
+    @Test
+    public void test3() {
+        System.out.println(consultDao.getLimitNumberClassfy(5));
+    }
+
 }

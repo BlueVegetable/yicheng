@@ -37,6 +37,7 @@ public class ConsultController {
     private static final Short RESIDENCE_CONSULT = 3;
     private static final Short WORK_CONSULT = 4;
     private static final Short WORK_SIMPLE_CONSULT = 5;
+    private static final Short RESIDENCE_SIMPLE_CONSULT = 6;
 
     private static final List<Short> CONSULT_LIST = new ArrayList<>();
 
@@ -47,6 +48,7 @@ public class ConsultController {
         CONSULT_LIST.add(RESIDENCE_CONSULT);
         CONSULT_LIST.add(WORK_CONSULT);
         CONSULT_LIST.add(WORK_SIMPLE_CONSULT);
+        CONSULT_LIST.add(RESIDENCE_SIMPLE_CONSULT);
     }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
@@ -110,6 +112,12 @@ public class ConsultController {
     @RequestMapping(value = "addCollegeConsult",method = RequestMethod.POST)
     public @ResponseBody Map addCollegeConsult(@RequestBody Consult consult) {
         consult.setApplyMethod(COLLEGE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addResidenceSimpleConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addResidenceSimpleConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(RESIDENCE_SIMPLE_CONSULT);
         return addConsultSmiple(consult);
     }
 
@@ -238,13 +246,10 @@ public class ConsultController {
     /**
      * 获取得到数量在前n名的地址与数量
      */
-//    public void getLimitNumberClassfy(int n,HttpServletResponse response) throws IOException {
-//        Map<String,Long> values = consultService.classifyCount();
-//        int count=0;
-//        long temp=-1;
-//        if(n>=values.size())
-//            Response.sendJSONArray(values,response);
-//    }
+    @RequestMapping("getLimitNumberClassfy")
+    public @ResponseBody List<Map<String,Object>> getLimitNumberClassfy(@RequestParam(required = true ) int number) throws IOException {
+        return consultService.getLimitNumberClassfy(number);
+    }
 
     private void success(HttpServletResponse response) throws IOException {
         response.getWriter().println(1);

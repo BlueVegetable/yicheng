@@ -39,6 +39,8 @@ public interface ConsultDao {
 
     int getLimitedCount(Map<String,Object> parameters);
 
+    List<Map<String,Object>> getLimitNumberClassfy(int rank);
+
     int updateConsult(Consult consult);
 
     int alterState(@Param("id") int id,@Param("state") int state);

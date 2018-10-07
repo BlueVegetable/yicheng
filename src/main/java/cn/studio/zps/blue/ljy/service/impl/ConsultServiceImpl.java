@@ -73,13 +73,8 @@ public class ConsultServiceImpl implements ConsultService {
     }
 
     @Override
-    public Map<String,Long> classifyCount(){
-        List<Map<String,Object>> values=consultDao.getAllAttribution();
-        Map<String,Long> all=new LinkedHashMap<>();
-        for(Map<String,Object> value:values) {
-            all.put((String)value.get("attribution"),(Long)value.get("number"));
-        }
-        return all;
+    public List<Map<String, Object>> getLimitNumberClassfy(int rank) {
+        return consultDao.getLimitNumberClassfy(rank);
     }
 
     @Override

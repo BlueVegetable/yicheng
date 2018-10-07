@@ -79,6 +79,20 @@
         </if>
     </select>
 
+    <select id="getLimitNumberClassfy" parameterType="Integer" resultType="java.util.HashMap">
+        SELECT attribution name,number value FROM
+        (
+        SELECT attribution,number,
+        IFNULL((SELECT COUNT(*)
+        FROM (SELECT attribution,COUNT(id) number FROM consult GROUP BY attribution) temp1
+        WHERE number>t.number),0)+1 AS rank
+        FROM (SELECT attribution,COUNT(id) number FROM consult GROUP BY attribution) t
+        ORDER BY rank
+        )
+        temp2
+        WHERE rank &lt;=#{rank}
+    </select>
+
     <select id="getAllAttribution" resultType="java.util.LinkedHashMap" >
         SELECT attribution, COUNT(id) number FROM consult GROUP BY attribution ORDER BY number DESC
     </select>
