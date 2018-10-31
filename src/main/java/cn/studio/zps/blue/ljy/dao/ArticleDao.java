@@ -15,7 +15,7 @@ public interface ArticleDao {
 
     Article getArticle(int articleID);
 
-    List<Article> getAllArticles();
+    List<Article> getAllArticles(@Param("start") int start,@Param("number") int number);
 
     int getAllArticlesCount();
 

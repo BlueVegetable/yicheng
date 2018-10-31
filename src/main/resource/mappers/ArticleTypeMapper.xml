@@ -10,5 +10,9 @@
     <select id="getAllArticleTypes" resultMap="ArticleTypeMap">
         select * from article_type
     </select>
+
+    <select id="getArticleTypeByTypeID" resultType="String">
+        select type from article_type where id = #{typeID}
+    </select>
     
 </mapper>

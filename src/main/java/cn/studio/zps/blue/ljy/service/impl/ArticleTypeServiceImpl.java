@@ -18,4 +18,9 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     public List<ArticleType> getAllArticleTypes() {
         return articleTypeDao.getAllArticleTypes();
     }
+
+    @Override
+    public String getArticleTypeByTypeID(int typeID) {
+        return articleTypeDao.getArticleTypeByTypeID(typeID);
+    }
 }

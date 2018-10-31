@@ -68,9 +68,10 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public Map<String, Object> getAllArticle() {
+    public Map<String, Object> getAllArticle(int page,int limit) {
         Map<String,Object> result = new HashMap<>(2);
-        result.put("data",articleDao.getAllArticles());
+        int start = (page-1) * limit;
+        result.put("data",articleDao.getAllArticles(start,limit));
         result.put("count",articleDao.getAllArticlesCount());
         return result;
     }

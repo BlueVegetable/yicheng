@@ -3,13 +3,11 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.domain.Admin;
 import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.service.ArticleService;
+import cn.studio.zps.blue.ljy.service.ArticleTypeService;
 import cn.studio.zps.blue.ljy.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
@@ -19,8 +17,8 @@ import java.util.Map;
 @RequestMapping("article")
 public class ArticleController {
 
-    @Autowired
-    private ArticleService articleService;
+    private @Autowired ArticleService articleService;
+    private @Autowired ArticleTypeService articleTypeService;
 
     @ResponseBody
     @RequestMapping(value="addArticle",method = RequestMethod.POST)
@@ -30,6 +28,7 @@ public class ArticleController {
             return Response.getResponseMap(1,"文章已存在",null);
         }
         article.setLastModify(new Timestamp(System.currentTimeMillis()));
+        article.setType(articleTypeService.getArticleTypeByTypeID(Integer.parseInt(article.getType())));
         if(articleService.addArticle(article,admin.getId())) {
             return Response.getResponseMap(0,"",null);
         } else {
@@ -56,10 +55,10 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping("getAllArticles")
-    public Map<String,Object> getAllArticles(HttpServletRequest request) {
+    public Map<String,Object> getAllArticles(@RequestParam("page") int page,@RequestParam("limit") int limit) {
 //        Admin admin = (Admin) request.getAttribute("admin");
 //        int adminID = admin.getId();
-        Map<String,Object>result = articleService.getAllArticle();
+        Map<String,Object>result = articleService.getAllArticle(page,limit);
         result.put("code",0);
         result.put("msg","");
         return result;

@@ -8,4 +8,6 @@ public interface ArticleTypeService {
 
     List<ArticleType> getAllArticleTypes();
 
+    String getArticleTypeByTypeID(int typeID);
+
 }

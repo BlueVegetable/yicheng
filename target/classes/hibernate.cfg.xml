@@ -6,7 +6,7 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost:3306/blue14</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-      <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
+    <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Banner"/>
     <mapping class="cn.studio.zps.blue.ljy.domain.Admin"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Article"/>

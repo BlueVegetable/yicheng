@@ -28,7 +28,7 @@
     </select>
 
     <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
-        select id,title,type,lastModify from article
+        select id,title,type,lastModify from article limit #{start},#{number}
     </select>
 
     <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">

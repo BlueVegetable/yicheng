@@ -8,4 +8,6 @@ public interface ArticleTypeDao {
 
     List<ArticleType> getAllArticleTypes();
 
+    String getArticleTypeByTypeID(int typeID);
+
 }
