@@ -15,8 +15,8 @@ import java.util.Map;
 public class FileUpload {
 
     private final static int LENGTH=1024;
-//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
     private final static String BANNER_PATH = "/banner-image/";
     private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
     private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";

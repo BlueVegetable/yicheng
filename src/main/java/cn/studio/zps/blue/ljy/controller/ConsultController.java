@@ -38,6 +38,7 @@ public class ConsultController {
     private static final Short WORK_CONSULT = 4;
     private static final Short WORK_SIMPLE_CONSULT = 5;
     private static final Short RESIDENCE_SIMPLE_CONSULT = 6;
+    private static final Short FIRST_SIMPLE_CONSULT = 7;
 
     private static final List<Short> CONSULT_LIST = new ArrayList<>();
 
@@ -49,6 +50,7 @@ public class ConsultController {
         CONSULT_LIST.add(WORK_CONSULT);
         CONSULT_LIST.add(WORK_SIMPLE_CONSULT);
         CONSULT_LIST.add(RESIDENCE_SIMPLE_CONSULT);
+        CONSULT_LIST.add(FIRST_SIMPLE_CONSULT);
     }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
@@ -139,6 +141,12 @@ public class ConsultController {
         return addConsultSmiple(consult);
     }
 
+    @RequestMapping(value = "addFirstSimpleConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addFirstSimpleConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(FIRST_SIMPLE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
     @RequestMapping(value = "addConsultTest",method = RequestMethod.POST)
     public @ResponseBody Map addConsultTest(@RequestBody Consult consult) {
         consult.setApplyMethod(SIMPLE_CONSULT);
@@ -146,14 +154,9 @@ public class ConsultController {
     }
 
     @RequestMapping("/deleteConsult")
-    public void deleteConsult(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public @ResponseBody int deleteConsult(HttpServletRequest request,HttpServletResponse response) throws IOException {
         int id=Integer.parseInt(request.getParameter("id"));
-        if(consultService.deleteConsult(id)) {
-            success(response);
-        }
-        else {
-            fail(response);
-        }
+        return consultService.deleteConsult(id)?1:0;
     }
 
     @RequestMapping("/getConsults")
