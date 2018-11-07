@@ -52,7 +52,8 @@ public class BannerPCServiceImpl implements BannerPCService {
 
     @Override
     public int getMaxPosition() {
-        return bannerPCDao.getMaxBannerPCPosition();
+        Integer position = bannerPCDao.getMaxBannerPCPosition();
+        return position == null?0:position;
     }
 
     @Override

@@ -1,6 +1,5 @@
 package cn.studio.zps.blue.ljy.controller;
 
-import cn.studio.zps.blue.ljy.domain.Banner;
 import cn.studio.zps.blue.ljy.domain.BannerPC;
 import cn.studio.zps.blue.ljy.service.BannerPCService;
 import cn.studio.zps.blue.ljy.utils.FileUpload;
@@ -20,18 +19,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public @RequestMapping("bannerPC") class BannerPCController {
+public @RequestMapping("BannerPC") class BannerPCController {
     @Autowired
     private BannerPCService bannerPCService;
     /**
      * 文件路径
      */
-    private static final String DIRECTORY="/bannerPC-image";
+    private static final String DIRECTORY="/banner-pc-image";
 
     @ResponseBody
     @RequestMapping("upload")
-    public Map uploadBanner(MultipartFile file) throws IOException {
-        Map<String,Object> value = FileUpload.copyBanner(file);
+    public Map uploadBanner(MultipartFile file) {
+        Map<String,Object> value = FileUpload.copyBannerPC(file);
         String name = (String) value.get("fileName");
         String msg = value.get("code").equals("SUCCESS")?"":"上传失败";
         int code = value.get("code").equals("SUCCESS")?0:1;
@@ -47,10 +46,11 @@ public @RequestMapping("bannerPC") class BannerPCController {
         return result;
     }
 
-    @RequestMapping("/addBanner")
+    @RequestMapping("/addBannerPCGraduate")
     @ResponseBody
-    public Map<String, Object> addBanner(@RequestBody BannerPC bannerPC) {
+    public Map<String, Object> addBannerPCGraduate(@RequestBody BannerPC bannerPC) {
         bannerPC.setVisible(true);
+        bannerPC.setLocation("Graduate");
         bannerPC.setPosition(bannerPCService.getMaxPosition()+1);
         if(bannerPCService.addBannerPC(bannerPC)){
             return Response.getResponseMap(0,"",null);
@@ -59,7 +59,7 @@ public @RequestMapping("bannerPC") class BannerPCController {
         }
     }
 
-    @RequestMapping("/deleteBanner")
+    @RequestMapping("/deleteBannerPC")
     public void deleteBanner(@RequestParam("id")int id, HttpServletRequest request, HttpServletResponse response) throws IOException {
         BannerPC bannerPC=bannerPCService.getBannerPC(id);
         if(bannerPCService.deleteBannerPC(id)) {
