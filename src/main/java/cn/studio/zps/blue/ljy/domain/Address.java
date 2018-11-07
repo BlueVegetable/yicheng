@@ -52,6 +52,9 @@ public class Address {
         this.route = route;
     }
 
+    public Address() {
+    }
+
     @Override
     public String toString() {
         return "Address{" +
