@@ -16,10 +16,30 @@ public class ArticleTypeController {
     @Autowired
     private ArticleTypeService articleTypeService;
 
+    @RequestMapping("addArticleType")
+    public @ResponseBody boolean addArticleType(ArticleType articleType) {
+        return articleTypeService.addArticleType(articleType);
+    }
+
     @ResponseBody
-    @RequestMapping("getAllArticleTypes")
-    public List<ArticleType> getAllArticleTypes() {
-        return articleTypeService.getAllArticleTypes();
+    @RequestMapping("getAllArticleTypesByModuleID")
+    public List<ArticleType> getAllArticleTypesByModuleID(int moduleID) {
+        return articleTypeService.getAllArticleTypesByModuleID(moduleID);
+    }
+
+    @RequestMapping("getArticleTypeByTypeID")
+    public @ResponseBody String getArticleTypeByTypeID(int typeID) {
+        return articleTypeService.getArticleTypeByTypeID(typeID);
+    }
+
+    @RequestMapping("deleteArticleType")
+    public @ResponseBody boolean deleteArticleType(int articleTypeID) {
+        return articleTypeService.deleteArticleType(articleTypeID);
+    }
+
+    @RequestMapping("alterArticleTypeName")
+    public @ResponseBody boolean alterArticleTypeName(int id,String name) {
+        return articleTypeService.alterArticleTypeName(id,name);
     }
 
 }

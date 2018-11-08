@@ -4,10 +4,10 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "article_type", schema = "blue14", catalog = "")
 public class ArticleType {
     private int id;
     private String type;
+    private Integer moduleID;
 
     @Id
     @Column(name = "id")
@@ -27,6 +27,14 @@ public class ArticleType {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Integer getModuleID() {
+        return moduleID;
+    }
+
+    public void setModuleID(Integer moduleID) {
+        this.moduleID = moduleID;
     }
 
     @Override

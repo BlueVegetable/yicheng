@@ -12,7 +12,7 @@
 
     <insert id="addArticle" parameterType="java.util.Map" >
         insert into article (title,content,lastModify,type,adminID)
-        values(#{article.title},#{article.content},#{article.lastModify},#{article.type},#{adminID})
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{adminID})
     </insert>
 
     <delete id="deleteArticle" parameterType="Integer">

@@ -5,14 +5,36 @@
     <resultMap id="ArticleTypeMap" type="ArticleType">
         <id column="id" property="id" />
         <result column="type" property="type" />
+        <result column="module_id" property="moduleID" />
     </resultMap>
 
-    <select id="getAllArticleTypes" resultMap="ArticleTypeMap">
-        select * from article_type
+    <insert id="addArticleType" parameterType="ArticleType">
+        insert into
+        article_type
+        (type, module_id)
+        values
+        (#{type},#{moduleID})
+    </insert>
+
+    <select id="getAllArticleTypesByModuleID" resultMap="ArticleTypeMap">
+        select * from article_type where module_id = #{moduleID}
     </select>
 
     <select id="getArticleTypeByTypeID" resultType="String">
         select type from article_type where id = #{typeID}
     </select>
+
+    <delete id="deleteArticleType" parameterType="int">
+        delete from article_type where id = #{id}
+    </delete>
+
+    <update id="alterArticleTypeName" parameterType="Map">
+        update
+        article_type
+        set
+        name = #{name}
+        where
+        id = #{id}
+    </update>
     
 </mapper>

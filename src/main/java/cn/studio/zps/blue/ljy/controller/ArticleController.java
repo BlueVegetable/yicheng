@@ -18,7 +18,6 @@ import java.util.Map;
 public class ArticleController {
 
     private @Autowired ArticleService articleService;
-    private @Autowired ArticleTypeService articleTypeService;
 
     @ResponseBody
     @RequestMapping(value="addArticle",method = RequestMethod.POST)
@@ -28,7 +27,6 @@ public class ArticleController {
             return Response.getResponseMap(1,"文章已存在",null);
         }
         article.setLastModify(new Timestamp(System.currentTimeMillis()));
-        article.setType(articleTypeService.getArticleTypeByTypeID(Integer.parseInt(article.getType())));
         if(articleService.addArticle(article,admin.getId())) {
             return Response.getResponseMap(0,"",null);
         } else {

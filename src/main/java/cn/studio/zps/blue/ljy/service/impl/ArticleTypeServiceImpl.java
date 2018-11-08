@@ -15,12 +15,27 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     private ArticleTypeDao articleTypeDao;
 
     @Override
-    public List<ArticleType> getAllArticleTypes() {
-        return articleTypeDao.getAllArticleTypes();
+    public boolean addArticleType(ArticleType articleType) {
+        return articleTypeDao.addArticleType(articleType) > 0;
+    }
+
+    @Override
+    public List<ArticleType> getAllArticleTypesByModuleID(int moduleID) {
+        return articleTypeDao.getAllArticleTypesByModuleID(moduleID);
     }
 
     @Override
     public String getArticleTypeByTypeID(int typeID) {
         return articleTypeDao.getArticleTypeByTypeID(typeID);
+    }
+
+    @Override
+    public boolean deleteArticleType(int typeID) {
+        return articleTypeDao.deleteArticleType(typeID) > 0;
+    }
+
+    @Override
+    public boolean alterArticleTypeName(int id, String newName) {
+        return articleTypeDao.alterArticleTypeName(id,newName) > 0;
     }
 }

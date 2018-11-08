@@ -6,8 +6,14 @@ import java.util.List;
 
 public interface ArticleTypeService {
 
-    List<ArticleType> getAllArticleTypes();
+    boolean addArticleType(ArticleType articleType);
+
+    List<ArticleType> getAllArticleTypesByModuleID(int moduleID);
 
     String getArticleTypeByTypeID(int typeID);
+
+    boolean deleteArticleType(int typeID);
+
+    boolean alterArticleTypeName(int id,String newName);
 
 }

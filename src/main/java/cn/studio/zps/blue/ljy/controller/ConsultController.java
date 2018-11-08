@@ -39,6 +39,8 @@ public class ConsultController {
     private static final Short WORK_SIMPLE_CONSULT = 5;
     private static final Short RESIDENCE_SIMPLE_CONSULT = 6;
     private static final Short FIRST_SIMPLE_CONSULT = 7;
+    private static final Short GUANG_ZHOU_RU_HU_CONSULT = 8;
+    private static final Short GUANG_ZHOU_RU_HU_SIMPLE_CONSULT = 9;
 
     private static final List<Short> CONSULT_LIST = new ArrayList<>();
 
@@ -51,6 +53,8 @@ public class ConsultController {
         CONSULT_LIST.add(WORK_SIMPLE_CONSULT);
         CONSULT_LIST.add(RESIDENCE_SIMPLE_CONSULT);
         CONSULT_LIST.add(FIRST_SIMPLE_CONSULT);
+        CONSULT_LIST.add(GUANG_ZHOU_RU_HU_CONSULT);
+        CONSULT_LIST.add(GUANG_ZHOU_RU_HU_SIMPLE_CONSULT);
     }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
@@ -144,6 +148,18 @@ public class ConsultController {
     @RequestMapping(value = "addFirstSimpleConsult",method = RequestMethod.POST)
     public @ResponseBody Map addFirstSimpleConsult(@RequestBody Consult consult) {
         consult.setApplyMethod(FIRST_SIMPLE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addGuangZhouSimpleConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addGuangZhouSimpleConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(GUANG_ZHOU_RU_HU_SIMPLE_CONSULT);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addGuangZhouConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addGuangZhouConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(GUANG_ZHOU_RU_HU_CONSULT);
         return addConsultSmiple(consult);
     }
 
