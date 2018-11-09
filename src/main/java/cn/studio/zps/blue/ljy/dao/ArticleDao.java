@@ -19,6 +19,8 @@ public interface ArticleDao {
 
     int getAllArticlesCount();
 
+    List<Article> getArticles(@Param("typeID")int typeID,@Param("number") int number);
+
     int updateArticle(Article article);
 
 }

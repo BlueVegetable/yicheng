@@ -8,6 +8,7 @@ public class Article {
     private String title;
     private String content;
     private Timestamp lastModify;
+    private String brief;
     private int typeID;
 
     public int getId() {
@@ -48,6 +49,14 @@ public class Article {
 
     public void setTypeID(int typeID) {
         this.typeID = typeID;
+    }
+
+    public String getBrief() {
+        return brief;
+    }
+
+    public void setBrief(String brief) {
+        this.brief = brief;
     }
 
     @Override

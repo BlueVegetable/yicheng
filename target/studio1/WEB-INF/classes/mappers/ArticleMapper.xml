@@ -7,7 +7,7 @@
         <result column="title" property="title" />
         <result column="content" property="content" />
         <result column="lastModify" property="lastModify" />
-        <result column="type" property="type" />
+        <result column="type" property="typeID" />
     </resultMap>
 
     <insert id="addArticle" parameterType="java.util.Map" >

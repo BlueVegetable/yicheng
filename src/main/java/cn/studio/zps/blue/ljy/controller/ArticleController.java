@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -60,6 +61,11 @@ public class ArticleController {
         result.put("code",0);
         result.put("msg","");
         return result;
+    }
+
+    @RequestMapping("getArticles")
+    public @ResponseBody List<Article> getArticles(@RequestParam("typeID") int typeID,@RequestParam("number") int number) {
+        return articleService.getArticles(typeID,number);
     }
 
     @ResponseBody

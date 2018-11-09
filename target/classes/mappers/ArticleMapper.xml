@@ -7,12 +7,13 @@
         <result column="title" property="title" />
         <result column="content" property="content" />
         <result column="lastModify" property="lastModify" />
-        <result column="type" property="type" />
+        <result column="brief" property="brief" />
+        <result column="type" property="typeID" />
     </resultMap>
 
     <insert id="addArticle" parameterType="java.util.Map" >
-        insert into article (title,content,lastModify,type,adminID)
-        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{adminID})
+        insert into article (title,content,lastModify,type,brief,adminID)
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{brief},#{adminID})
     </insert>
 
     <delete id="deleteArticle" parameterType="Integer">
@@ -33,6 +34,10 @@
 
     <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
         SELECT COUNT(id) FROM article
+    </select>
+
+    <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
+        SELECT * FROM article WHERE TYPE = #{typeID} ORDER BY lastModify DESC LIMIT #{number}
     </select>
 
     <update id="updateArticle" parameterType="Article">

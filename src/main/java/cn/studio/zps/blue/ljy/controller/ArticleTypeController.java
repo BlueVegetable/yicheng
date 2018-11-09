@@ -1,5 +1,6 @@
 package cn.studio.zps.blue.ljy.controller;
 
+import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.domain.ArticleType;
 import cn.studio.zps.blue.ljy.service.ArticleTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -23,8 +25,12 @@ public class ArticleTypeController {
 
     @ResponseBody
     @RequestMapping("getAllArticleTypesByModuleID")
-    public List<ArticleType> getAllArticleTypesByModuleID(int moduleID) {
-        return articleTypeService.getAllArticleTypesByModuleID(moduleID);
+    public List<ArticleType> getAllArticleTypesByModuleID(Integer moduleID) {
+        if(moduleID != null) {
+            return articleTypeService.getAllArticleTypesByModuleID(moduleID);
+        } else {
+            return new ArrayList<>();
+        }
     }
 
     @RequestMapping("getArticleTypeByTypeID")
