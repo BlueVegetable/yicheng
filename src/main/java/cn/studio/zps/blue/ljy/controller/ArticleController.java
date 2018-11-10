@@ -3,7 +3,6 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.domain.Admin;
 import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.service.ArticleService;
-import cn.studio.zps.blue.ljy.service.ArticleTypeService;
 import cn.studio.zps.blue.ljy.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -22,6 +22,7 @@ public class ArticleController {
     @ResponseBody
     @RequestMapping(value="addArticle",method = RequestMethod.POST)
     public Map<String,Object> addArticle(@RequestBody Article article , HttpServletRequest request) {
+        System.out.println(article);
         Admin admin = (Admin) request.getAttribute("admin");
         if(articleService.exist(admin.getId(),article.getTitle())) {
             return Response.getResponseMap(1,"文章已存在",null);
@@ -60,6 +61,11 @@ public class ArticleController {
         result.put("code",0);
         result.put("msg","");
         return result;
+    }
+
+    @RequestMapping("getArticles")
+    public @ResponseBody List<Article> getArticles(@RequestParam("typeID") int typeID) {
+        return articleService.getArticles(typeID);
     }
 
     @ResponseBody

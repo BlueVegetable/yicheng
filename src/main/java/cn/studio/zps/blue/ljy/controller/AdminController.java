@@ -21,8 +21,7 @@ public class AdminController {
 
     private Map<String, HttpSession> sessions = new HashMap<String,HttpSession>();
 
-    @Autowired
-    private AdminService adminService;
+    private @Autowired AdminService adminService;
     private static final String KEY="123456";
 
     @RequestMapping("addAdmin")
