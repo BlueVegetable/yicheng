@@ -85,6 +85,11 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public List<Article> getArticlesByModuleID(Integer moduleID) {
+        return articleDao.getArticlesByModuleID(moduleID);
+    }
+
+    @Override
     public boolean updateArticle(Article article) {
         return articleDao.updateArticle(article)>0;
     }

@@ -45,6 +45,14 @@
         ORDER BY topest DESC,lastModify DESC
     </select>
 
+    <select id="getArticlesByModuleID" resultMap="ArticleMap" parameterType="Map">
+        SELECT * FROM
+        article
+        WHERE TYPE IN
+        (SELECT id FROM article_type WHERE module_id = #{moduleID})
+        ORDER BY topest DESC,lastModify DESC
+    </select>
+
     <update id="updateArticle" parameterType="Article">
         update article set title=#{title},content=#{content},lastModify=#{lastModify},type=#{type} where id=#{id}
     </update>

@@ -19,6 +19,8 @@ public interface ArticleService {
 
     List<Article> getArticles(Integer typeID);
 
+    List<Article> getArticlesByModuleID(Integer moduleID);
+
     boolean updateArticle(Article article);
 
 }

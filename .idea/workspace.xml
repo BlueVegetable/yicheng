@@ -9,21 +9,10 @@
     <list default="true" id="c03e2d7b-7c58-4fae-85f8-21c1c847e406" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/UeditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/UeditorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ModuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/ModuleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/UeditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/UeditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/utils/FileUpload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/utils/FileUpload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/ModuleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/ModuleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/UeditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/UeditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/utils/FileUpload.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/cn/studio/zps/blue/ljy/utils/FileUpload.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yicheng.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/yicheng.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -77,14 +66,14 @@
     <session id="-1381280570">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="82" />
+          <entry key="project.closed" value="83" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.103" value="1" />
           <entry key="project.open.time.15" value="3" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.2" value="9" />
@@ -104,7 +93,7 @@
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.49" value="2" />
           <entry key="project.open.time.5" value="6" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.52" value="1" />
@@ -123,32 +112,32 @@
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.opened" value="86" />
+          <entry key="project.opened" value="88" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="2" />
           <entry key="html" value="1930" />
-          <entry key="java" value="25804" />
+          <entry key="java" value="25949" />
           <entry key="json" value="48" />
           <entry key="properties" value="287" />
           <entry key="sql" value="69" />
           <entry key="txt" value="18" />
-          <entry key="xml" value="3395" />
+          <entry key="xml" value="3459" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="HTML" value="1930" />
-          <entry key="JAVA" value="25804" />
+          <entry key="JAVA" value="25949" />
           <entry key="JSON" value="48" />
           <entry key="PLAIN_TEXT" value="18" />
           <entry key="Properties" value="287" />
-          <entry key="SQL" value="49" />
+          <entry key="SQL" value="54" />
           <entry key="Scratch" value="69" />
-          <entry key="XML" value="3346" />
+          <entry key="XML" value="3405" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -157,12 +146,12 @@
           <entry key="class" value="8" />
           <entry key="css" value="1" />
           <entry key="html" value="29" />
-          <entry key="java" value="493" />
+          <entry key="java" value="498" />
           <entry key="js" value="4" />
           <entry key="json" value="16" />
           <entry key="properties" value="39" />
           <entry key="sql" value="5" />
-          <entry key="xml" value="102" />
+          <entry key="xml" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -171,12 +160,12 @@
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="2" />
           <entry key="HTML" value="29" />
-          <entry key="JAVA" value="493" />
+          <entry key="JAVA" value="498" />
           <entry key="JSON" value="16" />
           <entry key="JavaScript" value="4" />
           <entry key="Properties" value="39" />
           <entry key="Scratch" value="5" />
-          <entry key="XML" value="102" />
+          <entry key="XML" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -190,45 +179,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/BannerPCController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="49" column="97" lean-forward="true" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
+            <state relative-caret-position="359">
+              <caret line="59" column="78" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="23" column="39" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="88" column="58" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
               <folding>
-                <element signature="method#uploadBanner#0;class#BannerPCController#0" />
-                <element signature="method#deleteBanner#0;class#BannerPCController#0" />
-                <element signature="method#getBannerPCs#0;class#BannerPCController#0" />
-                <element signature="method#updateBannerPC#0;class#BannerPCController#0" />
-                <element signature="method#updateState#0;class#BannerPCController#0" />
-                <element signature="method#upBannerPC#0;class#BannerPCController#0" />
-                <element signature="method#downBannerPC#0;class#BannerPCController#0" />
+                <element signature="e#2914#2915#0" expanded="true" />
+                <element signature="e#2968#2969#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/BannerPCMapper.xml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+            <state relative-caret-position="40">
+              <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
               <folding>
                 <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+                <element signature="n#insert#0;n#mapper#0;n#!!top" />
+                <element signature="e#9#194#0" />
                 <element signature="n#delete#0;n#mapper#0;n#!!top" />
+                <element signature="e#9#43#0" />
                 <element signature="n#select#0;n#mapper#0;n#!!top" />
-                <element signature="n#if#0;n#select#0;n#mapper#0;n#!!top" />
+                <element signature="e#9#90#0" />
                 <element signature="n#select#1;n#mapper#0;n#!!top" />
-                <element signature="n#if#0;n#select#1;n#mapper#0;n#!!top" />
+                <element signature="e#9#45#0" />
+                <element signature="n#select#2;n#mapper#0;n#!!top" />
+                <element signature="e#9#78#0" />
                 <element signature="n#select#3;n#mapper#0;n#!!top" />
+                <element signature="e#9#38#0" />
                 <element signature="n#select#4;n#mapper#0;n#!!top" />
+                <element signature="e#9#132#0" />
+                <element signature="n#if#0;n#select#4;n#mapper#0;n#!!top" />
                 <element signature="n#select#5;n#mapper#0;n#!!top" />
-                <element signature="n#select#6;n#mapper#0;n#!!top" />
-                <element signature="n#select#7;n#mapper#0;n#!!top" />
-                <element signature="n#select#8;n#mapper#0;n#!!top" />
+                <element signature="e#9#173#0" />
+                <element signature="e#70#119#0" />
                 <element signature="n#update#0;n#mapper#0;n#!!top" />
-                <element signature="n#update#1;n#mapper#0;n#!!top" />
-                <element signature="n#update#2;n#mapper#0;n#!!top" />
+                <element signature="e#9#114#0" />
               </folding>
             </state>
           </provider>
@@ -321,13 +338,13 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/UeditorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModuleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java" />
       </list>
     </option>
   </component>
@@ -381,7 +398,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -550,6 +566,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -557,7 +574,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="49611559-74f3-4f8d-9c1a-cbc21024ea79" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541858917771" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541861384330" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../studio1_view1" />
@@ -1026,6 +1043,8 @@
       <workItem from="1541810336451" duration="3443000" />
       <workItem from="1541814106902" duration="17208000" />
       <workItem from="1541851626856" duration="4054000" />
+      <workItem from="1541859464743" duration="64000" />
+      <workItem from="1541860240735" duration="1097000" />
     </task>
     <servers />
   </component>
@@ -1062,13 +1081,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326536000" />
+    <option name="totallyTimeSpent" value="327697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.53662694" visible="true" weight="0.23863636" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.53662694" visible="true" weight="0.24621212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.4633731" side_tool="true" weight="0.23257576" />
       <window_info id="Designer" order="3" />
@@ -1252,9 +1271,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
-          <folding>
-            <element signature="method#getAllArticleTypesByModuleID#0;class#ArticleTypeServiceImpl#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1348,14 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <element signature="method#copyBanner#0;class#FileUpload#0" />
-            <element signature="method#copyBannerPC#0;class#FileUpload#0" />
-            <element signature="method#copyUeditorVideo#0;class#FileUpload#0" />
-            <element signature="method#deleteFile#0;class#FileUpload#0" />
-            <element signature="method#deleteUeditorImage#0;class#FileUpload#0" />
-            <element signature="method#deleteUeditorVideo#0;class#FileUpload#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,11 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-          <folding>
-            <element signature="method#getAllArticleTypesByModuleID#0;class#ArticleTypeController#0" />
-            <element signature="method#getAllArticleTypes#0;class#ArticleTypeController#0" />
-            <element signature="method#getArticleTypeByTypeID#0;class#ArticleTypeController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1419,13 +1422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModuleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleTypeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1440,82 +1436,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+        <state relative-caret-position="333">
+          <caret line="66" column="85" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/BannerPCMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
             <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
             <element signature="n#insert#0;n#mapper#0;n#!!top" />
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
             <element signature="n#select#0;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#select#0;n#mapper#0;n#!!top" />
             <element signature="n#select#1;n#mapper#0;n#!!top" />
+            <element signature="n#if#0;n#select#1;n#mapper#0;n#!!top" />
             <element signature="n#select#2;n#mapper#0;n#!!top" />
             <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="n#select#5;n#mapper#0;n#!!top" />
+            <element signature="n#select#6;n#mapper#0;n#!!top" />
+            <element signature="n#select#7;n#mapper#0;n#!!top" />
+            <element signature="n#select#8;n#mapper#0;n#!!top" />
             <element signature="n#update#0;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-          <folding>
-            <element signature="method#addArticle#0;class#ArticleServiceImpl#0" />
-            <element signature="method#deleteArticle#0;class#ArticleServiceImpl#0" />
-            <element signature="method#getArticleFile#0;class#ArticleServiceImpl#0" />
-            <element signature="method#getAllArticle#0;class#ArticleServiceImpl#0" />
-            <element signature="e#2775#2776#0" expanded="true" />
-            <element signature="e#2828#2829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="66" column="85" selection-start-line="66" selection-start-column="85" selection-end-line="66" selection-end-column="85" />
-          <folding>
-            <element signature="method#addArticle#0;class#ArticleController#0" />
-            <element signature="method#deleteArticle#0;class#ArticleController#0" />
-            <element signature="method#getArticle#0;class#ArticleController#0" />
-            <element signature="method#updateArticle#0;class#ArticleController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-          <folding>
-            <element signature="method#getModuleByID#0;class#ModuleController#0" />
+            <element signature="n#update#1;n#mapper#0;n#!!top" />
+            <element signature="n#update#2;n#mapper#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/BannerPCController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="49" column="97" lean-forward="true" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
+        <state relative-caret-position="360">
+          <caret line="49" column="97" selection-start-line="49" selection-start-column="97" selection-end-line="49" selection-end-column="97" />
           <folding>
             <element signature="method#uploadBanner#0;class#BannerPCController#0" />
             <element signature="method#deleteBanner#0;class#BannerPCController#0" />
@@ -1528,27 +1485,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/BannerPCMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModuleDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        <state relative-caret-position="160">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="23" column="39" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ArticleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="57" lean-forward="true" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
           <folding>
             <element signature="n#resultMap#0;n#mapper#0;n#!!top" />
+            <element signature="n#insert#0;n#mapper#0;n#!!top" />
+            <element signature="e#9#194#0" />
             <element signature="n#delete#0;n#mapper#0;n#!!top" />
+            <element signature="e#9#43#0" />
             <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#if#0;n#select#0;n#mapper#0;n#!!top" />
+            <element signature="e#9#90#0" />
             <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#if#0;n#select#1;n#mapper#0;n#!!top" />
+            <element signature="e#9#45#0" />
+            <element signature="n#select#2;n#mapper#0;n#!!top" />
+            <element signature="e#9#78#0" />
             <element signature="n#select#3;n#mapper#0;n#!!top" />
+            <element signature="e#9#38#0" />
             <element signature="n#select#4;n#mapper#0;n#!!top" />
+            <element signature="e#9#132#0" />
+            <element signature="n#if#0;n#select#4;n#mapper#0;n#!!top" />
             <element signature="n#select#5;n#mapper#0;n#!!top" />
-            <element signature="n#select#6;n#mapper#0;n#!!top" />
-            <element signature="n#select#7;n#mapper#0;n#!!top" />
-            <element signature="n#select#8;n#mapper#0;n#!!top" />
+            <element signature="e#9#173#0" />
+            <element signature="e#70#119#0" />
             <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#2;n#mapper#0;n#!!top" />
+            <element signature="e#9#114#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="88" column="58" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
+          <folding>
+            <element signature="e#2914#2915#0" expanded="true" />
+            <element signature="e#2968#2969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="59" column="78" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
         </state>
       </provider>
     </entry>

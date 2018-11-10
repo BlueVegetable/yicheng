@@ -57,6 +57,7 @@ public @Controller class ModuleController {
             for (ArticleType articleType:articleTypes) {
                 articles.put(articleType.getType(),articleService.getArticles(articleType.getId()));
             }
+            articles.put("全部",articleService.getArticlesByModuleID(moduleID));
             data.put("articles",articles);
             result.put("data",data);
         } catch (Exception e) {
