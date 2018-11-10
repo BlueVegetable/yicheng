@@ -17,7 +17,7 @@ public interface ArticleService {
 
     Map<String, Object> getAllArticle(int page,int limit);
 
-    List<Article> getArticles(int typeID);
+    List<Article> getArticles(Integer typeID);
 
     boolean updateArticle(Article article);
 

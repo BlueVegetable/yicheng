@@ -23,9 +23,9 @@ import java.util.Properties;
 @RequestMapping("ueditor")
 public class UeditorController {
 
-//    private final static String ROOT = "/";
+    private final static String ROOT = "/";
 
-    private final static String ROOT = "/standby/";
+//    private final static String ROOT = "/standby/";
 
     @RequestMapping(value="/server")
     public void config(HttpServletRequest request, HttpServletResponse response,

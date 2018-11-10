@@ -52,10 +52,10 @@ public @Controller class ModuleController {
         try {
             Map data = new HashMap();
             data.put("banner-pc",bannerPCService.getBannerPCsByLocation(moduleID));
-            List<Article> articles = new ArrayList<>();
+            Map<String,List<Article>> articles = new HashMap<>();
             List<ArticleType> articleTypes = articleTypeService.getAllArticleTypesByModuleID(moduleID);
             for (ArticleType articleType:articleTypes) {
-                articles.addAll(articleService.getArticles(articleType.getId()));
+                articles.put(articleType.getType(),articleService.getArticles(articleType.getId()));
             }
             data.put("articles",articles);
             result.put("data",data);

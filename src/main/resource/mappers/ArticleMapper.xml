@@ -37,7 +37,12 @@
     </select>
 
     <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
-        SELECT * FROM article where type = #{typeID} ORDER BY topest DESC,lastModify DESC
+        SELECT * FROM article
+        <if test="typeID!=null">
+        where
+        type = #{typeID}
+        </if>
+        ORDER BY topest DESC,lastModify DESC
     </select>
 
     <update id="updateArticle" parameterType="Article">

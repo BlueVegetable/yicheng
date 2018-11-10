@@ -80,7 +80,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getArticles(int typeID) {
+    public List<Article> getArticles(Integer typeID) {
         return articleDao.getArticles(typeID);
     }
 
