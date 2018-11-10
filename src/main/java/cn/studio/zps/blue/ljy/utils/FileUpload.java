@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class FileUpload {
 
-    private final static int LENGTH=1024;
+    private final static int LENGTH=10240;
 //    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
 //    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
