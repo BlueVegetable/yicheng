@@ -7,5 +7,6 @@ import java.util.List;
 public interface ModuleService {
     boolean addModule(Module module);
     boolean deleteModule(int moduleID);
+    Module getModuleByID(int moduleID);
     List<Module> getAllModules();
 }

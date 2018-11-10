@@ -34,6 +34,10 @@
         ORDER BY position
     </select>
 
+    <select id="getBannerPCsByLocation" parameterType="Integer" resultMap="BannerPCMap">
+        select * from banner_pc where location = #{location} and visible = 1
+    </select>
+
     <select id="getPositionById" parameterType="Integer" resultType="Integer" >
         select position from banner_pc where id=#{id}
     </select>

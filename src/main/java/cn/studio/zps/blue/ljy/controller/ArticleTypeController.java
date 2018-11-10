@@ -1,15 +1,17 @@
 package cn.studio.zps.blue.ljy.controller;
 
-import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.domain.ArticleType;
 import cn.studio.zps.blue.ljy.service.ArticleTypeService;
+import cn.studio.zps.blue.ljy.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("articleType")
@@ -19,8 +21,12 @@ public class ArticleTypeController {
     private ArticleTypeService articleTypeService;
 
     @RequestMapping("addArticleType")
-    public @ResponseBody boolean addArticleType(ArticleType articleType) {
-        return articleTypeService.addArticleType(articleType);
+    public @ResponseBody Map addArticleType(ArticleType articleType) {
+        if(articleTypeService.addArticleType(articleType))
+            return Response.getResponseMap(0,"",true);
+        else {
+            return Response.getResponseMap(1,"服务器出错",false);
+        }
     }
 
     @ResponseBody
@@ -33,19 +39,46 @@ public class ArticleTypeController {
         }
     }
 
+    @RequestMapping("getAllArticleTypes")
+    public @ResponseBody Map getAllArticleTypes() {
+        List<ArticleType> data = articleTypeService.getAllArticleTypes();
+        Map result = Response.getResponseMap(0,"",data);
+        result.put("count",result.size());
+        return result;
+    }
+
     @RequestMapping("getArticleTypeByTypeID")
-    public @ResponseBody String getArticleTypeByTypeID(int typeID) {
-        return articleTypeService.getArticleTypeByTypeID(typeID);
+    public @ResponseBody Map<String,Object> getArticleTypeByTypeID(int typeID) {
+        String value = articleTypeService.getArticleTypeByTypeID(typeID);
+        if(value == null) {
+            return Response.getResponseMap(1,"不存在",null);
+        } else {
+            return Response.getResponseMap(0,"",value);
+        }
     }
 
     @RequestMapping("deleteArticleType")
-    public @ResponseBody boolean deleteArticleType(int articleTypeID) {
-        return articleTypeService.deleteArticleType(articleTypeID);
+    public @ResponseBody Map deleteArticleType(int articleTypeID) {
+        if (articleTypeService.deleteArticleType(articleTypeID)) {
+            return Response.getResponseMap(0,"",true);
+        } else {
+            return Response.getResponseMap(1,"删除失败",false);
+        }
     }
 
     @RequestMapping("alterArticleTypeName")
-    public @ResponseBody boolean alterArticleTypeName(int id,String name) {
-        return articleTypeService.alterArticleTypeName(id,name);
+    public @ResponseBody Map alterArticleTypeName(int id,String name) {
+        try {
+            if(articleTypeService.alterArticleTypeName(id,name)) {
+                return Response.getResponseMap(0, "", true);
+            }
+            else {
+                return Response.getResponseMap(1,"修改失败",false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Response.getResponseMap(1,"服务器出错",false);
+        }
     }
 
 }

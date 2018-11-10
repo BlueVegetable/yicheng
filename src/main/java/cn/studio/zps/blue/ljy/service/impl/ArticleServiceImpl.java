@@ -24,7 +24,7 @@ public class ArticleServiceImpl implements ArticleService {
     public boolean addArticle(Article article,int adminID) {
         Pattern pattern1 = Pattern.compile("<img\\s*((?<key>[^=]+)=\"*(?<value>[^\"]+)\")+?\\s*/?>");
         Matcher matcher1 = pattern1.matcher(article.getContent());
-        article.setBrief(matcher1.replaceAll("[图片]"));
+        article.setBrief(matcher1.replaceAll("[图片]").substring(0,50)+"······");
         return articleDao.addArticle(article,adminID)>0;
     }
 
@@ -80,8 +80,8 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Article> getArticles(int typeID, int number) {
-        return articleDao.getArticles(typeID,number);
+    public List<Article> getArticles(int typeID) {
+        return articleDao.getArticles(typeID);
     }
 
     @Override

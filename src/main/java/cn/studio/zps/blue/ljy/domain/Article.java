@@ -66,6 +66,7 @@ public class Article {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", lastModify=" + lastModify +
+                ", brief='" + brief + '\'' +
                 ", typeID=" + typeID +
                 '}';
     }

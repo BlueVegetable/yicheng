@@ -54,4 +54,8 @@ public class ConsultTest {
         System.out.println(now);
     }
 
+    public @Test void test5() {
+        ;
+    }
+
 }

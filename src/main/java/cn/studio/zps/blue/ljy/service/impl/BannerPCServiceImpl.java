@@ -31,6 +31,11 @@ public class BannerPCServiceImpl implements BannerPCService {
     }
 
     @Override
+    public List<BannerPC> getBannerPCsByLocation(Integer location) {
+        return bannerPCDao.getBannerPCsByLocation(location);
+    }
+
+    @Override
     public BannerPC getBannerPC(int id) {
         return bannerPCDao.getBannerPCById(id);
     }

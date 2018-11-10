@@ -12,6 +12,8 @@ public interface BannerPCService {
 
     List<BannerPC> getBannerPC(boolean visible);
 
+    List<BannerPC> getBannerPCsByLocation(Integer location);
+
     BannerPC getBannerPC(int id);
 
     int getCount(boolean visible);

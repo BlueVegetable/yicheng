@@ -13,7 +13,7 @@
 
     <insert id="addArticle" parameterType="java.util.Map" >
         insert into article (title,content,lastModify,type,brief,adminID)
-        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{brief},#{adminID})
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{article.brief},#{adminID})
     </insert>
 
     <delete id="deleteArticle" parameterType="Integer">
@@ -37,7 +37,7 @@
     </select>
 
     <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
-        SELECT * FROM article WHERE TYPE = #{typeID} ORDER BY lastModify DESC LIMIT #{number}
+        SELECT * FROM article where type = #{typeID} ORDER BY topest DESC,lastModify DESC
     </select>
 
     <update id="updateArticle" parameterType="Article">

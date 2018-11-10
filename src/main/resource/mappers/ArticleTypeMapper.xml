@@ -20,6 +20,10 @@
         select * from article_type where module_id = #{moduleID}
     </select>
 
+    <select id="getAllArticleTypes" resultMap="ArticleTypeMap">
+        select * from article_type
+    </select>
+
     <select id="getArticleTypeByTypeID" resultType="String">
         select type from article_type where id = #{typeID}
     </select>
@@ -32,9 +36,9 @@
         update
         article_type
         set
-        name = #{name}
+        type = #{name}
         where
-        id = #{id}
+        id = #{typeID}
     </update>
     
 </mapper>
