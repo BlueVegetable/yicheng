@@ -2,6 +2,7 @@ package cn.studio.zps.blue.ljy.service;
 
 import cn.studio.zps.blue.ljy.domain.Address;
 
+import java.util.List;
 import java.util.Map;
 
 
@@ -14,4 +15,6 @@ public interface AddressService {
     Map getAllAddress(String name , Integer start , Integer limit);
 
     boolean updateAddress(Address address);
+
+    List<Address> getAddressUI();
 }

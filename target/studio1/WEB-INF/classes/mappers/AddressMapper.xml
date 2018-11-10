@@ -37,4 +37,8 @@
         update address set name=#{name}, address=#{address}, route=#{route} where id=#{id}
     </update>
 
+    <select id="getAddressUI" parameterType="java.util.Map" resultMap="AddressMap">
+        select * from address
+    </select>
+
 </mapper>

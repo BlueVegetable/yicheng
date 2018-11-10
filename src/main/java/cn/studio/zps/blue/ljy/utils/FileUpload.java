@@ -16,12 +16,14 @@ public class FileUpload {
 
     private final static int LENGTH=1024;
 //    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
+    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
     private final static String BANNER_PC_PATH = "/banner-pc-image/";
     private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
     private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";
+    private final static String TEACHER_IMAGE_PATH = "/teacher-image/";
 
     public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
@@ -93,6 +95,12 @@ public class FileUpload {
         return result;
     }
 
+    public static Map<String,Object> copyTeacherImg(MultipartFile file){
+        Map<String,Object> result = copyFile(file,PATH + TEACHER_IMAGE_PATH);
+        result.put("relativePath",TEACHER_IMAGE_PATH + result.get("file Name"));
+        return  result;
+    }
+
     public static void deleteFile(String deletePath, String filePath) {
         Path path = Paths.get(deletePath + filePath);
         if(Files.exists(path)) {
@@ -114,6 +122,10 @@ public class FileUpload {
 
     public static void deleteUeditorVideo(String ueditorVideoName) {
         deleteFile(PATH + UEDITOR_VIDEO_PATH,ueditorVideoName);
+    }
+
+    public static void deleteTeacherImg(String relativePath){
+        deleteFile(PATH,relativePath);
     }
 
 }

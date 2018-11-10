@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -34,5 +35,10 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public boolean updateAddress(Address address) {
         return addressDao.updateAddress(address)>0;
+    }
+
+    @Override
+    public List<Address> getAddressUI() {
+        return addressDao.getAddressUI();
     }
 }

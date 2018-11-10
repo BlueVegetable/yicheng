@@ -18,4 +18,6 @@ public interface AddressDao {
     int count(@Param("name") String name);
 
     int updateAddress(Address address);
+
+    List<Address> getAddressUI();
 }

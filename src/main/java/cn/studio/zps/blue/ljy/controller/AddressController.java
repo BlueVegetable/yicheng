@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -62,5 +63,14 @@ public class AddressController {
         }else{
             return Response.getResponseMap(1,"更新失败",null);
         }
+    }
+
+    /*
+    前端接口
+     */
+    @RequestMapping("getAllAddress")
+    @ResponseBody
+    public List getAddressUI(){
+       return addressService.getAddressUI();
     }
 }
