@@ -2,6 +2,7 @@ package cn.studio.zps.blue.ljy.service;
 
 import cn.studio.zps.blue.ljy.domain.Teacher;
 
+import java.util.List;
 import java.util.Map;
 
 public interface TeacherService {
@@ -13,4 +14,6 @@ public interface TeacherService {
     boolean deleteTeacher(int teacherID);
 
     boolean updateTeacher(Teacher teacher);
+
+    List<Teacher> getAllTeacher();
 }

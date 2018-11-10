@@ -38,4 +38,8 @@
         update teacher set path=#{path}, name=#{name}, identity=#{identity}, info=#{info} where id=#{id}
     </update>
 
+    <select id="getAllTeacher" parameterType="java.util.Map" resultMap="TeacherMap">
+        select * from teacher
+    </select>
+
 </mapper>

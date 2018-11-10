@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -34,5 +35,10 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public boolean updateTeacher(Teacher teacher) {
         return teacherDao.updateTeacher(teacher)>0;
+    }
+
+    @Override
+    public List<Teacher> getAllTeacher() {
+        return teacherDao.getAllTeacher();
     }
 }

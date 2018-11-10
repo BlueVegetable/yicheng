@@ -66,11 +66,13 @@ public class AddressController {
     }
 
     /*
-    前端接口
+    校区地址前端接口
      */
     @RequestMapping("getAllAddress")
     @ResponseBody
     public List getAddressUI(){
        return addressService.getAddressUI();
     }
+
+
 }

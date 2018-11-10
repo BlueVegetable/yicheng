@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -23,7 +24,7 @@ public class TeacherController {
 
     private static final String DIRECTORY = "/teacher-image";
 
-    @RequestMapping(value = "upload")
+    @RequestMapping("upload")
     @ResponseBody
     public Map uploadTeacherImg(MultipartFile file){
         Map<String,Object> value = FileUpload.copyTeacherImg(file);
@@ -82,12 +83,22 @@ public class TeacherController {
             return Response.getResponseMap(1,"删除失败",null);
         }
     }
-
+    @RequestMapping("updateTeacher")
+    @ResponseBody
     public Map updateTeacher(@RequestBody Teacher teacher){
         if(teacherService.updateTeacher(teacher)){
             return Response.getResponseMap(0,"更新成功",null);
         }else{
             return Response.getResponseMap(1,"更新失败",null);
         }
+    }
+
+    /*
+    教师前端接口
+     */
+    @RequestMapping("getAllTeacher")
+    @ResponseBody
+    public List<Teacher> getAllTeacher(){
+        return teacherService.getAllTeacher();
     }
 }

@@ -16,4 +16,6 @@ public interface TeacherDao {
     int deleteTeacher(@Param("teacherID") int teacherID);
 
     int updateTeacher(Teacher teacher);
+
+    List<Teacher> getAllTeacher();
 }
