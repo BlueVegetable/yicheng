@@ -16,9 +16,9 @@ public class FileUpload {
 
     private final static int LENGTH=10240;
 //    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
-    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
+//    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
     private final static String BANNER_PC_PATH = "/banner-pc-image/";
     private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
