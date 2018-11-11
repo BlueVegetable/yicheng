@@ -14,6 +14,8 @@ public interface BannerPCDao {
 
     List<BannerPC> getAllBannerPCs(@Param("visible") boolean visible);
 
+    List<BannerPC> getBannerPCsByLocation(Integer location);
+
     BannerPC getBannerPCById(int id);
 
     int getPositionById(int id);

@@ -47,10 +47,8 @@ public @RequestMapping("BannerPC") class BannerPCController {
     }
 
     @RequestMapping("/addBannerPCGraduate")
-    @ResponseBody
-    public Map<String, Object> addBannerPCGraduate(@RequestBody BannerPC bannerPC) {
+    public @ResponseBody Map<String, Object> addBannerPCGraduate(@RequestBody BannerPC bannerPC) {
         bannerPC.setVisible(true);
-        bannerPC.setLocation("Graduate");
         bannerPC.setPosition(bannerPCService.getMaxPosition()+1);
         if(bannerPCService.addBannerPC(bannerPC)){
             return Response.getResponseMap(0,"",null);
@@ -72,8 +70,7 @@ public @RequestMapping("BannerPC") class BannerPCController {
     }
 
     @RequestMapping("/getBannerPCs")
-    @ResponseBody
-    public Map getBannerPCs(@RequestParam(value="visible",required=false) String visible) throws IOException {
+    public @ResponseBody Map getBannerPCs(@RequestParam(value="visible",required=false) String visible) throws IOException {
         if(visible==null||!visible.equals("1")) visible="0";
         boolean visity=Integer.parseInt(visible)!=0;
         Map values=new HashMap<String,Object>(2);
@@ -82,9 +79,13 @@ public @RequestMapping("BannerPC") class BannerPCController {
         return values;
     }
 
-    @ResponseBody
+    @RequestMapping("getBannerPCsByLocation")
+    public @ResponseBody Map getBannerPCsByLocation(@RequestParam("location")Integer location) {
+        return Response.getResponseMap(0,"",bannerPCService.getBannerPCsByLocation(location));
+    }
+
     @RequestMapping("updateBannerPC")
-    public Map updateBannerPC(@RequestBody BannerPC bannerPC) {
+    public @ResponseBody Map updateBannerPC(@RequestBody BannerPC bannerPC) {
         if(bannerPCService.updateBannerPC(bannerPC))
             return Response.getResponseMap(0,"",null);
         else

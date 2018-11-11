@@ -22,6 +22,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public boolean addArticle(Article article,int adminID) {
+        Pattern pattern1 = Pattern.compile("<img\\s*((?<key>[^=]+)=\"*(?<value>[^\"]+)\")+?\\s*/?>");
+        Matcher matcher1 = pattern1.matcher(article.getContent());
+        article.setBrief(matcher1.replaceAll("[图片]").substring(0,50)+"······");
         return articleDao.addArticle(article,adminID)>0;
     }
 
@@ -74,6 +77,16 @@ public class ArticleServiceImpl implements ArticleService {
         result.put("data",articleDao.getAllArticles(start,limit));
         result.put("count",articleDao.getAllArticlesCount());
         return result;
+    }
+
+    @Override
+    public List<Article> getArticles(Integer typeID) {
+        return articleDao.getArticles(typeID);
+    }
+
+    @Override
+    public List<Article> getArticlesByModuleID(Integer moduleID) {
+        return articleDao.getArticlesByModuleID(moduleID);
     }
 
     @Override
