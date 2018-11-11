@@ -61,7 +61,6 @@ public class TeacherController {
     public Map getTeacher(@RequestParam(name = "limit",required = false) Integer limit ,
                           @RequestParam(name = "page" , required = false) Integer page,
                           @RequestParam(name = "name" , required = false) String name){
-
         if(limit==null||page==null) {
             page=null;
             limit=null;
@@ -71,6 +70,7 @@ public class TeacherController {
         Map map  = teacherService.getTeacher(name, page, limit);
         map.put("code",0);
         map.put("msg","");
+
         return map;
     }
 
