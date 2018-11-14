@@ -28,6 +28,11 @@ class ModuleServiceImpl implements ModuleService {
     }
 
     @Override
+    public Module getModuleByTypeID(int typeID) {
+        return moduleDao.getModuleByTypeID(typeID);
+    }
+
+    @Override
     public List<Module> getAllModules() {
         return moduleDao.getAllModules();
     }

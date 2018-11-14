@@ -54,7 +54,7 @@
     </select>
 
     <update id="updateArticle" parameterType="Article">
-        update article set title=#{title},content=#{content},lastModify=#{lastModify},type=#{type} where id=#{id}
+        update article set title=#{title},content=#{content},lastModify=#{lastModify} where id=#{id}
     </update>
     
 </mapper>

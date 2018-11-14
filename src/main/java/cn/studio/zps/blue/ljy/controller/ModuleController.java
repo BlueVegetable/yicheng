@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RequestMapping("module")
 public @Controller class ModuleController {
@@ -42,6 +39,10 @@ public @Controller class ModuleController {
             return Response.getResponseMap(0,"",module);
         }
     }
+    @RequestMapping("getModuleByTypeID")
+    public @ResponseBody Module getModuleByTypeID(@RequestParam("typeID") int typeID) {
+        return moduleService.getModuleByTypeID(typeID);
+    }
     @RequestMapping("getAllModules")
     public @ResponseBody List<Module> getAllModules() {
         return moduleService.getAllModules();
@@ -52,12 +53,12 @@ public @Controller class ModuleController {
         try {
             Map data = new HashMap();
             data.put("banner-pc",bannerPCService.getBannerPCsByLocation(moduleID));
-            Map<String,List<Article>> articles = new HashMap<>();
+            Map<String,List<Article>> articles = new LinkedHashMap<>();
             List<ArticleType> articleTypes = articleTypeService.getAllArticleTypesByModuleID(moduleID);
+            articles.put("全部",articleService.getArticlesByModuleID(moduleID));
             for (ArticleType articleType:articleTypes) {
                 articles.put(articleType.getType(),articleService.getArticles(articleType.getId()));
             }
-            articles.put("全部",articleService.getArticlesByModuleID(moduleID));
             data.put("articles",articles);
             result.put("data",data);
         } catch (Exception e) {

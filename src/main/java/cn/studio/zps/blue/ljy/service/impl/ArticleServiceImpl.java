@@ -22,9 +22,9 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public boolean addArticle(Article article,int adminID) {
-        Pattern pattern1 = Pattern.compile("<img\\s*((?<key>[^=]+)=\"*(?<value>[^\"]+)\")+?\\s*/?>");
-        Matcher matcher1 = pattern1.matcher(article.getContent());
-        article.setBrief(matcher1.replaceAll("[图片]").substring(0,50)+"······");
+//        Pattern pattern1 = Pattern.compile("<img\\s*((?<key>[^=]+)=\"*(?<value>[^\"]+)\")+?\\s*/?>");
+//        Matcher matcher1 = pattern1.matcher(article.getContent());
+//        article.setBrief(matcher1.replaceAll("[图片]").substring(0,50)+"······");
         return articleDao.addArticle(article,adminID)>0;
     }
 
