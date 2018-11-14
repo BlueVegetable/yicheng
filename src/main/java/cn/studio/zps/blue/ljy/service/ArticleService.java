@@ -21,6 +21,8 @@ public interface ArticleService {
 
     List<Article> getArticlesByModuleID(Integer moduleID);
 
+    List<Article> getAllArticlesByConsult(Integer moduleID);
+
     boolean updateArticle(Article article);
 
 }

@@ -48,18 +48,23 @@ public @Controller class ModuleController {
         return moduleService.getAllModules();
     }
     @RequestMapping("getModuleInfo")
-    public @ResponseBody Map getModuleInfo(int moduleID) {
+    public @ResponseBody Map getModuleInfo(@RequestParam("moduleID") int moduleID) {
         Map<String,Object> result = Response.getResponseMap(0,"",null);
         try {
             Map data = new HashMap();
             data.put("banner-pc",bannerPCService.getBannerPCsByLocation(moduleID));
             Map<String,List<Article>> articles = new LinkedHashMap<>();
             List<ArticleType> articleTypes = articleTypeService.getAllArticleTypesByModuleID(moduleID);
-            articles.put("全部",articleService.getArticlesByModuleID(moduleID));
+            List<Article> all = articleService.getArticlesByModuleID(moduleID);
+            articles.put("全部",all);
             for (ArticleType articleType:articleTypes) {
                 articles.put(articleType.getType(),articleService.getArticles(articleType.getId()));
             }
+            articles.remove("咨询");
             data.put("articles",articles);
+            List<Article> consult = articleService.getAllArticlesByConsult(moduleID);
+            data.put("consult", consult);
+            all.removeAll(consult);
             result.put("data",data);
         } catch (Exception e) {
             e.printStackTrace();

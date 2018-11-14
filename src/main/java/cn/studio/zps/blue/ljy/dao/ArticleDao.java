@@ -23,6 +23,8 @@ public interface ArticleDao {
 
     List<Article> getArticlesByModuleID(@Param("moduleID") Integer moduleID);
 
+    List<Article> getAllArticlesByConsult(Integer moduleID);
+
     int updateArticle(Article article);
 
 }

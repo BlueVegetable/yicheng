@@ -53,6 +53,14 @@
         ORDER BY topest DESC,lastModify DESC
     </select>
 
+    <select id="getAllArticlesByConsult" parameterType="Integer" resultMap="ArticleMap">
+        SELECT * FROM
+        article
+        WHERE TYPE IN
+        (SELECT id FROM article_type WHERE type = '咨询' and module_id = #{moduleID})
+        ORDER BY topest DESC,lastModify DESC
+    </select>
+
     <update id="updateArticle" parameterType="Article">
         update article set title=#{title},content=#{content},lastModify=#{lastModify} where id=#{id}
     </update>
