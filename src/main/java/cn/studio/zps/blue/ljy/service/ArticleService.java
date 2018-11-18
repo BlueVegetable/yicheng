@@ -19,6 +19,10 @@ public interface ArticleService {
 
     List<Article> getArticles(Integer typeID);
 
+    Integer getPreviousArticleTypeID(int id,int articleTypeID);
+
+    Integer getNextArticleTypeID(int id, int articleTypeID);
+
     List<Article> getArticlesByModuleID(Integer moduleID);
 
     List<Article> getAllArticlesByConsult(Integer moduleID);

@@ -44,4 +44,12 @@ public class Module {
     public int hashCode() {
         return Objects.hash(id, moduleName);
     }
+
+    @Override
+    public String toString() {
+        return "Module{" +
+                "id=" + id +
+                ", moduleName='" + moduleName + '\'' +
+                '}';
+    }
 }

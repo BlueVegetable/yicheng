@@ -8,11 +8,11 @@
         <result column="content" property="content" />
         <result column="lastModify" property="lastModify" />
         <result column="brief" property="brief" />
-        <result column="type" property="typeID" />
+        <result column="typeID" property="typeID" />
     </resultMap>
 
     <insert id="addArticle" parameterType="java.util.Map" >
-        insert into article (title,content,lastModify,type,brief,adminID)
+        insert into article (title,content,lastModify,typeID,brief,adminID)
         values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{article.brief},#{adminID})
     </insert>
 
@@ -29,7 +29,15 @@
     </select>
 
     <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
-        select id,title,type,lastModify from article limit #{start},#{number}
+        select id,title,typeID,lastModify from article ORDER BY topest DESC,lastModify DESC limit #{start},#{number}
+    </select>
+
+    <select id="getPreviousArticleTypeID" parameterType="Map" resultType="Integer">
+        SELECT id FROM article WHERE typeID = #{articleTypeID} AND id &lt; #{articleID} ORDER BY id desc LIMIT 1
+    </select>
+
+    <select id="getNextArticleTypeID" parameterType="Map" resultType="Integer">
+        SELECT id FROM article WHERE typeID = #{articleTypeID} AND id &gt; #{articleID} ORDER BY id asc LIMIT 1
     </select>
 
     <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
@@ -40,7 +48,7 @@
         SELECT * FROM article
         <if test="typeID!=null">
         where
-        type = #{typeID}
+        typeID = #{typeID}
         </if>
         ORDER BY topest DESC,lastModify DESC
     </select>
@@ -48,7 +56,7 @@
     <select id="getArticlesByModuleID" resultMap="ArticleMap" parameterType="Map">
         SELECT * FROM
         article
-        WHERE TYPE IN
+        WHERE typeID IN
         (SELECT id FROM article_type WHERE module_id = #{moduleID})
         ORDER BY topest DESC,lastModify DESC
     </select>
@@ -56,9 +64,10 @@
     <select id="getAllArticlesByConsult" parameterType="Integer" resultMap="ArticleMap">
         SELECT * FROM
         article
-        WHERE TYPE IN
-        (SELECT id FROM article_type WHERE type = '咨询' and module_id = #{moduleID})
+        WHERE typeID IN
+        (SELECT id FROM article_type WHERE type = '资讯' and module_id = #{moduleID})
         ORDER BY topest DESC,lastModify DESC
+        limit 10
     </select>
 
     <update id="updateArticle" parameterType="Article">

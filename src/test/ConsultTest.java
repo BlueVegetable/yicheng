@@ -1,5 +1,7 @@
+import cn.studio.zps.blue.ljy.dao.ArticleDao;
 import cn.studio.zps.blue.ljy.dao.ConsultDao;
 import cn.studio.zps.blue.ljy.service.ConsultService;
+import cn.studio.zps.blue.ljy.service.ModuleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +23,10 @@ public class ConsultTest {
 
     @Autowired
     private ConsultService consultService;
+    private @Autowired ModuleService moduleService;
+    private @Autowired ArticleDao articleDao;
 
-    @Test
-    public void test1() {
+    public @Test void test1() {
         List<Short> parameters = new ArrayList<>();
         parameters.add((short)0);
         parameters.add((short)1);
@@ -33,17 +36,12 @@ public class ConsultTest {
         parameters.add((short)5);
         System.out.println(consultService.countByState(parameters));
     }
-
-    @Test
-    public void test2() {
+    public @Test void test2() {
         System.out.println();
     }
-
-    @Test
-    public void test3() {
+    public @Test void test3() {
         System.out.println(consultDao.getLimitNumberClassfy(5));
     }
-
     public @Test void test4() {
         Pattern pattern = Pattern.compile("<img\\s*((?<key>[^=]+)=\"*(?<value>[^\"]+)\")+?\\s*/?>");
         String origin = "<img src=\"http://localhost:80/upload/ueditor/image/1535954859039-1244994524-2147483647.jpeg\" title=\"1535954859039-1244994524-2147483647.jpeg\" alt=\"1535954859039-1244994524-2147483647.jpeg\" width=\"621\" height=\"318\"/>" +
@@ -53,9 +51,13 @@ public class ConsultTest {
         now = matcher.replaceAll("[图片]");
         System.out.println(now);
     }
-
     public @Test void test5() {
-        ;
+        System.out.println(moduleService.getAllModules());
     }
-
+    public @Test void test6() {
+        System.out.println(articleDao.getPreviousArticleTypeID(5,1));
+    }
+    public @Test void test7() {
+        System.out.println(articleDao.getArticle(1));
+    }
 }

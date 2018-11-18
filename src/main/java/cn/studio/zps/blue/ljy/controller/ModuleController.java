@@ -8,6 +8,7 @@ import cn.studio.zps.blue.ljy.service.ArticleTypeService;
 import cn.studio.zps.blue.ljy.service.BannerPCService;
 import cn.studio.zps.blue.ljy.service.ModuleService;
 import cn.studio.zps.blue.ljy.utils.Response;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,7 +61,7 @@ public @Controller class ModuleController {
             for (ArticleType articleType:articleTypes) {
                 articles.put(articleType.getType(),articleService.getArticles(articleType.getId()));
             }
-            articles.remove("咨询");
+            articles.remove("资讯");
             data.put("articles",articles);
             List<Article> consult = articleService.getAllArticlesByConsult(moduleID);
             data.put("consult", consult);
@@ -70,6 +71,18 @@ public @Controller class ModuleController {
             e.printStackTrace();
             result = Response.getResponseMap(1,"服务器出错",null);
         }
+        return result;
+    }
+    @RequestMapping("getAllModulesSimpleInfo")
+    public @ResponseBody Map getAllModulesSimpleInfo() {
+        Map result = new HashMap();
+        List<Module> modules = moduleService.getAllModules();
+        result.put("modules",modules);
+        List<List<ArticleType>> articles = new ArrayList<>();
+        for (Module module:modules) {
+            articles.add(articleTypeService.getAllArticleTypesByModuleID(module.getId()));
+        }
+        result.put("articleType",articles);
         return result;
     }
 }

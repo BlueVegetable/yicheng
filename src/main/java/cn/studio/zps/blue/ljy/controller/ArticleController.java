@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -50,6 +51,30 @@ public class ArticleController {
     public Map<String,Object> getArticle(int articleID) {
         Article article = articleService.getArticle(articleID);
         return Response.getResponseMap(0,"",article);
+    }
+
+    public @RequestMapping("getArticleInfo") @ResponseBody Map getArticleInfo(int articleID) {
+        Map result = new HashMap();
+        Article article = articleService.getArticle(articleID);
+        result.put("article",article);
+        Integer previous = articleService.getPreviousArticleTypeID(articleID,article.getTypeID());
+        Integer next = articleService.getNextArticleTypeID(articleID,article.getTypeID());
+        String msg1,msg2;
+        if(previous == null) {
+            msg1 = "没有上一篇";
+        } else {
+            msg1 = "";
+        }
+        if(next == null) {
+            msg2 = "没有下一篇";
+        } else {
+            msg2 = "";
+        }
+        result.put("previousArticleID",previous);
+        result.put("nextArticleID",next);
+        result.put("msg1",msg1);
+        result.put("msg2",msg2);
+        return result;
     }
 
     @ResponseBody
