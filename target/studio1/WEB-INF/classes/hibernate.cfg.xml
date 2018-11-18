@@ -12,6 +12,10 @@
       <mapping class="cn.studio.zps.blue.ljy.domain.Article"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.ArticleType"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Module"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Course"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.CourseModule"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.CourseType"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Video"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
