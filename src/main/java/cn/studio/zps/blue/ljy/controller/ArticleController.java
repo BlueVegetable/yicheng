@@ -59,21 +59,21 @@ public class ArticleController {
         result.put("article",article);
         Integer previous = articleService.getPreviousArticleTypeID(articleID,article.getTypeID());
         Integer next = articleService.getNextArticleTypeID(articleID,article.getTypeID());
-        String msg1,msg2;
+        String previousTitle,nextTitle;
         if(previous == null) {
-            msg1 = "没有上一篇";
+            previousTitle = null;
         } else {
-            msg1 = "";
+            previousTitle = articleService.getArticle(previous).getTitle();
         }
         if(next == null) {
-            msg2 = "没有下一篇";
+            nextTitle = null;
         } else {
-            msg2 = "";
+            nextTitle = articleService.getArticle(next).getTitle();
         }
         result.put("previousArticleID",previous);
         result.put("nextArticleID",next);
-        result.put("msg1",msg1);
-        result.put("msg2",msg2);
+        result.put("previousTitle",previousTitle);
+        result.put("nextTitle",nextTitle);
         return result;
     }
 

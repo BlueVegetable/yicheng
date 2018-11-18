@@ -80,7 +80,14 @@ public @Controller class ModuleController {
         result.put("modules",modules);
         List<List<ArticleType>> articles = new ArrayList<>();
         for (Module module:modules) {
-            articles.add(articleTypeService.getAllArticleTypesByModuleID(module.getId()));
+            List<ArticleType> articleTypes = new ArrayList<>();
+            ArticleType articleType = new ArticleType();
+            articleType.setId(-100);
+            articleType.setType("全部");
+            articleType.setModuleID(-100);
+            articleTypes.add(articleType);
+            articleTypes.addAll(articleTypeService.getAllArticleTypesByModuleID(module.getId()));
+            articles.add(articleTypes);
         }
         result.put("articleType",articles);
         return result;
