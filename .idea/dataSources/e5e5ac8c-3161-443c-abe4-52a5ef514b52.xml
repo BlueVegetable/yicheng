@@ -925,39 +925,44 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="218" name="lastModify">
+    <column id="235" parent="218" name="brief">
       <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="236" parent="218" name="lastModify">
+      <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="236" parent="218" name="typeID">
-      <Position>5</Position>
+    <column id="237" parent="218" name="typeID">
+      <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="218" name="adminID">
-      <Position>6</Position>
+    <column id="238" parent="218" name="adminID">
+      <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="238" parent="218" name="type">
+    <index id="239" parent="218" name="type">
       <ColNames>typeID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="239" parent="218" name="adminID">
+    <index id="240" parent="218" name="adminID">
       <ColNames>adminID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="240" parent="218" name="PRIMARY">
+    <key id="241" parent="218" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="241" parent="218" name="article_ibfk_2">
+    <foreign-key id="242" parent="218" name="article_ibfk_2">
       <ColNames>typeID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>article_type</RefTableName>
@@ -965,7 +970,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="242" parent="218" name="article_ibfk_1">
+    <foreign-key id="243" parent="218" name="article_ibfk_1">
       <ColNames>adminID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>admin</RefTableName>
@@ -973,35 +978,35 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="243" parent="219" name="id">
+    <column id="244" parent="219" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="219" name="type">
+    <column id="245" parent="219" name="type">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="219" name="module_id">
+    <column id="246" parent="219" name="module_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="246" parent="219" name="module_id">
+    <index id="247" parent="219" name="module_id">
       <ColNames>module_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="247" parent="219" name="PRIMARY">
+    <key id="248" parent="219" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="248" parent="219" name="article_type_ibfk_1">
+    <foreign-key id="249" parent="219" name="article_type_ibfk_1">
       <ColNames>module_id</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>module</RefTableName>
@@ -1009,7 +1014,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="249" parent="220" name="id">
+    <column id="250" parent="220" name="id">
       <Position>1</Position>
       <Comment>轮播图id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1017,46 +1022,46 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="220" name="path">
+    <column id="251" parent="220" name="path">
       <Position>2</Position>
       <Comment>轮播图路径</Comment>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="220" name="visible">
+    <column id="252" parent="220" name="visible">
       <Position>3</Position>
       <Comment>轮播图是否为可视(0为不显示,1为显示)</Comment>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="220" name="position">
+    <column id="253" parent="220" name="position">
       <Position>4</Position>
       <Comment>轮播图的播放位置</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="220" name="type">
+    <column id="254" parent="220" name="type">
       <Position>5</Position>
       <Comment>轮播图的类型</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="220" name="url">
+    <column id="255" parent="220" name="url">
       <Position>6</Position>
       <Comment>轮播图跳转网址</Comment>
       <DataType>varchar(300)|0s</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="255" parent="220" name="PRIMARY">
+    <key id="256" parent="220" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="256" parent="221" name="id">
+    <column id="257" parent="221" name="id">
       <Position>1</Position>
       <Comment>PC端轮播图id</Comment>
       <DataType>int(10) unsigned|0s</DataType>
@@ -1064,206 +1069,206 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="221" name="path">
+    <column id="258" parent="221" name="path">
       <Position>2</Position>
       <Comment>l轮播图路径</Comment>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="221" name="visible">
+    <column id="259" parent="221" name="visible">
       <Position>3</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="221" name="position">
+    <column id="260" parent="221" name="position">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="221" name="type">
+    <column id="261" parent="221" name="type">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="221" name="url">
+    <column id="262" parent="221" name="url">
       <Position>6</Position>
       <DataType>varchar(300)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="221" name="location">
+    <column id="263" parent="221" name="location">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="263" parent="221" name="PRIMARY">
+    <key id="264" parent="221" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="264" parent="222" name="id">
+    <column id="265" parent="222" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="222" name="name">
+    <column id="266" parent="222" name="name">
       <Position>2</Position>
       <Comment>姓名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="222" name="phoneNumber">
+    <column id="267" parent="222" name="phoneNumber">
       <Position>3</Position>
       <Comment>手机号码</Comment>
       <DataType>varchar(24)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="222" name="state">
+    <column id="268" parent="222" name="state">
       <Position>4</Position>
       <Comment>状态:0为未确认，1为已确认</Comment>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="268" parent="222" name="createTime">
+    <column id="269" parent="222" name="createTime">
       <Position>5</Position>
       <Comment>创建时间</Comment>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="222" name="attribution">
+    <column id="270" parent="222" name="attribution">
       <Position>6</Position>
       <Comment>手机号码归属地</Comment>
       <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="270" parent="222" name="applyMethod">
+    <column id="271" parent="222" name="applyMethod">
       <Position>7</Position>
       <Comment>报名方式</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="222" name="origin">
+    <column id="272" parent="222" name="origin">
       <Position>8</Position>
       <Comment>来源</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="222" name="academy">
+    <column id="273" parent="222" name="academy">
       <Position>9</Position>
       <Comment>院校</Comment>
       <DataType>int(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="222" name="profession">
+    <column id="274" parent="222" name="profession">
       <Position>10</Position>
       <Comment>专业</Comment>
       <DataType>int(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="222" name="level">
+    <column id="275" parent="222" name="level">
       <Position>11</Position>
       <Comment>报考层次</Comment>
       <DataType>smallint(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="222" name="type">
+    <column id="276" parent="222" name="type">
       <Position>12</Position>
       <Comment>类别</Comment>
       <DataType>smallint(5)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="222" name="currentEducation">
+    <column id="277" parent="222" name="currentEducation">
       <Position>13</Position>
       <Comment>目前学历</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="222" name="age">
+    <column id="278" parent="222" name="age">
       <Position>14</Position>
       <Comment>年龄</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="222" name="securityTime">
+    <column id="279" parent="222" name="securityTime">
       <Position>15</Position>
       <Comment>社保年限</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="222" name="workTime">
+    <column id="280" parent="222" name="workTime">
       <Position>16</Position>
       <Comment>工作年限</Comment>
       <DataType>smallint(6)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="280" parent="222" name="PRIMARY">
+    <key id="281" parent="222" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="281" parent="223" name="id">
+    <column id="282" parent="223" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="282" parent="223" name="title">
+    <column id="283" parent="223" name="title">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="223" name="date">
+    <column id="284" parent="223" name="date">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="223" name="teacher">
+    <column id="285" parent="223" name="teacher">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="223" name="imgUrl">
+    <column id="286" parent="223" name="imgUrl">
       <Position>5</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="223" name="teacherPic1">
+    <column id="287" parent="223" name="teacherPic1">
       <Position>6</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="223" name="teacherPic2">
+    <column id="288" parent="223" name="teacherPic2">
       <Position>7</Position>
       <DataType>varchar(500)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="223" name="courseTypeID">
+    <column id="289" parent="223" name="courseTypeID">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="289" parent="223" name="courseTypeID">
+    <index id="290" parent="223" name="courseTypeID">
       <ColNames>courseTypeID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="290" parent="223" name="PRIMARY">
+    <key id="291" parent="223" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="291" parent="223" name="course_ibfk_1">
+    <foreign-key id="292" parent="223" name="course_ibfk_1">
       <ColNames>courseTypeID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>course_type</RefTableName>
@@ -1271,53 +1276,53 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="292" parent="224" name="id">
+    <column id="293" parent="224" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="224" name="courseModuleName">
+    <column id="294" parent="224" name="courseModuleName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="294" parent="224" name="PRIMARY">
+    <key id="295" parent="224" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="225" name="id">
+    <column id="296" parent="225" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="225" name="courseTypeName">
+    <column id="297" parent="225" name="courseTypeName">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="225" name="courseModuleID">
+    <column id="298" parent="225" name="courseModuleID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="298" parent="225" name="courseModuleID">
+    <index id="299" parent="225" name="courseModuleID">
       <ColNames>courseModuleID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="299" parent="225" name="PRIMARY">
+    <key id="300" parent="225" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="300" parent="225" name="course_type_ibfk_1">
+    <foreign-key id="301" parent="225" name="course_type_ibfk_1">
       <ColNames>courseModuleID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>course_module</RefTableName>
@@ -1325,59 +1330,59 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="301" parent="226" name="id">
+    <column id="302" parent="226" name="id">
       <Position>1</Position>
       <Comment>模块id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="226" name="moduleName">
+    <column id="303" parent="226" name="moduleName">
       <Position>2</Position>
       <Comment>模块名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="303" parent="226" name="PRIMARY">
+    <key id="304" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="227" name="id">
+    <column id="305" parent="227" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="227" name="name">
+    <column id="306" parent="227" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="227" name="url">
+    <column id="307" parent="227" name="url">
       <Position>3</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="227" name="courseID">
+    <column id="308" parent="227" name="courseID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="308" parent="227" name="courseID">
+    <index id="309" parent="227" name="courseID">
       <ColNames>courseID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="227" name="PRIMARY">
+    <key id="310" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="310" parent="227" name="video_ibfk_1">
+    <foreign-key id="311" parent="227" name="video_ibfk_1">
       <ColNames>courseID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>course</RefTableName>

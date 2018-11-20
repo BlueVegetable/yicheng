@@ -45,7 +45,7 @@
     </select>
 
     <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
-        SELECT * FROM article
+        SELECT id,title,brief,lastModify,typeID,adminID FROM article
         <if test="typeID!=null">
         where
         typeID = #{typeID}
@@ -54,7 +54,7 @@
     </select>
 
     <select id="getArticlesByModuleID" resultMap="ArticleMap" parameterType="Map">
-        SELECT * FROM
+        SELECT id,title,brief,lastModify,typeID,adminID FROM
         article
         WHERE typeID IN
         (SELECT id FROM article_type WHERE module_id = #{moduleID})
@@ -62,7 +62,7 @@
     </select>
 
     <select id="getAllArticlesByConsult" parameterType="Integer" resultMap="ArticleMap">
-        SELECT * FROM
+        SELECT id,title,brief,lastModify,typeID,adminID FROM
         article
         WHERE typeID IN
         (SELECT id FROM article_type WHERE type = '资讯' and module_id = #{moduleID})
