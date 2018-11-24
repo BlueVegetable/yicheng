@@ -18,8 +18,12 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:applicationContext.xml</param-value>
   </context-param>
+    <context-param>
+        <param-name/>
+        <param-value/>
+    </context-param>
 
-  <!-- 定义Spring监听器，加载Spring  -->
+    <!-- 定义Spring监听器，加载Spring  -->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>

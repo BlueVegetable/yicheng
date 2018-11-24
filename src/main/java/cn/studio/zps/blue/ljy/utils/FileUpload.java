@@ -11,16 +11,19 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class FileUpload {
 
     private final static int LENGTH=10240;
-//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private static final Random RANDOM = new Random();
+    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
 //    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
     private final static String BANNER_PC_PATH = "/banner-pc-image/";
+    private final static String HOME_PAGE_PICTURE_PATH = "/homePagePicture/";
     private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
     private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";
     private final static String TEACHER_IMAGE_PATH = "/teacher-image/";
@@ -28,15 +31,16 @@ public class FileUpload {
     public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
         String typeValue = type.substring(type.lastIndexOf('/')+1);
-        String fileName = System.currentTimeMillis()+"-"+file.hashCode()+"-"+(int)(100000000000000000L*Math.random())+"."+typeValue;
+        String fileName = System.currentTimeMillis()+""+file.hashCode()+""+RANDOM.nextLong() + "";
         String filePath = path+fileName;
         String code = "SUCCESS";
 
         InputStream is = null;
         OutputStream os = null;
         try {
-            if(!Files.exists(Paths.get(path)))
+            if(!Files.exists(Paths.get(path))) {
                 Files.createDirectories(Paths.get(path));
+            }
             is = file.getInputStream();
             os = new FileOutputStream(Paths.get(filePath).toFile());
             byte[] buffer = new byte[LENGTH];
@@ -79,7 +83,13 @@ public class FileUpload {
 
     public static Map<String,Object> copyBannerPC(MultipartFile file) {
         Map<String,Object> result = copyFile(file,PATH + BANNER_PC_PATH);
-        result.put("relativePath" , BANNER_PATH);
+        result.put("relativePath" , BANNER_PC_PATH + result.get("fileName"));
+        return result;
+    }
+
+    public static Map<String,Object> copyHomePagePicture(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + HOME_PAGE_PICTURE_PATH);
+        result.put("relativePath" , HOME_PAGE_PICTURE_PATH + result.get("fileName"));
         return result;
     }
 
@@ -113,6 +123,10 @@ public class FileUpload {
     }
 
     public static void deleteBanner(String relativePath) {
+        deleteFile(PATH,relativePath);
+    }
+
+    public static void deleteHomePagePicture(String relativePath) {
         deleteFile(PATH,relativePath);
     }
 
