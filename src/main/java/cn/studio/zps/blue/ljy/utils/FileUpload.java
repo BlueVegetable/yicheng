@@ -17,8 +17,8 @@ public class FileUpload {
 
     private final static int LENGTH=10240;
     private static final Random RANDOM = new Random();
-    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
 //    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
