@@ -14,11 +14,11 @@ import java.util.Map;
 public @Service class ModulePictureServiceImpl implements ModulePictureService {
     private @Autowired
     ModulePictureDao modulePictureDao;
-    private static final int MAX_NUMBER = 2;
+    private static final int MAX_NUMBER = 3;
     @Override
     public Map addModulePicture(ModulePicture modulePicture) {
         Map result = new HashMap();
-        long number = modulePictureDao.count();
+        long number = modulePictureDao.count(modulePicture.getModuleID());
         if (number >= MAX_NUMBER) {
             result.put("code",false);
             result.put("msg","广告图片超过了限度");

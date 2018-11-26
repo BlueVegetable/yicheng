@@ -7,7 +7,7 @@ import java.util.List;
 public interface ModulePictureDao {
     int addModulePicture(ModulePicture modulePicture);
     int deleteModulePicture(int id);
-    Long count();
+    Long count(int moduleID);
     ModulePicture getModulePictureByID(int id);
     List<ModulePicture> getAllModulePictures();
     int updateModulePicture(ModulePicture modulePicture);
