@@ -21,7 +21,7 @@ public @Service class ModulePictureServiceImpl implements ModulePictureService {
         long number = modulePictureDao.count(modulePicture.getModuleID());
         if (number >= MAX_NUMBER) {
             result.put("code",false);
-            result.put("msg","广告图片超过了限度");
+            result.put("msg","图片超过了限度");
             return result;
         }
         if(modulePictureDao.addModulePicture(modulePicture) > 0) {

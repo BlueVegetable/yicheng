@@ -28,6 +28,7 @@ public class FileUpload {
     private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";
     private final static String TEACHER_IMAGE_PATH = "/teacher-image/";
     private final static String MODULE_PICTURE_PATH = "/modulePicture/";
+    private final static String ARTICLE_TYPE_PICTURE_PATH = "/articleTypePicture/";
 
     public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
@@ -100,6 +101,12 @@ public class FileUpload {
         return result;
     }
 
+    public static Map<String,Object> copyArticleTypePicture(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + ARTICLE_TYPE_PICTURE_PATH);
+        result.put("relativePath" , ARTICLE_TYPE_PICTURE_PATH + result.get("fileName"));
+        return result;
+    }
+
     public static Map<String,Object> copyUeditorImage(MultipartFile file) {
         Map<String,Object> result = copyFile(file,PATH + UEDITOR_IMAGE_PATH);
         result.put("relativePath",UEDITOR_IMAGE_PATH + result.get("fileName"));
@@ -138,6 +145,10 @@ public class FileUpload {
     }
 
     public static void deleteModulePicture(String relativePath) {
+        deleteFile(PATH,relativePath);
+    }
+
+    public static void deleteArticleTypePicture(String relativePath) {
         deleteFile(PATH,relativePath);
     }
 
