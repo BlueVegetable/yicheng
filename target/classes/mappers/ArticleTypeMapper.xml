@@ -11,9 +11,9 @@
     <insert id="addArticleType" parameterType="ArticleType">
         insert into
         article_type
-        (type, module_id)
+        (type, module_id,url)
         values
-        (#{type},#{moduleID})
+        (#{type},#{moduleID},#{url})
     </insert>
 
     <select id="getAllArticleTypesByModuleID" resultMap="ArticleTypeMap">
@@ -37,6 +37,7 @@
         article_type
         set
         type = #{name}
+        ,url = #{url}
         where
         id = #{typeID}
     </update>

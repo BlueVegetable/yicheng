@@ -40,7 +40,7 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     }
 
     @Override
-    public boolean alterArticleTypeName(int id, String newName) {
-        return articleTypeDao.alterArticleTypeName(id,newName) > 0;
+    public boolean alterArticleTypeName(int id, String newName,String url) {
+        return articleTypeDao.alterArticleTypeName(id,newName,url) > 0;
     }
 }

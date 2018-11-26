@@ -4,10 +4,12 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "article_type", schema = "blue14", catalog = "")
 public class ArticleType {
     private int id;
     private String type;
     private Integer moduleID;
+    private String url;
 
     @Id
     @Column(name = "id")
@@ -57,5 +59,15 @@ public class ArticleType {
                 "id=" + id +
                 ", type='" + type + '\'' +
                 '}';
+    }
+
+    @Basic
+    @Column(name = "url")
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -3,9 +3,11 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.domain.ArticleType;
 import cn.studio.zps.blue.ljy.service.ArticleTypeService;
 import cn.studio.zps.blue.ljy.utils.Response;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.SQLException;
@@ -67,9 +69,9 @@ public class ArticleTypeController {
     }
 
     @RequestMapping("alterArticleTypeName")
-    public @ResponseBody Map alterArticleTypeName(int id,String name) {
+    public @ResponseBody Map alterArticleTypeName(@RequestParam("id") int id,@RequestParam("name") String name,@RequestParam("url") String url) {
         try {
-            if(articleTypeService.alterArticleTypeName(id,name)) {
+            if(articleTypeService.alterArticleTypeName(id,name,url)) {
                 return Response.getResponseMap(0, "", true);
             }
             else {

@@ -17,6 +17,7 @@ public interface ArticleTypeDao {
 
     int deleteArticleType(int typeID);
 
-    int alterArticleTypeName(@Param("typeID") int typeID,@Param("name") String name);
+    int alterArticleTypeName(@Param("typeID") int typeID,@Param("name") String name,
+                             @Param("url") String url);
 
 }

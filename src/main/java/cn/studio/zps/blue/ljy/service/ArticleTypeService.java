@@ -10,5 +10,5 @@ public interface ArticleTypeService {
     List<ArticleType> getAllArticleTypes();
     String getArticleTypeByTypeID(int typeID);
     boolean deleteArticleType(int typeID);
-    boolean alterArticleTypeName(int id,String newName);
+    boolean alterArticleTypeName(int id,String newName,String url);
 }
