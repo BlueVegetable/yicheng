@@ -7,17 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03e2d7b-7c58-4fae-85f8-21c1c847e406" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModulePictureController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModulePictureDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/ModulePicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ModulePictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ModulePictureServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resource/mappers/ModulePictureMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/e5e5ac8c-3161-443c-abe4-52a5ef514b52.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e5e5ac8c-3161-443c-abe4-52a5ef514b52.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleTypeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/ArticleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/ArticleType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resource/mappers/ArticleTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/mappers/ArticleTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resource/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -125,27 +124,27 @@
         <counts>
           <entry key="class" value="2" />
           <entry key="html" value="1930" />
-          <entry key="java" value="33883" />
+          <entry key="java" value="34038" />
           <entry key="json" value="48" />
           <entry key="jsp" value="23" />
           <entry key="properties" value="525" />
           <entry key="sql" value="91" />
           <entry key="txt" value="24" />
-          <entry key="xml" value="5295" />
+          <entry key="xml" value="5315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="2" />
           <entry key="HTML" value="1930" />
-          <entry key="JAVA" value="33883" />
+          <entry key="JAVA" value="34038" />
           <entry key="JSON" value="48" />
           <entry key="JSP" value="23" />
           <entry key="PLAIN_TEXT" value="24" />
           <entry key="Properties" value="525" />
           <entry key="SQL" value="65" />
           <entry key="Scratch" value="91" />
-          <entry key="XML" value="5230" />
+          <entry key="XML" value="5250" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -154,13 +153,13 @@
           <entry key="class" value="8" />
           <entry key="css" value="1" />
           <entry key="html" value="29" />
-          <entry key="java" value="625" />
+          <entry key="java" value="636" />
           <entry key="js" value="4" />
           <entry key="json" value="16" />
           <entry key="jsp" value="2" />
           <entry key="properties" value="63" />
           <entry key="sql" value="7" />
-          <entry key="xml" value="134" />
+          <entry key="xml" value="135" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -169,13 +168,13 @@
           <entry key="CSS" value="1" />
           <entry key="Database Element" value="2" />
           <entry key="HTML" value="29" />
-          <entry key="JAVA" value="625" />
+          <entry key="JAVA" value="636" />
           <entry key="JSON" value="16" />
           <entry key="JSP" value="2" />
           <entry key="JavaScript" value="4" />
           <entry key="Properties" value="63" />
           <entry key="Scratch" value="7" />
-          <entry key="XML" value="134" />
+          <entry key="XML" value="135" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -188,7 +187,45 @@
     <favorites_list name="studio1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModulePictureController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="method#addModulePicture#0;class#ModulePictureController#0" />
+                <element signature="method#deleteModulePicture#0;class#ModulePictureController#0" />
+                <element signature="method#getModulePictureByID#0;class#ModulePictureController#0" />
+                <element signature="method#getAllModulePictures#0;class#ModulePictureController#0" />
+                <element signature="method#getAllModulePicturesDeal#0;class#ModulePictureController#0" />
+                <element signature="method#updateModulePicture#0;class#ModulePictureController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="22" column="80" lean-forward="true" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+              <folding>
+                <element signature="method#copyBanner#0;class#FileUpload#0" />
+                <element signature="method#copyBannerPC#0;class#FileUpload#0" />
+                <element signature="method#copyHomePagePicture#0;class#FileUpload#0" />
+                <element signature="method#copyUeditorImage#0;class#FileUpload#0" />
+                <element signature="method#copyUeditorVideo#0;class#FileUpload#0" />
+                <element signature="method#copyTeacherImg#0;class#FileUpload#0" />
+                <element signature="method#deleteFile#0;class#FileUpload#0" />
+                <element signature="method#deleteUeditorImage#0;class#FileUpload#0" />
+                <element signature="method#deleteUeditorVideo#0;class#FileUpload#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -215,6 +252,9 @@
       <find>banner</find>
       <find>conf</find>
       <find>spring-mock</find>
+      <find>image</find>
+      <find>HomePagePicture</find>
+      <find>homePagePicture</find>
     </findStrings>
     <replaceStrings>
       <replace>Admin</replace>
@@ -224,6 +264,10 @@
       <replace>banner_pc</replace>
       <replace>BannerPC</replace>
       <replace>bannerPC</replace>
+      <replace>module_picture</replace>
+      <replace>path</replace>
+      <replace>ModulePicture</replace>
+      <replace>modulePicture</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -233,11 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ModuleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ModuleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/domain/Module.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/filters/AccessFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/ConsultTest.java" />
@@ -276,7 +315,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/HomePagePictureService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/HomePagePictureController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/HomePagePictureImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" />
         <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleTestController.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/ArticleTypeMapper.xml" />
@@ -284,6 +322,12 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ArticleTypeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ArticleTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ArticleTypeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModulePictureDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ModulePictureService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ModulePictureServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/mappers/ModulePictureMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModulePictureController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java" />
       </list>
     </option>
   </component>
@@ -328,7 +372,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1376" />
@@ -377,6 +421,39 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ljy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ljy" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ljy" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studio1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resource" type="462c0819:PsiDirectoryNode" />
+              <item name="mappers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -388,7 +465,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="e5e5ac8c-3161-443c-abe4-52a5ef514b52" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543236661936" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543239268150" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../studio1_view1" />
@@ -411,8 +488,8 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Application\IDEA\studio1\src\main\resource" />
       <recent name="D:\Application\IDEA\studio1\src\main\resource\mappers" />
+      <recent name="D:\Application\IDEA\studio1\src\main\resource" />
       <recent name="D:\Application\IDEA\studio1\src\main\webapp\conf" />
       <recent name="D:\Application\IDEA\studio1\src\main\webapp\后台管理系统" />
       <recent name="D:\Application\IDEA\studio1\src\main\webapp\后台管理系统\js" />
@@ -897,7 +974,7 @@
       <workItem from="1543156185515" duration="839000" />
       <workItem from="1543157161621" duration="312000" />
       <workItem from="1543221636970" duration="1508000" />
-      <workItem from="1543234031785" duration="2538000" />
+      <workItem from="1543234031785" duration="5064000" />
     </task>
     <servers />
   </component>
@@ -934,7 +1011,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="420529000" />
+    <option name="totallyTimeSpent" value="423055000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -947,8 +1024,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.53110045" weight="0.2621212" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.53110045" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.46889952" side_tool="true" weight="0.2621212" />
       <window_info id="Designer" order="3" />
@@ -960,7 +1038,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.38118023" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33173844" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.33173844" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924242" weight="0.32879046" />
@@ -1033,13 +1111,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/VideoDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resource/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/CourseMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/CourseDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/CourseTypeMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/CourseModuleMapper.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/CourseModuleDao.java" />
@@ -1137,38 +1208,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/HomePagePictureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/HomePagePictureMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="27" column="70" lean-forward="true" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/HomePagePictureDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/HomePagePictureImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="21" column="79" lean-forward="true" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -1183,13 +1226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/HomePagePictureController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -1239,6 +1275,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="43" column="39" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/HomePagePictureDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="12" column="63" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/ModulePictureDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/HomePagePictureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="67" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="12" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/ModulePictureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/HomePagePictureImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+          <folding>
+            <element signature="method#addHomePagePicture#0;class#HomePagePictureImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ModulePictureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="40" column="60" lean-forward="true" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/mappers/ModulePictureMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/HomePagePictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="67" selection-start-line="18" selection-start-column="4" selection-end-line="67" />
+          <folding>
+            <element signature="method#uploadHomePagePicture#0;class#HomePagePictureController#0" />
+            <element signature="method#addHomePagePicture#0;class#HomePagePictureController#0" />
+            <element signature="method#deleteHomePagePicture#0;class#HomePagePictureController#0" />
+            <element signature="method#getHomePagePictureByID#0;class#HomePagePictureController#0" />
+            <element signature="method#getAllHomePagePictures#0;class#HomePagePictureController#0" />
+            <element signature="method#getAllHomePagePicturesDeal#0;class#HomePagePictureController#0" />
+            <element signature="method#updateHomePagePicture#0;class#HomePagePictureController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModulePictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="method#addModulePicture#0;class#ModulePictureController#0" />
+            <element signature="method#deleteModulePicture#0;class#ModulePictureController#0" />
+            <element signature="method#getModulePictureByID#0;class#ModulePictureController#0" />
+            <element signature="method#getAllModulePictures#0;class#ModulePictureController#0" />
+            <element signature="method#getAllModulePicturesDeal#0;class#ModulePictureController#0" />
+            <element signature="method#updateModulePicture#0;class#ModulePictureController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/utils/FileUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="22" column="80" lean-forward="true" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+          <folding>
+            <element signature="method#copyBanner#0;class#FileUpload#0" />
+            <element signature="method#copyBannerPC#0;class#FileUpload#0" />
+            <element signature="method#copyHomePagePicture#0;class#FileUpload#0" />
+            <element signature="method#copyUeditorImage#0;class#FileUpload#0" />
+            <element signature="method#copyUeditorVideo#0;class#FileUpload#0" />
+            <element signature="method#copyTeacherImg#0;class#FileUpload#0" />
+            <element signature="method#deleteFile#0;class#FileUpload#0" />
+            <element signature="method#deleteUeditorImage#0;class#FileUpload#0" />
+            <element signature="method#deleteUeditorVideo#0;class#FileUpload#0" />
+          </folding>
         </state>
       </provider>
     </entry>

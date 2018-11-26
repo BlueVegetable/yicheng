@@ -17,8 +17,8 @@ public class FileUpload {
 
     private final static int LENGTH=10240;
     private static final Random RANDOM = new Random();
-//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
 //    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
@@ -27,6 +27,7 @@ public class FileUpload {
     private final static String UEDITOR_IMAGE_PATH = "/ueditor/image/";
     private final static String UEDITOR_VIDEO_PATH = "/ueditor/video/";
     private final static String TEACHER_IMAGE_PATH = "/teacher-image/";
+    private final static String MODULE_PICTURE_PATH = "/modulePicture/";
 
     public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
@@ -93,6 +94,12 @@ public class FileUpload {
         return result;
     }
 
+    public static Map<String,Object> copyModulePicture(MultipartFile file) {
+        Map<String,Object> result = copyFile(file,PATH + MODULE_PICTURE_PATH);
+        result.put("relativePath" , MODULE_PICTURE_PATH + result.get("fileName"));
+        return result;
+    }
+
     public static Map<String,Object> copyUeditorImage(MultipartFile file) {
         Map<String,Object> result = copyFile(file,PATH + UEDITOR_IMAGE_PATH);
         result.put("relativePath",UEDITOR_IMAGE_PATH + result.get("fileName"));
@@ -127,6 +134,10 @@ public class FileUpload {
     }
 
     public static void deleteHomePagePicture(String relativePath) {
+        deleteFile(PATH,relativePath);
+    }
+
+    public static void deleteModulePicture(String relativePath) {
         deleteFile(PATH,relativePath);
     }
 

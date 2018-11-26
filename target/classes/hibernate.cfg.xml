@@ -17,6 +17,7 @@
       <mapping class="cn.studio.zps.blue.ljy.domain.CourseType"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Video"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.HomePagePicture"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ModulePicture"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
