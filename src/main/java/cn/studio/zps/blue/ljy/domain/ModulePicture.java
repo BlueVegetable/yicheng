@@ -9,6 +9,7 @@ public class ModulePicture {
     private int id;
     private String path;
     private String url;
+    private int moduleID;
 
     @Id
     @Column(name = "id")
@@ -38,6 +39,14 @@ public class ModulePicture {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public int getModuleID() {
+        return moduleID;
+    }
+
+    public void setModuleID(int moduleID) {
+        this.moduleID = moduleID;
     }
 
     @Override
