@@ -23,6 +23,9 @@
     <select id="getModulePictureByID" resultType="ModulePicture" parameterType="Integer">
         select * from module_picture where id = #{id}
     </select>
+    <select id="getModulePicturesByModuleID" resultMap="ModulePictureMap" parameterType="Integer">
+        select * from module_picture where moduleID = #{moduleID}
+    </select>
     <select id="getAllModulePictures" resultMap="ModulePictureMap">
         select * from module_picture
     </select>

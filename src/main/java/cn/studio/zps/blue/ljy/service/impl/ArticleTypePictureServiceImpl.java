@@ -14,7 +14,7 @@ import java.util.Map;
 public @Service class ArticleTypePictureServiceImpl implements ArticleTypePictureService {
     private @Autowired
     ArticleTypePictureDao articleTypePictureDao;
-    private static final int MAX_NUMBER = 2;
+    private static final int MAX_NUMBER = 1;
     @Override
     public Map addArticleTypePicture(ArticleTypePicture articleTypePicture) {
         Map result = new HashMap();
@@ -44,6 +44,11 @@ public @Service class ArticleTypePictureServiceImpl implements ArticleTypePictur
     @Override
     public ArticleTypePicture getArticleTypePictureByID(int articleTypePictureID) {
         return articleTypePictureDao.getArticleTypePictureByID(articleTypePictureID);
+    }
+
+    @Override
+    public List<ArticleTypePicture> getArticleTypePicturesByArticleTypeID(int articleTypeID) {
+        return articleTypePictureDao.getArticleTypePicturesByArticleTypeID(articleTypeID);
     }
 
     @Override

@@ -42,8 +42,8 @@ public @Controller @RequestMapping("articleTypePicture") class ArticleTypePictur
     public @ResponseBody @RequestMapping("getArticleTypePictureByID") ArticleTypePicture getArticleTypePictureByID(int articleTypePictureID) {
         return articleTypePictureService.getArticleTypePictureByID(articleTypePictureID);
     }
-    public @ResponseBody @RequestMapping("getAllArticleTypePictures") List<ArticleTypePicture> getAllArticleTypePictures() {
-        return articleTypePictureService.getAllArticleTypePictures();
+    public @ResponseBody @RequestMapping("getArticleTypePicturesByArticleTypeID") List<ArticleTypePicture> getArticleTypePicturesByArticleTypeID(int articleTypeID) {
+        return articleTypePictureService.getArticleTypePicturesByArticleTypeID(articleTypeID);
     }
     public @ResponseBody @RequestMapping("getAllArticleTypePicturesDeal") Map getAllArticleTypePicturesDeal() {
         Map result = new HashMap();

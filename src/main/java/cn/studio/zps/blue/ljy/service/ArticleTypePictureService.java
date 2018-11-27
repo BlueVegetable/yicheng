@@ -9,6 +9,7 @@ public interface ArticleTypePictureService {
     Map addArticleTypePicture(ArticleTypePicture articleTypePicture);
     boolean deleteArticleTypePicture(int id);
     ArticleTypePicture getArticleTypePictureByID(int articleTypePictureID);
+    List<ArticleTypePicture> getArticleTypePicturesByArticleTypeID(int articleTypeID);
     List<ArticleTypePicture> getAllArticleTypePictures();
     boolean updateArticleTypePicture(ArticleTypePicture articleTypePicture);
 }

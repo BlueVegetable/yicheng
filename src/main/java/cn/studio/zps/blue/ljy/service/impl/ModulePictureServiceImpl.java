@@ -47,6 +47,11 @@ public @Service class ModulePictureServiceImpl implements ModulePictureService {
     }
 
     @Override
+    public List<ModulePicture> getModulePicturesByModuleID(int moduleID) {
+        return modulePictureDao.getModulePicturesByModuleID(moduleID);
+    }
+
+    @Override
     public List<ModulePicture> getAllModulePictures() {
         return modulePictureDao.getAllModulePictures();
     }

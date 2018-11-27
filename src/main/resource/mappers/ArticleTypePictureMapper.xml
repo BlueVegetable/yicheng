@@ -24,6 +24,9 @@
     <select id="getArticleTypePictureByID" resultType="ArticleTypePicture" parameterType="Integer">
         select * from article_type_picture where id = #{id}
     </select>
+    <select id="getArticleTypePicturesByArticleTypeID" parameterType="int" resultMap="ArticleTypePictureMap">
+        select * from article_type_picture where articleTypeID = #{articleTypeID}
+    </select>
     <select id="getAllArticleTypePictures" resultMap="ArticleTypePictureMap">
         select * from article_type_picture
     </select>

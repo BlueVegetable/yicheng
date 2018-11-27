@@ -9,6 +9,7 @@ public interface ModulePictureDao {
     int deleteModulePicture(int id);
     Long count(int moduleID);
     ModulePicture getModulePictureByID(int id);
+    List<ModulePicture> getModulePicturesByModuleID(int moduleID);
     List<ModulePicture> getAllModulePictures();
     int updateModulePicture(ModulePicture modulePicture);
 }
