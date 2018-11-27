@@ -17,7 +17,10 @@ public class FileUpload {
 
     private final static int LENGTH=10240;
     private static final Random RANDOM = new Random();
-    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+    //本地主服务器的路径
+//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+    //阿里云服务器路径
+    private final static String PATH = "C:/servers/apache-tomcat3/upload";
 //    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
 //    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";

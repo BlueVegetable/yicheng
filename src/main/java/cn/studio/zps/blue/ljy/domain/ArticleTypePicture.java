@@ -10,6 +10,7 @@ public class ArticleTypePicture {
     private String path;
     private String url;
     private int articleTypeID;
+    private String smallPath;
 
     @Id
     @Column(name = "id")
@@ -62,5 +63,15 @@ public class ArticleTypePicture {
     @Override
     public int hashCode() {
         return Objects.hash(id, path, url);
+    }
+
+    @Basic
+    @Column(name = "smallPath")
+    public String getSmallPath() {
+        return smallPath;
+    }
+
+    public void setSmallPath(String smallPath) {
+        this.smallPath = smallPath;
     }
 }

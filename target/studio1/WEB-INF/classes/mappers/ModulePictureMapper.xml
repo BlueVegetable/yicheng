@@ -18,7 +18,7 @@
         delete from module_picture where id = #{id}
     </delete>
     <select id="count" resultType="Long">
-        select count(id) from module_picture
+        select count(id) from module_picture where moduleID = #{moduleID}
     </select>
     <select id="getModulePictureByID" resultType="ModulePicture" parameterType="Integer">
         select * from module_picture where id = #{id}

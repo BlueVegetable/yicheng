@@ -4,15 +4,16 @@
     <resultMap id="ArticleTypePictureMap" type="ArticleTypePicture">
         <id column="id" property="id" />
         <result column="path" property="path" />
+        <result column="smallPath" property="smallPath" />
         <result column="url" property="url" />
         <result column="articleTypeID" property="articleTypeID" />
     </resultMap>
     <insert id="addArticleTypePicture" parameterType="ArticleTypePicture">
         insert into
         article_type_picture
-        (path, url, articleTypeID)
+        (path, smallPath, url, articleTypeID)
         VALUE
-        (#{path},#{url},#{articleTypeID})
+        (#{path},#{smallPath},#{url},#{articleTypeID})
     </insert>
     <delete id="deleteArticleTypePicture" parameterType="int">
         delete from article_type_picture where id = #{id}
@@ -29,7 +30,7 @@
     <update id="updateArticleTypePicture" parameterType="ArticleTypePicture">
         update article_type_picture
         set
-        path=#{path},url=#{url},articleTypeID=#{articleTypeID}
+        path=#{path},smallPath=#{smallPath},url=#{url},articleTypeID=#{articleTypeID}
         where id = #{id}
     </update>
 </mapper>
