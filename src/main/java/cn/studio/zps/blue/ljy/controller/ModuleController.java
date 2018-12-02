@@ -84,6 +84,15 @@ public @Controller class ModuleController {
             articleType.setModuleID(-100);
             articleTypes.add(articleType);
             articleTypes.addAll(articleTypeService.getAllArticleTypesByModuleID(module.getId()));
+            //此段代码是为了删除资讯的文章类型
+            int ziXunLocation = -1;
+            for (int i=0;i<articleTypes.size();i++) {
+                if(articleTypes.get(i).getType().equals("资讯")) {
+                    ziXunLocation = i;
+                }
+            }
+            if (ziXunLocation!=-1)
+                articleTypes.remove(ziXunLocation);
             articles.add(articleTypes);
         }
         result.put("articleType",articles);
