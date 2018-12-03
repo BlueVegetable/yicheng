@@ -35,6 +35,10 @@ public interface ConsultDao {
 
     List<Consult> getConsultLimited(Map<String,Object> parameters);
 
+    List<Map<String,Object>> statistic();
+
+    Long statisticMonth(@Param("start") String start,@Param("finish") String finish);
+
     List<Map<String,Object>> getAllAttribution();
 
     int getLimitedCount(Map<String,Object> parameters);

@@ -6,10 +6,7 @@ import cn.studio.zps.blue.ljy.service.ConsultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ConsultServiceImpl implements ConsultService {
@@ -57,6 +54,25 @@ public class ConsultServiceImpl implements ConsultService {
     @Override
     public List<Consult> selectConsults(Map map) {
         return consultDao.getConsultLimited(map);
+    }
+
+    @Override
+    public List<Map<String, Object>> statistic() {
+        return consultDao.statistic();
+    }
+
+    @Override
+    public List<Map<String, Object>> statisticMonth(int year) {
+        List<Map<String,Object>> result = new ArrayList<>();
+        for (int month = 1;month <= 12;month++) {
+            Map<String,Object> datas = new HashMap<>();
+            datas.put("name",month+"月");
+            String start = year+"-"+month+"-"+"01";
+            String finish = year + "-" + (month+1) + "-01";
+            datas.put("value",consultDao.statisticMonth(start,finish));
+            result.add(datas);
+        }
+        return result;
     }
 
     @Override

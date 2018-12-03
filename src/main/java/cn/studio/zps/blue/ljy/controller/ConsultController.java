@@ -163,6 +163,47 @@ public class ConsultController {
         return addConsultSmiple(consult);
     }
 
+    @ResponseBody
+    @RequestMapping("statistic")
+    public List<Map<String,Object>> statistic() {
+        List<Map<String,Object>> result = new ArrayList<>();
+        List<Map<String,Object>> datas = consultService.statistic();
+        for (Map<String,Object> data:datas) {
+            Map<String,Object> anotherData = new HashMap<>();
+            switch ((Integer)data.get("applyMethod")) {
+                case 1:anotherData.put("name","简单报名");break;
+                case 2:anotherData.put("name","大学报名");break;
+                case 3:anotherData.put("name","入户报名");break;
+                case 4:anotherData.put("name","工作报名");break;
+                case 5:anotherData.put("name","住房报名");break;
+                case 6:anotherData.put("name","登录报名");break;
+                case 7:anotherData.put("name","注册报名");break;
+                case 8:anotherData.put("name","vip报名");break;
+                case 9:anotherData.put("name","大学报名");break;
+                default:anotherData.put("name","其他报名");break;
+            }
+            anotherData.put("value",data.get("number"));
+            result.add(anotherData);
+        }
+        return result;
+    }
+
+    @ResponseBody
+    @RequestMapping("statisticMonth")
+    public Map<String,Object> statisticMonth(@RequestParam("year") int year) {
+        List<Map<String,Object>> datas = consultService.statisticMonth(year);
+        Map<String,Object> result = new HashMap<>();
+        List<String> x = new ArrayList<>();
+        List<Long> y = new ArrayList<>();
+        for (Map<String,Object> data:datas) {
+            x.add((String) data.get("name"));
+            y.add((Long) data.get("value"));
+        }
+        result.put("x",x);
+        result.put("y",y);
+        return result;
+    }
+
     @RequestMapping(value = "addConsultTest",method = RequestMethod.POST)
     public @ResponseBody Map addConsultTest(@RequestBody Consult consult) {
         consult.setApplyMethod(SIMPLE_CONSULT);

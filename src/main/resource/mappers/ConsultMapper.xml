@@ -93,6 +93,14 @@
         WHERE rank &lt;=#{rank}
     </select>
 
+    <select id="statistic" resultType="java.util.Map">
+        SELECT applyMethod, COUNT(id) number FROM consult GROUP BY applyMethod
+    </select>
+
+    <select id="statisticMonth" resultType="Long" parameterType="Map">
+        SELECT COUNT(id) number FROM consult WHERE createTime &gt;= #{start} AND createTime &lt; #{finish}
+    </select>
+
     <select id="getAllAttribution" resultType="java.util.LinkedHashMap" >
         SELECT attribution, COUNT(id) number FROM consult GROUP BY attribution ORDER BY number DESC
     </select>

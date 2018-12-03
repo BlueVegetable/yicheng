@@ -27,6 +27,7 @@ public class ExceptionResolver implements HandlerExceptionResolver {
         //避免乱码
         response.setCharacterEncoding("UTF-8");
         response.setHeader("Cache-Control", "no-cache, must-revalidate");
+        ex.printStackTrace();
         if (ex instanceof SQLException) {
             msg = "数据库访问出错";
         } else {

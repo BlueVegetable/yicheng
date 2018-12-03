@@ -25,6 +25,10 @@ public interface ConsultService {
 
     int limitConsultCount(Integer consultId,String name,String remark,String phoneNumber,Short applyMethod);
 
+    List<Map<String,Object>> statistic();
+
+    List<Map<String,Object>> statisticMonth(int year);
+
     List<Map<String,Object>> getLimitNumberClassfy(int rank);
 
     boolean updateConsult(Consult consult);
