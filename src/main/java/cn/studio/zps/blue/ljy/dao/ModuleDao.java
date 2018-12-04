@@ -10,4 +10,5 @@ public interface ModuleDao {
     Module getModuleByID(int moduleID);
     Module getModuleByTypeID(int typeID);
     List<Module> getAllModules();
+    int updateModule(Module module);
 }

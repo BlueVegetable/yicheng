@@ -36,4 +36,9 @@ class ModuleServiceImpl implements ModuleService {
     public List<Module> getAllModules() {
         return moduleDao.getAllModules();
     }
+
+    @Override
+    public boolean updateModule(Module module) {
+        return moduleDao.updateModule(module) > 0;
+    }
 }

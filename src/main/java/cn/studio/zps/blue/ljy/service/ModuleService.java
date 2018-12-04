@@ -10,4 +10,5 @@ public interface ModuleService {
     Module getModuleByID(int moduleID);
     Module getModuleByTypeID(int typeID);
     List<Module> getAllModules();
+    boolean updateModule(Module module);
 }

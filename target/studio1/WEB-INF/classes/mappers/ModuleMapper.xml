@@ -24,4 +24,9 @@
     <select id="getAllModules" resultMap="ModuleMap">
         select * from module
     </select>
+    <update id="updateModule" parameterType="Module">
+        update module
+        set moduleName = #{moduleName},bannerPCState = #{bannerPcState}
+        where id = #{id}
+    </update>
 </mapper>

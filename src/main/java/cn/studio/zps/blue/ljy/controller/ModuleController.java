@@ -98,4 +98,16 @@ public @Controller class ModuleController {
         result.put("articleType",articles);
         return result;
     }
+    @RequestMapping("getAllModulesDeal")
+    public @ResponseBody Map getAllModulesDeal() {
+        Map result = new HashMap();
+        result.put("code",0);
+        result.put("msg","");
+        result.put("data",moduleService.getAllModules());
+        return result;
+    }
+    @RequestMapping("updateModule")
+    public @ResponseBody boolean updateModule(Module module) {
+        return moduleService.updateModule(module);
+    }
 }
