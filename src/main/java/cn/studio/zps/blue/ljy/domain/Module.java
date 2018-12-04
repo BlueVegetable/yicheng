@@ -10,6 +10,7 @@ import java.util.Objects;
 public class Module {
     private int id;
     private String moduleName;
+    private String bannerPcState;
 
     @Id
     @Column(name = "id")
@@ -51,5 +52,15 @@ public class Module {
                 "id=" + id +
                 ", moduleName='" + moduleName + '\'' +
                 '}';
+    }
+
+    @Basic
+    @Column(name = "bannerPCState")
+    public String getBannerPcState() {
+        return bannerPcState;
+    }
+
+    public void setBannerPcState(String bannerPcState) {
+        this.bannerPcState = bannerPcState;
     }
 }

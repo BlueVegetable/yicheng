@@ -50,8 +50,8 @@ public @Controller class ModuleController {
     }
     @RequestMapping("getModuleInfo")
     public @ResponseBody Map getModuleInfo(@RequestParam("moduleID") int moduleID) {
-        long time = System.currentTimeMillis();
         Map<String,Object> result = Response.getResponseMap(0,"",null);
+        Module module = moduleService.getModuleByID(moduleID);
         Map data = new HashMap();
         data.put("banner-pc",bannerPCService.getBannerPCsByLocation(moduleID));
         Map<String,List<Article>> articles = new LinkedHashMap<>();
@@ -65,9 +65,9 @@ public @Controller class ModuleController {
         data.put("articles",articles);
         List<Article> consult = articleService.getAllArticlesByConsult(moduleID);
         data.put("consult", consult);
+        data.put("bannerPCState",module.getBannerPcState());
         all.removeAll(consult);
         result.put("data",data);
-        System.out.println((System.currentTimeMillis()-time) + "毫秒");
         return result;
     }
     @RequestMapping("getAllModulesSimpleInfo")
