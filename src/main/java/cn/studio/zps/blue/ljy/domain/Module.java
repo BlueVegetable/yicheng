@@ -11,6 +11,7 @@ public class Module {
     private int id;
     private String moduleName;
     private String bannerPcState;
+    private String bannerPcName;
 
     @Id
     @Column(name = "id")
@@ -62,5 +63,15 @@ public class Module {
 
     public void setBannerPcState(String bannerPcState) {
         this.bannerPcState = bannerPcState;
+    }
+
+    @Basic
+    @Column(name = "bannerPCName")
+    public String getBannerPcName() {
+        return bannerPcName;
+    }
+
+    public void setBannerPcName(String bannerPcName) {
+        this.bannerPcName = bannerPcName;
     }
 }

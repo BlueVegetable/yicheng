@@ -9,8 +9,9 @@
     <insert id="addModule" parameterType="Module">
         insert into
         module
-        (id, moduleName) VALUES
-        (#{id},#{moduleName})
+        (id, moduleName, bannerPCName, bannerPCState)
+        VALUES
+        (#{id},#{moduleName},#{bannerPcName},#{bannerPcState})
     </insert>
     <delete id="deleteModule" parameterType="int">
         delete from module where id = #{id}
@@ -26,7 +27,7 @@
     </select>
     <update id="updateModule" parameterType="Module">
         update module
-        set moduleName = #{moduleName},bannerPCState = #{bannerPcState}
+        set moduleName = #{moduleName}, bannerPCName = #{bannerPcName},bannerPCState = #{bannerPcState}
         where id = #{id}
     </update>
 </mapper>
