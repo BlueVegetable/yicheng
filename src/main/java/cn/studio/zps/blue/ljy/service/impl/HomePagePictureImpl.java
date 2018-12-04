@@ -14,12 +14,14 @@ import java.util.Map;
 @Service
 public class HomePagePictureImpl implements HomePagePictureService {
     private @Autowired HomePagePictureDao homePagePictureDao;
-    private static final int MAX_NUMBER = 2;
+    private static final int TOPEST_MAX_NUMBER = 1;
+    private static final int UN_TOPEST_MAX_NUMBER = 2;
     @Override
     public Map addHomePagePicture(HomePagePicture homePagePicture) {
         Map result = new HashMap();
-        long number = homePagePictureDao.count();
-        if (number >= MAX_NUMBER) {
+        long number = homePagePictureDao.count(homePagePicture.getTopest());
+        long numberLimit = homePagePicture.getTopest()?TOPEST_MAX_NUMBER:UN_TOPEST_MAX_NUMBER;
+        if (number >= numberLimit) {
             result.put("code",false);
             result.put("msg","广告图片超过了限度");
             return result;

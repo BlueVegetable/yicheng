@@ -9,6 +9,7 @@ public class HomePagePicture {
     private int id;
     private String image;
     private String url;
+    private Boolean topest;
 
     @Id
     @Column(name = "id")
@@ -53,5 +54,15 @@ public class HomePagePicture {
     @Override
     public int hashCode() {
         return Objects.hash(id, image, url);
+    }
+
+    @Basic
+    @Column(name = "topest")
+    public Boolean getTopest() {
+        return topest;
+    }
+
+    public void setTopest(Boolean topest) {
+        this.topest = topest;
     }
 }

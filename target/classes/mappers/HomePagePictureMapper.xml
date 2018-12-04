@@ -9,15 +9,15 @@
     <insert id="addHomePagePicture" parameterType="HomePagePicture">
         insert into
         home_page_picture
-        (image, url)
+        (image, url, topest)
         VALUE
-        (#{image},#{url})
+        (#{image},#{url},#{topest})
     </insert>
     <delete id="deleteHomePagePicture" parameterType="int">
         delete from home_page_picture where id = #{id}
     </delete>
     <select id="count" resultType="Long">
-        select count(id) from home_page_picture
+        select count(id) from home_page_picture where topest = #{topest}
     </select>
     <select id="getHomePagePictureByID" resultType="HomePagePicture" parameterType="Integer">
         select * from home_page_picture where id = #{id}

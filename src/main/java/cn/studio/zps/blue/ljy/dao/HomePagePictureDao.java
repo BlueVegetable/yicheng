@@ -7,7 +7,7 @@ import java.util.List;
 public interface HomePagePictureDao {
     int addHomePagePicture(HomePagePicture homePagePicture);
     int deleteHomePagePicture(int id);
-    Long count();
+    Long count(boolean topest);
     HomePagePicture getHomePagePictureByID(int id);
     List<HomePagePicture> getAllHomePagePictures();
     int updateHomePagePicture(HomePagePicture homePagePicture);

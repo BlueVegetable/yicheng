@@ -1432,74 +1432,79 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="230" name="url">
+    <column id="322" parent="230" name="topest">
       <Position>3</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="323" parent="230" name="url">
+      <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="323" parent="230" name="PRIMARY">
+    <key id="324" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="324" parent="231" name="id">
+    <column id="325" parent="231" name="id">
       <Position>1</Position>
       <Comment>模块id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="231" name="moduleName">
+    <column id="326" parent="231" name="moduleName">
       <Position>2</Position>
       <Comment>模块名</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="231" name="bannerPCState">
+    <column id="327" parent="231" name="bannerPCState">
       <Position>3</Position>
       <Comment>PC端轮播图说明</Comment>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="327" parent="231" name="PRIMARY">
+    <key id="328" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="328" parent="232" name="id">
+    <column id="329" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="232" name="path">
+    <column id="330" parent="232" name="path">
       <Position>2</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="232" name="url">
+    <column id="331" parent="232" name="url">
       <Position>3</Position>
       <DataType>varchar(300)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="232" name="moduleID">
+    <column id="332" parent="232" name="moduleID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="332" parent="232" name="module_picture_ibfk_1">
+    <index id="333" parent="232" name="module_picture_ibfk_1">
       <ColNames>moduleID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="333" parent="232" name="PRIMARY">
+    <key id="334" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="334" parent="232" name="module_picture_ibfk_1">
+    <foreign-key id="335" parent="232" name="module_picture_ibfk_1">
       <ColNames>moduleID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>module</RefTableName>
@@ -1507,41 +1512,41 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="335" parent="233" name="id">
+    <column id="336" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="233" name="name">
+    <column id="337" parent="233" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="233" name="url">
+    <column id="338" parent="233" name="url">
       <Position>3</Position>
       <DataType>varchar(500)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="233" name="courseID">
+    <column id="339" parent="233" name="courseID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="339" parent="233" name="courseID">
+    <index id="340" parent="233" name="courseID">
       <ColNames>courseID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="340" parent="233" name="PRIMARY">
+    <key id="341" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="341" parent="233" name="video_ibfk_1">
+    <foreign-key id="342" parent="233" name="video_ibfk_1">
       <ColNames>courseID</ColNames>
       <RefSchemaName>blue14</RefSchemaName>
       <RefTableName>course</RefTableName>
