@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.ModuleExtraPictureDao">
+    <resultMap id="ModuleExtraPictureMap" type="ModuleExtraPicture">
+        <id column="id" property="id" />
+        <result column="path" property="path" />
+        <result column="url" property="url" />
+        <result column="moduleExtraID" property="moduleExtraID" />
+    </resultMap>
+    <insert id="addModuleExtraPicture" parameterType="ModuleExtraPicture">
+        insert into
+        moduleExtra_picture
+        (path, url, moduleExtraID)
+        VALUE
+        (#{path},#{url},#{moduleExtraID})
+    </insert>
+    <delete id="deleteModuleExtraPicture" parameterType="int">
+        delete from moduleExtra_picture where id = #{id}
+    </delete>
+    <select id="count" resultType="Long">
+        select count(id) from moduleExtra_picture where moduleExtraID = #{moduleExtraID}
+    </select>
+    <select id="getModuleExtraPictureByID" resultType="ModuleExtraPicture" parameterType="Integer">
+        select * from moduleExtra_picture where id = #{id}
+    </select>
+    <select id="getModuleExtraPicturesByModuleExtraID" resultMap="ModuleExtraPictureMap" parameterType="Integer">
+        select * from moduleExtra_picture where moduleExtraID = #{moduleExtraID}
+    </select>
+    <select id="getAllModuleExtraPictures" resultMap="ModuleExtraPictureMap">
+        select * from moduleExtra_picture
+    </select>
+    <update id="updateModuleExtraPicture" parameterType="ModuleExtraPicture">
+        update moduleExtra_picture
+        set
+        path=#{path},url=#{url},moduleExtraID=#{moduleExtraID}
+        where id = #{id}
+    </update>
+</mapper>

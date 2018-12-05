@@ -19,6 +19,7 @@
       <mapping class="cn.studio.zps.blue.ljy.domain.HomePagePicture"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.ModulePicture"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.ArticleTypePicture"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ModuleExtraPicture"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

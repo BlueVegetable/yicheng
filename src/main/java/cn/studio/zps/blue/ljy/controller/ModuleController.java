@@ -66,6 +66,7 @@ public @Controller class ModuleController {
         List<Article> consult = articleService.getAllArticlesByConsult(moduleID);
         data.put("consult", consult);
         data.put("bannerPCState",module.getBannerPcState());
+        data.put("bannerPCName",module.getBannerPcName());
         all.removeAll(consult);
         result.put("data",data);
         return result;
