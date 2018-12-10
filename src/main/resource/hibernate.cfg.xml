@@ -4,8 +4,8 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://localhost:3306/blue14</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:oracle:thin:@14.29.221.4:1521:yulanb2b</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
       <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.Banner"/>
     <mapping class="cn.studio.zps.blue.ljy.domain.Admin"/>
