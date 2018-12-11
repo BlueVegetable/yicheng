@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.AdminDao">
+    <resultMap id="AdminMap" type="Admin" >
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="password" property="password" />
+    </resultMap>
+
+    <insert id="addAdmin" parameterType="Admin" >
+        insert into admin (name, password) value (#{name},md5(#{password}))
+    </insert>
+
+    <delete id="deleteAdmin" parameterType="Integer" >
+        delete from admin where id=#{id}
+    </delete>
+
+    <select id="getAdminById" resultType="Admin" parameterType="Integer" >
+        select * from admin where id=#{id}
+    </select>
+
+    <select id="getAdminByName" parameterType="String" resultMap="AdminMap" >
+        select * from admin where name = #{name}
+    </select>
+
+    <select id="getAllAdmin" resultMap="AdminMap" parameterType="java.util.Map">
+        select * from admin where 1=1
+        <if test="name!=null">
+            and name like CONCAT(CONCAT('%',#{name},'%'))
+        </if>
+        <if test="start!=null">
+            limit #{start},#{number}
+        </if>
+    </select>
+
+    <select id="count" parameterType="java.util.Map" resultType="Integer" >
+        select count(id) from admin where 1=1
+        <if test="name!=null">
+            and name like CONCAT(CONCAT('%',#{name},'%'))
+        </if>
+    </select>
+
+    <update id="updateAdmin" parameterType="Admin" >
+        update admin set name=#{name}, password=md5(#{password}) where id=#{id}
+    </update>
+
+    <update id="resetPassword" parameterType="java.util.Map" >
+        update set password=md5(#{password}) where id=#{id}
+    </update>
+
+</mapper>

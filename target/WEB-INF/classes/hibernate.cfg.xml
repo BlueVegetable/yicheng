@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/blue14</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Consult"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Banner"/>
+    <mapping class="cn.studio.zps.blue.ljy.domain.Admin"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Article"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ArticleType"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Module"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Course"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.CourseModule"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.CourseType"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.Video"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.HomePagePicture"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ModulePicture"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ArticleTypePicture"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.ModuleExtraPicture"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

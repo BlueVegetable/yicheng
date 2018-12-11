@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.HomePagePictureDao">
+    <resultMap id="HomePagePictureMap" type="HomePagePicture">
+        <id column="id" property="id" />
+        <result column="image" property="image" />
+        <result column="url" property="url" />
+    </resultMap>
+    <insert id="addHomePagePicture" parameterType="HomePagePicture">
+        insert into
+        home_page_picture
+        (image, url, topest)
+        VALUE
+        (#{image},#{url},#{topest})
+    </insert>
+    <delete id="deleteHomePagePicture" parameterType="int">
+        delete from home_page_picture where id = #{id}
+    </delete>
+    <select id="count" resultType="Long">
+        select count(id) from home_page_picture where topest = #{topest}
+    </select>
+    <select id="getHomePagePictureByID" resultType="HomePagePicture" parameterType="Integer">
+        select * from home_page_picture where id = #{id}
+    </select>
+    <select id="getAllHomePagePictures" resultMap="HomePagePictureMap">
+        select * from home_page_picture
+    </select>
+    <update id="updateHomePagePicture" parameterType="HomePagePicture">
+        update home_page_picture
+        set
+        image=#{image},url=#{url}
+        where id = #{id}
+    </update>
+</mapper>

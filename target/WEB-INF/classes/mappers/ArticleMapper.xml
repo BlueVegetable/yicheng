@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.ArticleDao">
+
+    <resultMap id="ArticleMap" type="Article">
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="lastModify" property="lastModify" />
+        <result column="brief" property="brief" />
+        <result column="typeID" property="typeID" />
+    </resultMap>
+
+    <insert id="addArticle" parameterType="java.util.Map" >
+        insert into article (title,content,lastModify,typeID,brief,adminID)
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{article.brief},#{adminID})
+    </insert>
+
+    <delete id="deleteArticle" parameterType="Integer">
+        delete from article where id=#{id}
+    </delete>
+
+    <select id="exist" parameterType="java.util.Map" resultType="Boolean" >
+        SELECT COUNT(id)>0 exist FROM article WHERE adminID=#{adminID} AND title=#{title}
+    </select>
+
+    <select id="getArticle" parameterType="Integer" resultType="Article">
+        select * from article where id=#{id}
+    </select>
+
+    <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
+        select id,title,typeID,lastModify from article ORDER BY topest DESC,lastModify DESC limit #{start},#{number}
+    </select>
+
+    <select id="getPreviousArticleTypeID" parameterType="Map" resultType="Integer">
+        SELECT id FROM article WHERE typeID = #{articleTypeID} AND id &lt; #{articleID} ORDER BY id desc LIMIT 1
+    </select>
+
+    <select id="getNextArticleTypeID" parameterType="Map" resultType="Integer">
+        SELECT id FROM article WHERE typeID = #{articleTypeID} AND id &gt; #{articleID} ORDER BY id asc LIMIT 1
+    </select>
+
+    <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
+        SELECT COUNT(id) FROM article
+    </select>
+
+    <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
+        SELECT id,title,brief,lastModify,typeID,adminID FROM article
+        <if test="typeID!=null">
+        where
+        typeID = #{typeID}
+        </if>
+        ORDER BY topest DESC,lastModify DESC
+    </select>
+
+    <select id="getArticlesByModuleID" resultMap="ArticleMap" parameterType="Map">
+        SELECT id,title,brief,lastModify,typeID,adminID FROM
+        article
+        WHERE typeID IN
+        (SELECT id FROM article_type WHERE module_id = #{moduleID})
+        ORDER BY topest DESC,lastModify DESC
+    </select>
+
+    <select id="getAllArticlesByConsult" parameterType="Integer" resultMap="ArticleMap">
+        SELECT id,title,brief,lastModify,typeID,adminID FROM
+        article
+        WHERE typeID IN
+        (SELECT id FROM article_type WHERE type = '资讯' and module_id = #{moduleID})
+        ORDER BY topest DESC,lastModify DESC
+        limit 10
+    </select>
+
+    <update id="updateArticle" parameterType="Article">
+        update article set title=#{title},content=#{content},lastModify=#{lastModify} where id=#{id}
+    </update>
+    
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.ModuleDao">
+
+    <resultMap id="ModuleMap" type="Module">
+        <id column="id" property="id" />
+        <result column="moduleName" property="moduleName" />
+    </resultMap>
+    <insert id="addModule" parameterType="Module">
+        insert into
+        module
+        (id, moduleName, bannerPCName, bannerPCState)
+        VALUES
+        (#{id},#{moduleName},#{bannerPcName},#{bannerPcState})
+    </insert>
+    <delete id="deleteModule" parameterType="int">
+        delete from module where id = #{id}
+    </delete>
+    <select id="getModuleByID" parameterType="int" resultType="Module">
+        select * from module where id=#{id}
+    </select>
+    <select id="getModuleByTypeID" parameterType="int" resultType="Module">
+        select * from module where id in (select module_id from article_type where article_type.id = #{typeID})
+    </select>
+    <select id="getAllModules" resultMap="ModuleMap">
+        select * from module
+    </select>
+    <update id="updateModule" parameterType="Module">
+        update module
+        set moduleName = #{moduleName}, bannerPCName = #{bannerPcName},bannerPCState = #{bannerPcState}
+        where id = #{id}
+    </update>
+</mapper>
