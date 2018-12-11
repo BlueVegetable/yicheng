@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.MajorCourseDao">
+    <resultMap id="MajorCourseMap" type="MajorCourse" >
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="visible" property="visible" />
+    </resultMap>
+    <insert id="addMajorCourse" parameterType="MajorCourse">
+        insert into
+        major_course
+        (name, visible)
+        value
+        (#{name},#{visible})
+    </insert>
+    <select id="getMajorCourseByID" resultMap="MajorCourseMap">
+        select * from major_course where id = #{id}
+    </select>
+    <select id="getMajorCourses" parameterType="byte" resultMap="MajorCourseMap">
+        select * from major_course
+        <if test="visible!=null">
+            where visible = #{visible}
+        </if>
+    </select>
+    <update id="updateMajorCourse" parameterType="MajorCourse">
+        update major_course
+        set name = #{name},visible = #{visible}
+        where id = #{id}
+    </update>
+</mapper>
