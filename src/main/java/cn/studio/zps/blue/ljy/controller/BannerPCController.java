@@ -48,6 +48,14 @@ public @RequestMapping("BannerPC") class BannerPCController {
 
     @RequestMapping("/addBannerPCGraduate")
     public @ResponseBody Map<String, Object> addBannerPCGraduate(@RequestBody BannerPC bannerPC) {
+        if(bannerPC.getUrl().equals("")) {
+            bannerPC.setUrl(null);
+        }
+        String url = bannerPC.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            bannerPC.setUrl(url);
+        }
         bannerPC.setVisible(true);
         bannerPC.setPosition(bannerPCService.getMaxPosition()+1);
         if(bannerPCService.addBannerPC(bannerPC)){
@@ -86,6 +94,14 @@ public @RequestMapping("BannerPC") class BannerPCController {
 
     @RequestMapping("updateBannerPC")
     public @ResponseBody Map updateBannerPC(@RequestBody BannerPC bannerPC) {
+        if(bannerPC.getUrl().equals("")) {
+            bannerPC.setUrl(null);
+        }
+        String url = bannerPC.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            bannerPC.setUrl(url);
+        }
         if(bannerPCService.updateBannerPC(bannerPC))
             return Response.getResponseMap(0,"",null);
         else

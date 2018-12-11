@@ -34,6 +34,14 @@ public @Controller @RequestMapping("articleTypePicture") class ArticleTypePictur
         return result;
     }
     public @ResponseBody @RequestMapping("addArticleTypePicture") Map addArticleTypePicture(ArticleTypePicture articleTypePicture) {
+        if(articleTypePicture.getUrl().equals("")) {
+            articleTypePicture.setUrl(null);
+        }
+        String url = articleTypePicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            articleTypePicture.setUrl(url);
+        }
         return articleTypePictureService.addArticleTypePicture(articleTypePicture);
     }
     public @ResponseBody @RequestMapping("deleteArticleTypePicture") boolean deleteArticleTypePicture(int articleTypePictureID) {
@@ -62,6 +70,14 @@ public @Controller @RequestMapping("articleTypePicture") class ArticleTypePictur
         return result;
     }
     public @ResponseBody @RequestMapping("updateArticleTypePicture") boolean updateArticleTypePicture(ArticleTypePicture articleTypePicture) {
+        if(articleTypePicture.getUrl().equals("")) {
+            articleTypePicture.setUrl(null);
+        }
+        String url = articleTypePicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            articleTypePicture.setUrl(url);
+        }
         return articleTypePictureService.updateArticleTypePicture(articleTypePicture);
     }
 }

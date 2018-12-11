@@ -35,6 +35,14 @@ public @Controller @RequestMapping("homePagePicture") class HomePagePictureContr
         return result;
     }
     public @ResponseBody @RequestMapping("addHomePagePicture") Map addHomePagePicture(HomePagePicture homePagePicture) {
+        if(homePagePicture.getUrl().equals("")) {
+            homePagePicture.setUrl(null);
+        }
+        String url = homePagePicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            homePagePicture.setUrl(url);
+        }
         return homePagePictureService.addHomePagePicture(homePagePicture);
     }
     public @ResponseBody @RequestMapping("deleteHomePagePicture") boolean deleteHomePagePicture(int homePagePictureID) {
@@ -63,6 +71,14 @@ public @Controller @RequestMapping("homePagePicture") class HomePagePictureContr
         return result;
     }
     public @ResponseBody @RequestMapping("updateHomePagePicture") boolean updateHomePagePicture(HomePagePicture homePagePicture) {
+        if(homePagePicture.getUrl().equals("")) {
+            homePagePicture.setUrl(null);
+        }
+        String url = homePagePicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            homePagePicture.setUrl(url);
+        }
         return homePagePictureService.updateHomePagePicture(homePagePicture);
     }
 }

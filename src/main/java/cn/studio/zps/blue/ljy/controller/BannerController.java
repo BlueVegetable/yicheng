@@ -54,6 +54,14 @@ public class BannerController {
     @RequestMapping("/addBanner")
     @ResponseBody
     public Map<String, Object> addBanner(@RequestBody Banner banner) {
+        if(banner.getUrl().equals("")) {
+            banner.setUrl(null);
+        }
+        String url = banner.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            banner.setUrl(url);
+        }
         banner.setVisible(true);
         banner.setPosition(bannerService.getMaxPosition()+1);
         if(bannerService.addBanner(banner)){
@@ -89,6 +97,14 @@ public class BannerController {
     @ResponseBody
     @RequestMapping("updateBanner")
     public Map updateBanner(@RequestBody Banner banner) {
+        if(banner.getUrl().equals("")) {
+            banner.setUrl(null);
+        }
+        String url = banner.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            banner.setUrl(url);
+        }
         if(bannerService.updateBanner(banner))
             return Response.getResponseMap(0,"",null);
         else

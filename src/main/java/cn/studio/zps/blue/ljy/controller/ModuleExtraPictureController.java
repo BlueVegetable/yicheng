@@ -34,6 +34,14 @@ public @Controller @RequestMapping("moduleExtraPicture") class ModuleExtraPictur
         return result;
     }
     public @ResponseBody @RequestMapping("addModuleExtraPicture") Map addModuleExtraPicture(ModuleExtraPicture moduleExtraPicture) {
+        if(moduleExtraPicture.getUrl().equals("")) {
+            moduleExtraPicture.setUrl(null);
+        }
+        String url = moduleExtraPicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            moduleExtraPicture.setUrl(url);
+        }
         return moduleExtraPictureService.addModuleExtraPicture(moduleExtraPicture);
     }
     public @ResponseBody @RequestMapping("deleteModuleExtraPicture") boolean deleteModuleExtraPicture(int moduleExtraPictureID) {
@@ -62,6 +70,14 @@ public @Controller @RequestMapping("moduleExtraPicture") class ModuleExtraPictur
         return result;
     }
     public @ResponseBody @RequestMapping("updateModuleExtraPicture") boolean updateModuleExtraPicture(ModuleExtraPicture moduleExtraPicture) {
+        if(moduleExtraPicture.getUrl().equals("")) {
+            moduleExtraPicture.setUrl(null);
+        }
+        String url = moduleExtraPicture.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            url = "http://" + url;
+            moduleExtraPicture.setUrl(url);
+        }
         return moduleExtraPictureService.updateModuleExtraPicture(moduleExtraPicture);
     }
 }

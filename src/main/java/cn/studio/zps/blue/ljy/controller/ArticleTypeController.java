@@ -24,6 +24,12 @@ public class ArticleTypeController {
 
     @RequestMapping("addArticleType")
     public @ResponseBody Map addArticleType(ArticleType articleType) {
+        if(articleType.getUrl().equals(""))
+            articleType.setUrl(null);
+        String url = articleType.getUrl();
+        if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+            articleType.setUrl("http://"+url);
+        }
         if(articleTypeService.addArticleType(articleType))
             return Response.getResponseMap(0,"",true);
         else {
@@ -71,6 +77,11 @@ public class ArticleTypeController {
     @RequestMapping("alterArticleTypeName")
     public @ResponseBody Map alterArticleTypeName(@RequestParam("id") int id,@RequestParam("name") String name,@RequestParam("url") String url) {
         try {
+            if (url.equals(""))
+                url = null;
+            if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+                url = "http://" + url;
+            }
             if(articleTypeService.alterArticleTypeName(id,name,url)) {
                 return Response.getResponseMap(0, "", true);
             }

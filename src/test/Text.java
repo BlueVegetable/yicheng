@@ -20,4 +20,7 @@ public class Text {
     public @Test void test() throws QiniuException {
         System.out.println(QiNiuUpload.uploadVideo("E:\\我的视频\\其他\\【末日时在做什么】斯卡布罗集市（1080P合集） - 2.第十二集(Av11744252,P2).Flv"));
     }
+    public @Test void test2() {
+        System.out.println("www.baidu.com".startsWith("https://"));
+    }
 }
