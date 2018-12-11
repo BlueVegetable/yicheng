@@ -54,4 +54,13 @@ public class EducationLevel {
     public int hashCode() {
         return Objects.hash(id, name, visible);
     }
+
+    @Override
+    public String toString() {
+        return "EducationLevel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", visible=" + visible +
+                '}';
+    }
 }

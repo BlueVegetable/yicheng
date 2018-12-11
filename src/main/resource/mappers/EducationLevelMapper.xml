@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.EducationLevelDao">
+    <resultMap id="EducationLevelMap" type="EducationLevel" >
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="visible" property="visible" />
+    </resultMap>
+    <insert id="addEducationLevel" parameterType="EducationLevel">
+        insert into
+        education_level
+        (name, visible)
+        values
+        (#{name},#{visible})
+    </insert>
+    <select id="getEducationLevelByID" parameterType="int" resultMap="EducationLevelMap">
+        select * from education_level where id = #{id}
+    </select>
+    <select id="getEducationLevels" parameterType="Byte" resultMap="EducationLevelMap">
+        select * from education_level
+        <if test="visible!=null">
+            where visible = #{visible}
+        </if>
+    </select>
+    <update id="updateEducationLevel" parameterType="EducationLevel">
+        update education_level
+        set name = #{name},visible=#{visible}
+        where id = #{id}
+    </update>
+</mapper>
