@@ -3,10 +3,7 @@ package cn.studio.zps.blue.ljy.controller;
 import cn.studio.zps.blue.ljy.domain.Article;
 import cn.studio.zps.blue.ljy.domain.ArticleType;
 import cn.studio.zps.blue.ljy.domain.Module;
-import cn.studio.zps.blue.ljy.service.ArticleService;
-import cn.studio.zps.blue.ljy.service.ArticleTypeService;
-import cn.studio.zps.blue.ljy.service.BannerPCService;
-import cn.studio.zps.blue.ljy.service.ModuleService;
+import cn.studio.zps.blue.ljy.service.*;
 import cn.studio.zps.blue.ljy.utils.Response;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +20,7 @@ public @Controller class ModuleController {
     private @Autowired BannerPCService bannerPCService;
     private @Autowired ArticleService articleService;
     private @Autowired ArticleTypeService articleTypeService;
+    private @Autowired ModuleExtraPictureService moduleExtraPictureService;
     @RequestMapping("addModule")
     public @ResponseBody boolean addModule(Module module) {
         return moduleService.addModule(module);
@@ -67,6 +65,7 @@ public @Controller class ModuleController {
         data.put("consult", consult);
         data.put("bannerPCState",module.getBannerPcState());
         data.put("bannerPCName",module.getBannerPcName());
+        data.put("moduleExtraPicture",moduleExtraPictureService.getAllModuleExtraPictures());
         all.removeAll(consult);
         result.put("data",data);
         return result;

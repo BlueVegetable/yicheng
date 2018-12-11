@@ -10,9 +10,9 @@
     <insert id="addModuleExtraPicture" parameterType="ModuleExtraPicture">
         insert into
         module_extra_picture
-        (path, url, moduleExtraID)
+        (path, url, moduleID)
         VALUE
-        (#{path},#{url},#{moduleID})
+        (#{path},#{url},#{moduleId})
     </insert>
     <delete id="deleteModuleExtraPicture" parameterType="int">
         delete from module_extra_picture where id = #{id}
@@ -23,8 +23,8 @@
     <select id="getModuleExtraPictureByID" resultType="ModuleExtraPicture" parameterType="Integer">
         select * from module_extra_picture where id = #{id}
     </select>
-    <select id="getModuleExtraPicturesByModuleExtraID" resultMap="ModuleExtraPictureMap" parameterType="Integer">
-        select * from module_extra_picture where moduleExtraID = #{moduleExtraID}
+    <select id="getModuleExtraPicturesByModuleID" resultMap="ModuleExtraPictureMap" parameterType="Integer">
+        select * from module_extra_picture where moduleID = #{moduleID}
     </select>
     <select id="getAllModuleExtraPictures" resultMap="ModuleExtraPictureMap">
         select * from module_extra_picture
@@ -32,7 +32,7 @@
     <update id="updateModuleExtraPicture" parameterType="ModuleExtraPicture">
         update module_extra_picture
         set
-        path=#{path},url=#{url},moduleExtraID=#{moduleExtraID}
+        path=#{path},url=#{url},moduleID=#{moduleId}
         where id = #{id}
     </update>
 </mapper>
