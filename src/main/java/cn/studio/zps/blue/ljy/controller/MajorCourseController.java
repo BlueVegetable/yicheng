@@ -38,7 +38,7 @@ public class MajorCourseController {
     }
     @ResponseBody@RequestMapping("getMajorCoursesDeal")
     public Map getMajorCoursesDeal() {
-        return Response.getResponseMap(0,"",majorCourseService.getMajorCourses(CLOSE));
+        return Response.getResponseMap(0,"",majorCourseService.getMajorCourses(OPEN));
     }
     @ResponseBody@RequestMapping("updateMajorCourse")
     public boolean updateMajorCourse(MajorCourse majorCourse) {
