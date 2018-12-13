@@ -9,4 +9,7 @@
     <select id="getCourseModuleByID" parameterType="int" resultMap="CourseModuleMap">
         select * from course_module where id = #{courseModuleID}
     </select>
+    <select id="getAllCourseModules" resultMap="CourseModuleMap">
+        select * from course_module
+    </select>
 </mapper>
