@@ -7,10 +7,39 @@
         <result column="url" property="url" />
         <result column="courseID" property="courseID" />
     </resultMap>
+    <insert id="addVideo" parameterType="Video">
+        insert into video
+        (name, url, courseID)
+        values
+        (#{name},#{url},#{courseID})
+    </insert>
+    <delete id="deleteVideo" parameterType="int">
+        delete from video where id = #{id}
+    </delete>
     <select id="getVideo" parameterType="int" resultType="Video">
         select * from video where id = #{id}
     </select>
     <select id="getVideosByCourseID" parameterType="int" resultMap="VideoMap">
         select * from video where courseID = #{courseID}
     </select>
+    <select id="getVideos" parameterType="Map" resultMap="VideoMap">
+        select * from video where 1=1
+        <if test="courseID!=null">
+            and courseID = #{courseID}
+        </if>
+        <if test="start!=null">
+            limit #{start},#{number}
+        </if>
+    </select>
+    <select id="getVideosNumber" parameterType="Map" resultType="Long">
+        select count(id) from video where 1=1
+        <if test="courseID!=null">
+            and courseID = #{courseID}
+        </if>
+    </select>
+    <update id="updateVideo" parameterType="Video">
+        update video
+        set name=#{name},url=#{url},courseID=#{courseID}
+        where id=#{id}
+    </update>
 </mapper>

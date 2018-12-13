@@ -9,7 +9,7 @@ public interface ModuleExtraPictureService {
     Map addModuleExtraPicture(ModuleExtraPicture moduleExtraPicture);
     boolean deleteModuleExtraPicture(int id);
     ModuleExtraPicture getModuleExtraPictureByID(int moduleExtraPictureID);
-    List<ModuleExtraPicture> getModuleExtraPicturesByModuleExtraID(int moduleExtraID);
+    List<ModuleExtraPicture> getModuleExtraPicturesByModuleID(int moduleID);
     List<ModuleExtraPicture> getAllModuleExtraPictures();
     boolean updateModuleExtraPicture(ModuleExtraPicture moduleExtraPicture);
 }

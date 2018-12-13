@@ -9,7 +9,7 @@ public interface ModuleExtraPictureDao {
     int deleteModuleExtraPicture(int id);
     Long count(int moduleID);
     ModuleExtraPicture getModuleExtraPictureByID(int id);
-    List<ModuleExtraPicture> getModuleExtraPicturesByModuleExtraID(int moduleID);
+    List<ModuleExtraPicture> getModuleExtraPicturesByModuleID(int moduleID);
     List<ModuleExtraPicture> getAllModuleExtraPictures();
     int updateModuleExtraPicture(ModuleExtraPicture moduleExtraPicture);
 }

@@ -50,8 +50,8 @@ public @Controller @RequestMapping("moduleExtraPicture") class ModuleExtraPictur
     public @ResponseBody @RequestMapping("getModuleExtraPictureByID") ModuleExtraPicture getModuleExtraPictureByID(int moduleExtraPictureID) {
         return moduleExtraPictureService.getModuleExtraPictureByID(moduleExtraPictureID);
     }
-    public @ResponseBody @RequestMapping("getModuleExtraPicturesByModuleExtraID") List<ModuleExtraPicture> getModuleExtraPicturesByModuleExtraID(int moduleExtraID) {
-        return moduleExtraPictureService.getModuleExtraPicturesByModuleExtraID(moduleExtraID);
+    public @ResponseBody @RequestMapping("getModuleExtraPicturesByModuleExtraID") List<ModuleExtraPicture> getModuleExtraPicturesByModuleExtraID(int moduleID) {
+        return moduleExtraPictureService.getModuleExtraPicturesByModuleID(moduleID);
     }
     public @ResponseBody @RequestMapping("getAllModuleExtraPicturesDeal") Map getAllModuleExtraPicturesDeal() {
         Map result = new HashMap();

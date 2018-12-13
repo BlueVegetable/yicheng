@@ -65,7 +65,7 @@ public @Controller class ModuleController {
         data.put("consult", consult);
         data.put("bannerPCState",module.getBannerPcState());
         data.put("bannerPCName",module.getBannerPcName());
-        data.put("moduleExtraPicture",moduleExtraPictureService.getAllModuleExtraPictures());
+        data.put("moduleExtraPicture",moduleExtraPictureService.getModuleExtraPicturesByModuleID(moduleID));
         all.removeAll(consult);
         result.put("data",data);
         return result;
