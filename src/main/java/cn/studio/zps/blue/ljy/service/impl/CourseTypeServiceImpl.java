@@ -8,6 +8,8 @@ import cn.studio.zps.blue.ljy.service.CourseTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CourseTypeServiceImpl implements CourseTypeService {
     private @Autowired CourseTypeDao courseTypeDao;
@@ -17,5 +19,10 @@ public class CourseTypeServiceImpl implements CourseTypeService {
         Course course = courseDao.getCourseByID(courseID);
         CourseType courseType = courseTypeDao.getCourseTypeByID(course.getCourseTypeID());
         return courseType;
+    }
+
+    @Override
+    public List<CourseType> getCourseTypesByCourseModuleID(int courseModuleID) {
+        return courseTypeDao.getCourseTypeByCourseModuleID(courseModuleID);
     }
 }

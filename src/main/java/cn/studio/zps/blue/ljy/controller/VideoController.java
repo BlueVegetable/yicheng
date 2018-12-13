@@ -44,4 +44,12 @@ public class VideoController {
         result.put("msg","");
         return result;
     }
+    @ResponseBody@RequestMapping("updateVideo")
+    public Map updateVideo(Video video) {
+        if(videoService.updateVideo(video)) {
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"未作出修改",null);
+        }
+    }
 }

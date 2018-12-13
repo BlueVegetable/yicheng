@@ -24,8 +24,8 @@ public class CourseController {
             return Response.getResponseMap(0,"",course);
         }
     }
-    @ResponseBody@RequestMapping("getCourseByCourseTypeID")
-    public List<Course> getCourseByCourseTypeID(int courseTypeID) {
+    @ResponseBody@RequestMapping("getCoursesByCourseTypeID")
+    public List<Course> getCoursesByCourseTypeID(int courseTypeID) {
         return courseService.getCourseByCourseTypeID(courseTypeID);
     }
 }
