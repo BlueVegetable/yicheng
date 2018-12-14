@@ -15,7 +15,7 @@ public interface ArticleService {
 
     Article getArticle(int articleID);
 
-    Map<String, Object> getAllArticle(int page,int limit);
+    Map<String, Object> getAllArticle(int page,int limit,Integer articleTypeID,String title);
 
     List<Article> getArticles(Integer typeID);
 
