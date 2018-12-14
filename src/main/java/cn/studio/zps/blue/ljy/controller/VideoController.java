@@ -19,6 +19,10 @@ public class VideoController {
     private VideoService videoService;
     @ResponseBody@RequestMapping("addVideo")
     public Map addVideo(Video video) {
+        String url = video.getUrl();
+        if(!url.startsWith("http://")&&!url.startsWith("https://")) {
+            video.setUrl("http://" + url);
+        }
         if(videoService.addVideo(video)) {
             return Response.getResponseMap(0,"",null);
         } else {
@@ -46,6 +50,10 @@ public class VideoController {
     }
     @ResponseBody@RequestMapping("updateVideo")
     public Map updateVideo(Video video) {
+        String url = video.getUrl();
+        if(!url.startsWith("http://")&&!url.startsWith("https://")) {
+            video.setUrl("http://" + url);
+        }
         if(videoService.updateVideo(video)) {
             return Response.getResponseMap(0,"",null);
         } else {

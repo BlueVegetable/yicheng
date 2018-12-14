@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="studio1:war exploded" />
+      <artifact name="yicheng" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03e2d7b-7c58-4fae-85f8-21c1c847e406" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/CourseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/CourseTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/CourseTypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/VideoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/CourseTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/CourseTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/CourseTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/CourseTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/cn/studio/zps/blue/ljy/controller/VideoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/studio/zps/blue/ljy/controller/VideoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/yicheng.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/yicheng.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,16 +61,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/VideoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+            <state relative-caret-position="320">
+              <caret line="56" column="45" lean-forward="true" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
               <folding>
-                <element signature="method#addVideo#0;class#VideoController#0" />
                 <element signature="method#deleteVideo#0;class#VideoController#0" />
                 <element signature="method#getVideosDeal#0;class#VideoController#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -111,6 +120,7 @@
       <find>module</find>
       <find>Module</find>
       <find>moduleExtra_picture</find>
+      <find>startsWith</find>
     </findStrings>
     <replaceStrings>
       <replace>Admin</replace>
@@ -182,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/ModuleExtraPictureServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleExtraPictureController.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/CourseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/dao/CourseModuleDao.java" />
         <option value="$PROJECT_DIR$/src/main/resource/mappers/CourseModuleMapper.xml" />
@@ -195,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/service/impl/CourseTypeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/CourseTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/VideoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -233,11 +243,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -247,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,14 +301,6 @@
               <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
               <item name="studio1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,6 +313,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +321,7 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="e5e5ac8c-3161-443c-abe4-52a5ef514b52" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544721724889" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544758270446" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../studio1_view1" />
@@ -864,7 +866,9 @@
       <workItem from="1544667241211" duration="9492000" />
       <workItem from="1544705809130" duration="1978000" />
       <workItem from="1544710499700" duration="2599000" />
-      <workItem from="1544716598862" duration="4619000" />
+      <workItem from="1544716598862" duration="6011000" />
+      <workItem from="1544757460154" duration="929000" />
+      <workItem from="1544799256343" duration="168000" />
     </task>
     <servers />
   </component>
@@ -901,7 +905,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508987000" />
+    <option name="totallyTimeSpent" value="511476000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -913,10 +917,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1358" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.522293" visible="true" weight="0.23484848" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.522293" visible="true" weight="0.24242425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.477707" side_tool="true" weight="0.25075758" />
       <window_info id="Designer" order="3" />
@@ -927,7 +931,7 @@
       <window_info id="Web" order="8" sideWeight="0.4345898" side_tool="true" weight="0.2060606" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37244898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3710191" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.26634768" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1252,13 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/ModuleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
@@ -1515,13 +1512,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/studio/zps/blue/ljy/controller/VideoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
+        <state relative-caret-position="320">
+          <caret line="56" column="45" lean-forward="true" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
           <folding>
-            <element signature="method#addVideo#0;class#VideoController#0" />
             <element signature="method#deleteVideo#0;class#VideoController#0" />
             <element signature="method#getVideosDeal#0;class#VideoController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
