@@ -29,7 +29,14 @@
     </select>
 
     <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
-        select id,title,typeID,lastModify from article ORDER BY topest DESC,lastModify DESC limit #{start},#{number}
+        select id,title,typeID,lastModify from article where 1=1
+        <if test="title!=null">
+            and title like CONCAT(CONCAT('%',#{title},'%'))
+        </if>
+        <if test="articleTypeID!=null">
+            and typeID = #{articleTypeID}
+        </if>
+        ORDER BY topest DESC,lastModify DESC limit #{start},#{number}
     </select>
 
     <select id="getPreviousArticleTypeID" parameterType="Map" resultType="Integer">

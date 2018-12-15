@@ -79,10 +79,12 @@ public class ArticleController {
 
     @ResponseBody
     @RequestMapping("getAllArticles")
-    public Map<String,Object> getAllArticles(@RequestParam("page") int page,@RequestParam("limit") int limit) {
+    public Map<String,Object> getAllArticles(@RequestParam("page") int page,@RequestParam("limit") int limit,
+                                             @RequestParam(value = "articleTypeID",required=false) Integer articleTypeID,
+                                             @RequestParam(value = "title", required = false) String title) {
 //        Admin admin = (Admin) request.getAttribute("admin");
 //        int adminID = admin.getId();
-        Map<String,Object>result = articleService.getAllArticle(page,limit);
+        Map<String,Object>result = articleService.getAllArticle(page,limit,articleTypeID,title);
         result.put("code",0);
         result.put("msg","");
         return result;
