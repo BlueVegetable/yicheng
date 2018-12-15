@@ -65,7 +65,13 @@
 	</select>
 
     <update id="updateBannerPC" parameterType="BannerPC">
-        update banner_pc set url=#{url} where id=#{id}
+        update banner_pc set
+        url=#{url},
+        location=#{location},
+        path=#{path},
+        type=#{type},
+        visible=#{visible}
+        where id=#{id}
     </update>
 
     <update id="alterVisible" parameterType="java.util.Map">

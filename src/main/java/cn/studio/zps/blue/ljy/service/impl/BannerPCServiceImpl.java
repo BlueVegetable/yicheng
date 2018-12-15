@@ -63,7 +63,7 @@ public class BannerPCServiceImpl implements BannerPCService {
 
     @Override
     public boolean updateBannerPC(BannerPC bannerPC) {
-        return updateBannerPC(bannerPC);
+        return bannerPCDao.updateBannerPC(bannerPC) > 0;
     }
 
     @Override
