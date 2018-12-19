@@ -21,7 +21,8 @@ public class FileUpload {
 //    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
     //阿里云服务器路径
 //    private final static String PATH = "C:/servers/apache-tomcat3/upload";
-    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
+    private final static String PATH = "C:/servers/apache-tomcat1/upload";
 //    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
 //    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
     private final static String BANNER_PATH = "/banner-image/";
