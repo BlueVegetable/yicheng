@@ -58,6 +58,7 @@ public class ConsultController {
         CONSULT_LIST.add(GUANG_ZHOU_RU_HU_CONSULT);
         CONSULT_LIST.add(GUANG_ZHOU_RU_HU_SIMPLE_CONSULT);
         CONSULT_LIST.add(TEA_SPECIALIST);
+        CONSULT_LIST.add(TEA_SPECIALIST_SIMPLE);
     }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
