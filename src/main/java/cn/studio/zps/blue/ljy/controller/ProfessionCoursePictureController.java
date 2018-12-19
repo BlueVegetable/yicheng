@@ -42,6 +42,14 @@ public class ProfessionCoursePictureController{
 
 	@ResponseBody @RequestMapping("addProfessionCoursePicture")
 	public Map<String,Object> addProfessionCoursePicture(ProfessionCoursePicture professionCoursePicture) {
+		if(professionCoursePicture.getUrl().equals("")) {
+			professionCoursePicture.setUrl(null);
+		}
+		String url = professionCoursePicture.getUrl();
+		if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+			url = "http://" + url;
+			professionCoursePicture.setUrl(url);
+		}
 		if(professionCoursePictureService.addProfessionCoursePicture(professionCoursePicture))
 			return Response.getResponseMap(0,"添加成功",null);
 		else
@@ -75,6 +83,14 @@ public class ProfessionCoursePictureController{
 
 	@ResponseBody@RequestMapping("updateProfessionCoursePicture")
 	public Map<String,Object> updateProfessionCoursePicture(ProfessionCoursePicture professionCoursePicture) {
+		if(professionCoursePicture.getUrl().equals("")) {
+			professionCoursePicture.setUrl(null);
+		}
+		String url = professionCoursePicture.getUrl();
+		if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+			url = "http://" + url;
+			professionCoursePicture.setUrl(url);
+		}
 		if(professionCoursePictureService.updateProfessionCoursePicture(professionCoursePicture)) {
 			return Response.getResponseMap(0,"",null);
 		} else {
