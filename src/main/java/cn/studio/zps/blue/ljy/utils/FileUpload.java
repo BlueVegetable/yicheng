@@ -35,6 +35,7 @@ public class FileUpload {
     private final static String MODULE_EXTRA_PICTURE_PATH = "/moduleExtraPicture/";
     private final static String ARTICLE_TYPE_PICTURE_PATH = "/articleTypePicture/";
     private final static String PROFESSION_COURSE_PICTURE_PATH = "/professionCoursePicture/";
+    private final static String HOME_PAGE_BANNER_PATH = "/homePageBanner/";
 
     public static Map<String,Object> copyFile(MultipartFile file,String path) {
         String type = file.getContentType();
@@ -139,6 +140,12 @@ public class FileUpload {
 
     public static Map<String,Object> copyProfessionCoursePicture(MultipartFile file){
         Map<String,Object> result = copyFile(file,PATH + PROFESSION_COURSE_PICTURE_PATH);
+        result.put("relativePath",PROFESSION_COURSE_PICTURE_PATH + result.get("file Name"));
+        return  result;
+    }
+
+    public static Map<String,Object> copeHomePageBanner(MultipartFile file){
+        Map<String,Object> result = copyFile(file,PATH + HOME_PAGE_BANNER_PATH);
         result.put("relativePath",PROFESSION_COURSE_PICTURE_PATH + result.get("file Name"));
         return  result;
     }

@@ -24,6 +24,8 @@ public class Consult {
     private Short age;
     private Short securityTime;
     private Short workTime;
+    private String academyName;
+    private String professionName;
 
     @Id
     @Column(name = "id")
@@ -223,5 +225,25 @@ public class Consult {
 
     public void setWorkTime(Short workTime) {
         this.workTime = workTime;
+    }
+
+    @Basic
+    @Column(name = "academyName")
+    public String getAcademyName() {
+        return academyName;
+    }
+
+    public void setAcademyName(String academyName) {
+        this.academyName = academyName;
+    }
+
+    @Basic
+    @Column(name = "professionName")
+    public String getProfessionName() {
+        return professionName;
+    }
+
+    public void setProfessionName(String professionName) {
+        this.professionName = professionName;
     }
 }

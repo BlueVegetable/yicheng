@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.ModuleNavigationDao">
+
+    <resultMap id="ModuleNavigationMap" type="ModuleNavigation">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="url" property="url" />
+        <result column="moduleID" property="moduleID" />
+    </resultMap>
+
+    <insert id="addArticleType" parameterType="ArticleType">
+        insert into
+        module_navigation
+        (name, url, moduleID)
+        values
+        (#{name},#{url},#{moduleID})
+    </insert>
+
+    <delete id="deleteModuleNavigationByID" parameterType="Integer" >
+        delete from module_navigation where id=#{moduleNavigationID}
+    </delete>
+
+    <select id="getModuleNavigationByID" resultType="Admin" parameterType="Integer" >
+        select * from module_navigation where id=#{moduleNavigationID}
+    </select>
+
+    <select id="getModuleNavigations" resultMap="ModuleNavigationMap" parameterType="java.util.Map">
+        select * from module_navigation where 1=1
+    </select>
+
+    <update id="updateModuleNavigation" parameterType="Admin" >
+        update module_navigation set name=#{name}, url=url where id=#{id}
+    </update>
+</mapper>

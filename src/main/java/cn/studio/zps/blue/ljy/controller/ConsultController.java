@@ -43,6 +43,7 @@ public class ConsultController {
     private static final Short GUANG_ZHOU_RU_HU_SIMPLE_CONSULT = 9;
     private static final Short TEA_SPECIALIST = 10;
     private static final Short TEA_SPECIALIST_SIMPLE = 11;
+    private static final Short PC_CONSULT = 12;
 
     private static final List<Short> CONSULT_LIST = new ArrayList<>();
 
@@ -59,6 +60,7 @@ public class ConsultController {
         CONSULT_LIST.add(GUANG_ZHOU_RU_HU_SIMPLE_CONSULT);
         CONSULT_LIST.add(TEA_SPECIALIST);
         CONSULT_LIST.add(TEA_SPECIALIST_SIMPLE);
+        CONSULT_LIST.add(PC_CONSULT);
     }
 
     @RequestMapping(value="/addConsultSimple",method = RequestMethod.POST)
@@ -176,6 +178,12 @@ public class ConsultController {
     @RequestMapping(value = "addTeaSpecialistSimpleConsult",method = RequestMethod.POST)
     public @ResponseBody Map addTeaSpecialistSimpleConsult(@RequestBody Consult consult) {
         consult.setApplyMethod(TEA_SPECIALIST_SIMPLE);
+        return addConsultSmiple(consult);
+    }
+
+    @RequestMapping(value = "addPCConsult",method = RequestMethod.POST)
+    public @ResponseBody Map addPCConsult(@RequestBody Consult consult) {
+        consult.setApplyMethod(PC_CONSULT);
         return addConsultSmiple(consult);
     }
 
