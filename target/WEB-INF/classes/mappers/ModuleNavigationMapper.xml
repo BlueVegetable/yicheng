@@ -21,12 +21,15 @@
         delete from module_navigation where id=#{moduleNavigationID}
     </delete>
 
-    <select id="getModuleNavigationByID" resultType="Admin" parameterType="Integer" >
+    <select id="getModuleNavigationByID" resultType="ModuleNavigation" parameterType="Integer" >
         select * from module_navigation where id=#{moduleNavigationID}
     </select>
 
     <select id="getModuleNavigations" resultMap="ModuleNavigationMap" parameterType="java.util.Map">
         select * from module_navigation where 1=1
+        <if test="moduleID!=null">
+            and moduleID=#{moduleID}
+        </if>
     </select>
 
     <update id="updateModuleNavigation" parameterType="Admin" >
