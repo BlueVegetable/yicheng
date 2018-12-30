@@ -1,4 +1,6 @@
+import cn.studio.zps.blue.ljy.dao.HomePageBannerDao;
 import cn.studio.zps.blue.ljy.dao.ProfessionCoursePictureDao;
+import cn.studio.zps.blue.ljy.domain.HomePageBanner;
 import cn.studio.zps.blue.ljy.domain.ProfessionCoursePicture;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,10 +12,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 public class Text {
     @Autowired
-    private ProfessionCoursePictureDao professionCoursePictureDao;
+    private HomePageBannerDao homePageBannerDao;
     @Test
     public void test1() {
-        ProfessionCoursePicture professionCoursePicture = new ProfessionCoursePicture();
-        System.out.println(professionCoursePictureDao.getProfessionCoursePictureByID(1));
+        HomePageBanner homePageBanner = new HomePageBanner();
+        homePageBanner.setImage("/homePageBanner/15461874539762007440250");
+        homePageBanner.setVisible((byte)0);
+        homePageBanner.setUrl(null);
+        homePageBanner.setPosition(1);
+        System.out.println(homePageBannerDao.addHomePageBanner(homePageBanner));
     }
 }

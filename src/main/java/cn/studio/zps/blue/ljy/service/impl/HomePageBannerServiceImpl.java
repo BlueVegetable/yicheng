@@ -30,8 +30,13 @@ public class HomePageBannerServiceImpl implements HomePageBannerService {
 	}
 
 	@Override
-	public List<HomePageBanner> getHomePageBanners(String image,String url) {
-		return homePageBannerDao.getHomePageBanners(image,url);
+	public List<HomePageBanner> getHomePageBanners(String image,String url,Boolean visible) {
+		return homePageBannerDao.getHomePageBanners(image,url,visible);
+	}
+
+	@Override
+	public Long count(String image, String url, Boolean visible) {
+		return homePageBannerDao.count(image, url, visible);
 	}
 
 	@Override
@@ -39,4 +44,35 @@ public class HomePageBannerServiceImpl implements HomePageBannerService {
 		return homePageBannerDao.updateHomePageBanner(homePageBanner)>0;
 	}
 
+	@Override
+	public int bigger(int bannerId) {
+		return homePageBannerDao.bigger(bannerId);
+	}
+
+	@Override
+	public int smaller(int bannerId) {
+		return homePageBannerDao.smaller(bannerId);
+	}
+
+	@Override
+	public int getMaxPosition() {
+		return homePageBannerDao.getMaxBannerPosition();
+	}
+
+	@Override
+	public boolean alterVisible(int id, boolean visible) {
+		return homePageBannerDao.alterVisible(id,visible)>0;
+	}
+
+	@Override
+	public boolean exchange(int id, int anotherID) {
+		int temp=homePageBannerDao.getPositionById(id);
+		if(changePosition(id,homePageBannerDao.getPositionById(anotherID)) && changePosition(anotherID,temp) )
+			return true;
+		return false;
+	}
+
+	private boolean changePosition(int id,int position) {
+		return homePageBannerDao.change(id,position)>0;
+	}
 }

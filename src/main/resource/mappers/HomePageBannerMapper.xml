@@ -9,9 +9,9 @@
     <insert id="addHomePageBanner" parameterType="HomePageBanner">
         insert into
         home_page_banner
-        (image, url)
+        (image, visible, position, url)
         VALUE
-        (#{image},#{url})
+        (#{image},#{visible},#{position},#{url})
     </insert>
     <delete id="deleteHomePageBannerByID" parameterType="int">
         delete from home_page_banner where id = #{id}
@@ -21,11 +21,41 @@
     </select>
     <select id="getHomePageBanners" resultMap="HomePageBannerMap">
         select * from home_page_banner where 1=1
+        <if test="visible!=null">
+            and visible = #{visible}
+        </if>
+        order by position
     </select>
+    <select id="count" resultType="Long">
+        select count(id) from home_page_banner where 1=1
+        <if test="visible!=null">
+            and visible = #{visible}
+        </if>
+    </select>
+    <select id="getPositionById" parameterType="Integer" resultType="Integer" >
+        select position from home_page_banner where id=#{id}
+    </select>
+    <select id="bigger" resultType="Integer" parameterType="Integer">
+        SELECT id FROM home_page_banner WHERE POSITION = ( SELECT POSITION FROM home_page_banner WHERE POSITION &gt; (SELECT POSITION FROM home_page_banner WHERE id=#{bannerId}) ORDER BY POSITION ASC LIMIT 1 )
+        <!-- SELECT POSITION FROM image WHERE POSITION &lt; #{imagePosition} ORDER BY POSITION ASC LIMIT 1 -->
+    </select>
+    <select id="smaller" resultType="Integer" parameterType="Integer">
+        SELECT id FROM home_page_banner WHERE POSITION = ( SELECT POSITION FROM home_page_banner WHERE POSITION &lt;  (SELECT POSITION FROM home_page_banner WHERE id=#{bannerId}) ORDER BY POSITION DESC LIMIT 1 )
+        <!-- SELECT POSITION FROM image WHERE POSITION &lt; #{imagePosition} LIMIT 1 之前的sql语句-->
+    </select>
+    <select id="getMaxBannerPosition" resultType="java.lang.Integer">
+		SELECT MAX(POSITION) value from home_page_banner
+	</select>
     <update id="updateHomePageBanner" parameterType="HomePageBanner">
         update home_page_banner
         set
         image=#{image},url=#{url}
         where id = #{id}
+    </update>
+    <update id="alterVisible" parameterType="java.util.Map">
+        UPDATE home_page_banner SET visible=#{visible} WHERE id=#{id}
+    </update>
+    <update id="change" parameterType="java.util.Map">
+        update home_page_banner set position=#{newPosition} where id=#{id}
     </update>
 </mapper>

@@ -18,13 +18,10 @@ public class FileUpload {
     private final static int LENGTH=10240;
     private static final Random RANDOM = new Random();
     //本地主服务器的路径
-//    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
-    //阿里云服务器路径
-//    private final static String PATH = "C:/servers/apache-tomcat3/upload";
-//    private final static String PATH = "C:/rongbin-tomcat/apache-tomcat-main/upload";
-    private final static String PATH = "C:/servers/apache-tomcat1/upload";
-//    private final static String PATH = "E:/服务器目录/apache-tomcat-first/upload";
-//    private final static String PATH = "D:/tomcat/apache-tomcat-8.0.0/upload";
+    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
+    //网络服务器路径
+//    private final static String PATH = "C:/servers/apache-tomcat1/upload";
+
     private final static String BANNER_PATH = "/banner-image/";
     private final static String BANNER_PC_PATH = "/banner-pc-image/";
     private final static String HOME_PAGE_PICTURE_PATH = "/homePagePicture/";
@@ -146,8 +143,14 @@ public class FileUpload {
 
     public static Map<String,Object> copeHomePageBanner(MultipartFile file){
         Map<String,Object> result = copyFile(file,PATH + HOME_PAGE_BANNER_PATH);
-        result.put("relativePath",PROFESSION_COURSE_PICTURE_PATH + result.get("file Name"));
+        result.put("relativePath",HOME_PAGE_BANNER_PATH + result.get("file Name"));
         return  result;
+    }
+
+    public static Map<String,Object> copyPicture(MultipartFile file,String relativePath) {
+        Map<String,Object> result = copyFile(file,PATH+relativePath);
+        result.put("relativePath",relativePath+result.get("file Name"));
+        return result;
     }
 
     public static void deleteFile(String deletePath, String filePath) {

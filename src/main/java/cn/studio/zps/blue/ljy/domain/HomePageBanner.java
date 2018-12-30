@@ -1,12 +1,20 @@
 package cn.studio.zps.blue.ljy.domain;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "home_page_banner", schema = "blue14", catalog = "")
 public class HomePageBanner {
 
 	private int id;
 	private String image;
 	private String url;
+    private Byte visible;
+    private int position;
 
-	public int getId() {
+	@Id
+    @Column(name = "id")
+    public int getId() {
 		return this.id;
 	}
 
@@ -14,7 +22,9 @@ public class HomePageBanner {
 		this.id=id;
 	}
 
-	public String getImage() {
+	@Basic
+    @Column(name = "image")
+    public String getImage() {
 		return this.image;
 	}
 
@@ -22,7 +32,9 @@ public class HomePageBanner {
 		this.image=image;
 	}
 
-	public String getUrl() {
+	@Basic
+    @Column(name = "url")
+    public String getUrl() {
 		return this.url;
 	}
 
@@ -51,4 +63,24 @@ public class HomePageBanner {
 		result = 31 * result + (url!=null ? url.hashCode() : 0);
 		return result;
 	}
+
+    @Basic
+    @Column(name = "visible")
+    public Byte getVisible() {
+        return visible;
+    }
+
+    public void setVisible(Byte visible) {
+        this.visible = visible;
+    }
+
+    @Basic
+    @Column(name = "position")
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 }

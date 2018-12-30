@@ -22,6 +22,7 @@
       <mapping class="cn.studio.zps.blue.ljy.domain.ModuleExtraPicture"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.EducationLevel"/>
       <mapping class="cn.studio.zps.blue.ljy.domain.MajorCourse"/>
+      <mapping class="cn.studio.zps.blue.ljy.domain.HomePageBanner"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
