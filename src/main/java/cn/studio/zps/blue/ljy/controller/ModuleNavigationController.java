@@ -25,6 +25,12 @@ public class ModuleNavigationController{
 	@ResponseBody
 	@RequestMapping("addModuleNavigation")
 	public Map<String,Object> addModuleNavigation(ModuleNavigation moduleNavigation) {
+		if(moduleNavigation.getUrl().equals(""))
+			moduleNavigation.setUrl(null);
+		String url = moduleNavigation.getUrl();
+		if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+			moduleNavigation.setUrl("http://"+url);
+		}
 		if(moduleNavigationService.addModuleNavigation(moduleNavigation))
 			return Response.getResponseMap(0,"添加成功",null);
 		else
@@ -66,12 +72,22 @@ public class ModuleNavigationController{
 	}
 
 	@ResponseBody@RequestMapping("getModuleNavigationsDeal")
-	public Map<String,Object> getModuleNavigationsDeal(@RequestParam(value = "name",required=false)String name,@RequestParam(value = "url",required=false)String url,@RequestParam(value = "moduleID",required=false)Integer moduleID) {
-		return Response.getResponseMap(0,"",moduleNavigationService.getModuleNavigations(name,url,moduleID));
+	public Map<String,Object> getModuleNavigationsDeal(@RequestParam(value = "page",required=false)Integer page,
+													   @RequestParam(value = "limit",required=false)Integer number,
+													   @RequestParam(value = "moduleID",required=false)Integer moduleID) {
+		Map result = Response.getResponseMap(0,"",moduleNavigationService.getModuleNavigations(moduleID,page,number));
+		result.put("count",moduleNavigationService.countModuleNavigations(moduleID));
+		return result;
 	}
 
 	@ResponseBody@RequestMapping("updateModuleNavigation")
 	public Map<String,Object> updateModuleNavigation(ModuleNavigation moduleNavigation) {
+		if(moduleNavigation.getUrl().equals(""))
+			moduleNavigation.setUrl(null);
+		String url = moduleNavigation.getUrl();
+		if(url!=null&&!url.startsWith("https://")&&!url.startsWith("http://")) {
+			moduleNavigation.setUrl("http://"+url);
+		}
 		if(moduleNavigationService.updateModuleNavigation(moduleNavigation)) {
 			return Response.getResponseMap(0,"",null);
 		} else {

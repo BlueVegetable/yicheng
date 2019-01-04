@@ -9,7 +9,7 @@
         <result column="moduleID" property="moduleID" />
     </resultMap>
 
-    <insert id="addArticleType" parameterType="ArticleType">
+    <insert id="addModuleNavigation" parameterType="ModuleNavigation">
         insert into
         module_navigation
         (name, url, moduleID)
@@ -30,9 +30,19 @@
         <if test="moduleID!=null">
             and moduleID=#{moduleID}
         </if>
+        <if test="start!=null">
+            limit #{start},#{number}
+        </if>
     </select>
 
-    <update id="updateModuleNavigation" parameterType="Admin" >
-        update module_navigation set name=#{name}, url=url where id=#{id}
+    <select id="countModuleNavigations" resultType="Long" parameterType="Map">
+        select count(id) from module_navigation where 1=1
+        <if test="moduleID!=null">
+            and moduleID=#{moduleID}
+        </if>
+    </select>
+
+    <update id="updateModuleNavigation" parameterType="ModuleNavigation" >
+        update module_navigation set name=#{name}, url=#{url} where id=#{id}
     </update>
 </mapper>

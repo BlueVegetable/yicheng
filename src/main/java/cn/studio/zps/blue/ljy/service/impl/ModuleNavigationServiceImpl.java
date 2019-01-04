@@ -30,8 +30,14 @@ public class ModuleNavigationServiceImpl implements ModuleNavigationService {
 	}
 
 	@Override
-	public List<ModuleNavigation> getModuleNavigations(String name,String url,Integer moduleID) {
-		return moduleNavigationDao.getModuleNavigations(name,url,moduleID);
+	public List<ModuleNavigation> getModuleNavigations(Integer moduleID,Integer page,Integer number) {
+		Integer start = page!=null?(page-1)*number:null;
+		return moduleNavigationDao.getModuleNavigations(moduleID,start,number);
+	}
+
+	@Override
+	public Long countModuleNavigations(Integer moduleID) {
+		return moduleNavigationDao.countModuleNavigations(moduleID);
 	}
 
 	@Override

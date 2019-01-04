@@ -7,7 +7,8 @@ import java.util.List;
 public interface ArticleTypeService {
     boolean addArticleType(ArticleType articleType);
     List<ArticleType> getAllArticleTypesByModuleID(int moduleID);
-    List<ArticleType> getAllArticleTypes();
+    List<ArticleType> getAllArticleTypes(Integer moduleID,Integer page,Integer limit);
+    Long countArticleTypes(Integer moduleID);
     String getArticleTypeByTypeID(int typeID);
     boolean deleteArticleType(int typeID);
     boolean alterArticleTypeName(int id,String newName,String url);

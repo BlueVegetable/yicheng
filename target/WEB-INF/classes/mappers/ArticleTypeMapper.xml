@@ -20,8 +20,21 @@
         select * from article_type where module_id = #{moduleID}
     </select>
 
-    <select id="getAllArticleTypes" resultMap="ArticleTypeMap">
-        select * from article_type
+    <select id="getAllArticleTypes" resultMap="ArticleTypeMap" parameterType="Map">
+        select * from article_type where 1=1
+        <if test="moduleID!=null">
+            and module_id=#{moduleID}
+        </if>
+        <if test="start!=null">
+            limit #{start},#{number}
+        </if>
+    </select>
+
+    <select id="countArticleTypes" parameterType="Map" resultType="Long">
+        select count(id) from article_type
+        <if test="moduleID!=null">
+            where module_id=#{moduleID}
+        </if>
     </select>
 
     <select id="getArticleTypeByTypeID" resultType="String">

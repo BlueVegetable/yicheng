@@ -25,8 +25,15 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     }
 
     @Override
-    public List<ArticleType> getAllArticleTypes() {
-        return articleTypeDao.getAllArticleTypes();
+    public List<ArticleType> getAllArticleTypes(Integer moduleID,Integer page,Integer limit) {
+        Integer start;
+        start = page!=null?(page-1)*10:null;
+        return articleTypeDao.getAllArticleTypes(moduleID,start,limit);
+    }
+
+    @Override
+    public Long countArticleTypes(Integer moduleID) {
+        return articleTypeDao.countArticleTypes(moduleID);
     }
 
     @Override

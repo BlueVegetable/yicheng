@@ -13,7 +13,9 @@ public interface ModuleNavigationDao {
 
 	ModuleNavigation getModuleNavigationByID(int moduleNavigationID);
 
-	List<ModuleNavigation> getModuleNavigations(@Param("name") String name, @Param("url") String url, @Param("moduleID") Integer moduleID);
+	List<ModuleNavigation> getModuleNavigations(@Param("moduleID") Integer moduleID,@Param("start")Integer start,@Param("number")Integer number);
+
+	Long countModuleNavigations(@Param("moduleID") Integer moduleID);
 
 	int updateModuleNavigation(ModuleNavigation moduleNavigation);
 

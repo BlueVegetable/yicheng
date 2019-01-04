@@ -12,7 +12,9 @@ public interface ModuleNavigationService {
 
 	ModuleNavigation getModuleNavigationByID(int moduleNavigationID);
 
-	List<ModuleNavigation> getModuleNavigations(String name, String url,Integer moduleID);
+	List<ModuleNavigation> getModuleNavigations(Integer moduleID,Integer page,Integer number);
+
+	Long countModuleNavigations(Integer moduleID);
 
 	boolean updateModuleNavigation(ModuleNavigation moduleNavigation);
 

@@ -11,7 +11,9 @@ public interface ArticleTypeDao {
 
     List<ArticleType> getAllArticleTypesByModuleID(int moduleID);
 
-    List<ArticleType> getAllArticleTypes();
+    List<ArticleType> getAllArticleTypes(@Param("moduleID") Integer moduleID,@Param("start")Integer start,@Param("number")Integer number);
+
+    Long countArticleTypes(@Param("moduleID") Integer moduleID);
 
     String getArticleTypeByTypeID(int typeID);
 

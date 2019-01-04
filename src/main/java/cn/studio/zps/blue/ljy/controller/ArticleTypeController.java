@@ -24,6 +24,9 @@ public class ArticleTypeController {
 
     @RequestMapping("addArticleType")
     public @ResponseBody Map addArticleType(ArticleType articleType) {
+        if(articleType.getType().equals("资讯")) {
+            return Response.getResponseMap(1,"资讯类不能够添加",false);
+        }
         if(articleType.getUrl().equals(""))
             articleType.setUrl(null);
         String url = articleType.getUrl();
@@ -48,10 +51,12 @@ public class ArticleTypeController {
     }
 
     @RequestMapping("getAllArticleTypes")
-    public @ResponseBody Map getAllArticleTypes() {
-        List<ArticleType> data = articleTypeService.getAllArticleTypes();
+    public @ResponseBody Map getAllArticleTypes(@RequestParam(value = "moduleID",required = false)Integer moduleID,
+                                                @RequestParam(value = "limit",required = false) Integer limit,
+                                                @RequestParam(value = "page",required = false) Integer page) {
+        List<ArticleType> data = articleTypeService.getAllArticleTypes(moduleID, page, limit);
         Map result = Response.getResponseMap(0,"",data);
-        result.put("count",result.size());
+        result.put("count",articleTypeService.countArticleTypes(moduleID));
         return result;
     }
 
