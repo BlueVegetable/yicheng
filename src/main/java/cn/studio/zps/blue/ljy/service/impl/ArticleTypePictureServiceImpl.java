@@ -52,8 +52,8 @@ public @Service class ArticleTypePictureServiceImpl implements ArticleTypePictur
     }
 
     @Override
-    public List<ArticleTypePicture> getAllArticleTypePictures() {
-        return articleTypePictureDao.getAllArticleTypePictures();
+    public List<ArticleTypePicture> getAllArticleTypePictures(Integer moduleID) {
+        return articleTypePictureDao.getAllArticleTypePictures(moduleID);
     }
 
     @Override

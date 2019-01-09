@@ -10,6 +10,6 @@ public interface ArticleTypePictureService {
     boolean deleteArticleTypePicture(int id);
     ArticleTypePicture getArticleTypePictureByID(int articleTypePictureID);
     List<ArticleTypePicture> getArticleTypePicturesByArticleTypeID(int articleTypeID);
-    List<ArticleTypePicture> getAllArticleTypePictures();
+    List<ArticleTypePicture> getAllArticleTypePictures(Integer moduleID);
     boolean updateArticleTypePicture(ArticleTypePicture articleTypePicture);
 }

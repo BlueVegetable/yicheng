@@ -27,8 +27,11 @@
     <select id="getArticleTypePicturesByArticleTypeID" parameterType="int" resultMap="ArticleTypePictureMap">
         select * from article_type_picture where articleTypeID = #{articleTypeID}
     </select>
-    <select id="getAllArticleTypePictures" resultMap="ArticleTypePictureMap">
-        select * from article_type_picture
+    <select id="getAllArticleTypePictures" resultMap="ArticleTypePictureMap" parameterType="Map">
+        select * from article_type_picture where 1=1
+        <if test="moduleID!=null">
+            and articleTypeID in (select id from article_type where module_id=#{moduleID})
+        </if>
     </select>
     <update id="updateArticleTypePicture" parameterType="ArticleTypePicture">
         update article_type_picture

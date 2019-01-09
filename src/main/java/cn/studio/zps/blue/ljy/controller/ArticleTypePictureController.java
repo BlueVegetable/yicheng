@@ -6,6 +6,7 @@ import cn.studio.zps.blue.ljy.utils.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -53,19 +54,12 @@ public @Controller @RequestMapping("articleTypePicture") class ArticleTypePictur
     public @ResponseBody @RequestMapping("getArticleTypePicturesByArticleTypeID") List<ArticleTypePicture> getArticleTypePicturesByArticleTypeID(int articleTypeID) {
         return articleTypePictureService.getArticleTypePicturesByArticleTypeID(articleTypeID);
     }
-    public @ResponseBody @RequestMapping("getAllArticleTypePicturesDeal") Map getAllArticleTypePicturesDeal() {
+    @ResponseBody @RequestMapping("getAllArticleTypePicturesDeal")
+    public Map getAllArticleTypePicturesDeal(@RequestParam(value = "moduleID",required = false)Integer moduleID) {
         Map result = new HashMap();
-        List<ArticleTypePicture> datas;
-        try {
-            datas = articleTypePictureService.getAllArticleTypePictures();
-            result.put("code",0);
-            result.put("msg","");
-        } catch (Exception e) {
-            e.printStackTrace();
-            result.put("code",1);
-            result.put("msg","服务器查不到数据");
-            datas = new ArrayList<>();
-        }
+        List<ArticleTypePicture> datas = articleTypePictureService.getAllArticleTypePictures(moduleID);
+        result.put("code",0);
+        result.put("msg","");
         result.put("data",datas);
         return result;
     }
