@@ -1,8 +1,13 @@
 package cn.studio.zps.blue.ljy.domain;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+@Entity
 public class Article {
     private int id;
     private String title;
@@ -10,7 +15,10 @@ public class Article {
     private Timestamp lastModify;
     private String brief;
     private int typeID;
+    private Integer topest;
 
+    @Id
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -19,6 +27,8 @@ public class Article {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "title")
     public String getTitle() {
         return title;
     }
@@ -27,6 +37,8 @@ public class Article {
         this.title = title;
     }
 
+    @Basic
+    @Column(name = "content")
     public String getContent() {
         return content;
     }
@@ -35,6 +47,8 @@ public class Article {
         this.content = content;
     }
 
+    @Basic
+    @Column(name = "lastModify")
     public Timestamp getLastModify() {
         return lastModify;
     }
@@ -51,6 +65,8 @@ public class Article {
         this.typeID = typeID;
     }
 
+    @Basic
+    @Column(name = "brief")
     public String getBrief() {
         return brief;
     }
@@ -86,5 +102,15 @@ public class Article {
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getTitle(), getContent(), getLastModify(), getTypeID());
+    }
+
+    @Basic
+    @Column(name = "topest")
+    public Integer getTopest() {
+        return topest;
+    }
+
+    public void setTopest(Integer topest) {
+        this.topest = topest;
     }
 }

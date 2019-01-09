@@ -70,6 +70,11 @@ public class ArticleTypeController {
         }
     }
 
+    @RequestMapping("getArticleTypeByArticleID")@ResponseBody
+    public ArticleType getArticleTypeByArticleID(@RequestParam("articleID") int articleID) {
+        return articleTypeService.getArticleTypeByArticleID(articleID);
+    }
+
     @RequestMapping("deleteArticleType")
     public @ResponseBody Map deleteArticleType(int articleTypeID) {
         if (articleTypeService.deleteArticleType(articleTypeID)) {

@@ -10,6 +10,7 @@ public interface ArticleTypeService {
     List<ArticleType> getAllArticleTypes(Integer moduleID,Integer page,Integer limit);
     Long countArticleTypes(Integer moduleID);
     String getArticleTypeByTypeID(int typeID);
+    ArticleType getArticleTypeByArticleID(int articleID);
     boolean deleteArticleType(int typeID);
     boolean alterArticleTypeName(int id,String newName,String url);
 }

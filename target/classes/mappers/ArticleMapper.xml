@@ -12,8 +12,9 @@
     </resultMap>
 
     <insert id="addArticle" parameterType="java.util.Map" >
-        insert into article (title,content,lastModify,typeID,brief,adminID)
-        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{article.brief},#{adminID})
+        insert into article
+        (title,content,lastModify,typeID,brief,adminID,topest)
+        values(#{article.title},#{article.content},#{article.lastModify},#{article.typeID},#{article.brief},#{adminID},#{article.topest})
     </insert>
 
     <delete id="deleteArticle" parameterType="Integer">
@@ -29,7 +30,7 @@
     </select>
 
     <select id="getAllArticles" parameterType="Integer" resultMap="ArticleMap">
-        select id,title,typeID,lastModify from article where 1=1
+        select id,title,typeID,lastModify,topest from article where 1=1
         <if test="title!=null">
             and title like CONCAT(CONCAT('%',#{title},'%'))
         </if>
@@ -48,11 +49,17 @@
     </select>
 
     <select id="getAllArticlesCount" parameterType="Integer" resultType="Integer">
-        SELECT COUNT(id) FROM article
+        SELECT COUNT(id) FROM article where 1=1
+        <if test="title!=null">
+            and title like CONCAT(CONCAT('%',#{title},'%'))
+        </if>
+        <if test="articleTypeID!=null">
+            and typeID = #{articleTypeID}
+        </if>
     </select>
 
     <select id="getArticles" resultMap="ArticleMap" parameterType="Map">
-        SELECT id,title,brief,lastModify,typeID,adminID FROM article
+        SELECT id,title,brief,lastModify,typeID,adminID,topest FROM article
         <if test="typeID!=null">
         where
         typeID = #{typeID}
@@ -61,7 +68,7 @@
     </select>
 
     <select id="getArticlesByModuleID" resultMap="ArticleMap" parameterType="Map">
-        SELECT id,title,brief,lastModify,typeID,adminID FROM
+        SELECT id,title,brief,lastModify,typeID,adminID,topest FROM
         article
         WHERE typeID IN
         (SELECT id FROM article_type WHERE module_id = #{moduleID})
@@ -69,7 +76,7 @@
     </select>
 
     <select id="getAllArticlesByConsult" parameterType="Integer" resultMap="ArticleMap">
-        SELECT id,title,brief,lastModify,typeID,adminID FROM
+        SELECT id,title,brief,lastModify,typeID,adminID,topest FROM
         article
         WHERE typeID IN
         (SELECT id FROM article_type WHERE type = '资讯' and module_id = #{moduleID})
@@ -78,7 +85,9 @@
     </select>
 
     <update id="updateArticle" parameterType="Article">
-        update article set title=#{title},content=#{content},lastModify=#{lastModify} where id=#{id}
+        update article set
+        title=#{title},content=#{content},lastModify=#{lastModify},topest=#{topest}
+        where id=#{id}
     </update>
     
 </mapper>

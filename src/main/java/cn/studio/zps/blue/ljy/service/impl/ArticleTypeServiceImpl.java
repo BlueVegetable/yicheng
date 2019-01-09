@@ -42,6 +42,11 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
     }
 
     @Override
+    public ArticleType getArticleTypeByArticleID(int articleID) {
+        return articleTypeDao.getArticleTypeByArticleID(articleID);
+    }
+
+    @Override
     public boolean deleteArticleType(int typeID) {
         return articleTypeDao.deleteArticleType(typeID) > 0;
     }

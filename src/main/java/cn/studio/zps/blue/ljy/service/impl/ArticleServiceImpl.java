@@ -79,7 +79,7 @@ public class ArticleServiceImpl implements ArticleService {
         Map<String,Object> result = new HashMap<>(2);
         int start = (page-1) * limit;
         result.put("data",articleDao.getAllArticles(start,limit,articleTypeID,title));
-        result.put("count",articleDao.getAllArticlesCount());
+        result.put("count",articleDao.getAllArticlesCount(articleTypeID, title));
         return result;
     }
 

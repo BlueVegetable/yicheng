@@ -41,6 +41,10 @@
         select type from article_type where id = #{typeID}
     </select>
 
+    <select id="getArticleTypeByArticleID" resultType="ArticleType" parameterType="int">
+        select * from article_type where id in(select typeID from article where id=#{articleID})
+    </select>
+
     <delete id="deleteArticleType" parameterType="int">
         delete from article_type where id = #{id}
     </delete>

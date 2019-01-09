@@ -23,7 +23,6 @@ public class ArticleController {
     @ResponseBody
     @RequestMapping(value="addArticle",method = RequestMethod.POST)
     public Map<String,Object> addArticle(@RequestBody Article article , HttpServletRequest request) {
-        System.out.println(article);
         Admin admin = (Admin) request.getAttribute("admin");
         if(articleService.exist(admin.getId(),article.getTitle())) {
             return Response.getResponseMap(1,"文章已存在",null);

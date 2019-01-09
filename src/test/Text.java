@@ -1,3 +1,4 @@
+import cn.studio.zps.blue.ljy.dao.ArticleTypeDao;
 import cn.studio.zps.blue.ljy.dao.ModuleNavigationDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,9 +10,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
 public class Text {
     @Autowired
-    private ModuleNavigationDao moduleNavigationDao;
+    private ArticleTypeDao articleTypeDao;
     @Test
     public void test1() {
-        System.out.println(moduleNavigationDao.countModuleNavigations(null));
+        System.out.println(articleTypeDao.getArticleTypeByArticleID(13));
     }
 }
