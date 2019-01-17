@@ -15,6 +15,8 @@ public interface VideoIntroduceDao {
 
 	VideoIntroduce getVideoIntroduceByVideoID(int videoID);
 
+	VideoIntroduce getVideoIntroduceContentByVideoID(int videoID);
+
 	VideoIntroduce getVideoIntroduceByID(int videoIntroduceID);
 
 	List<VideoIntroduce> getVideoIntroduces(@Param("title") String title, @Param("content") String content, @Param("videoID") Integer videoID);

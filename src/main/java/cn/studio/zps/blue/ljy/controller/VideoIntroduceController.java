@@ -45,6 +45,16 @@ public class VideoIntroduceController{
 		}
 	}
 
+	@ResponseBody@RequestMapping("getVideoIntroduceContentByVideoID")
+	public Map getVideoIntroduceContentByVideoID(@RequestParam("videoID") int videoID) {
+		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceContentByVideoID(videoID);
+		if(videoIntroduce!=null) {
+			return Response.getResponseMap(0,"",videoIntroduce);
+		} else {
+			return Response.getResponseMap(1,"数据不存在",null);
+		}
+	}
+
 	@ResponseBody@RequestMapping("getVideoIntroduceByID")
 	public VideoIntroduce getVideoIntroduceByID(int videoIntroduceID) {
 		return videoIntroduceService.getVideoIntroduceByID(videoIntroduceID);

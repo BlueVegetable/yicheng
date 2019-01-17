@@ -48,6 +48,11 @@ public class VideoIntroduceServiceImpl implements VideoIntroduceService {
 	}
 
 	@Override
+	public VideoIntroduce getVideoIntroduceContentByVideoID(int videoID) {
+		return videoIntroduceDao.getVideoIntroduceContentByVideoID(videoID);
+	}
+
+	@Override
 	public VideoIntroduce getVideoIntroduceByID(int videoIntroduceID) {
 		return videoIntroduceDao.getVideoIntroduceByID(videoIntroduceID);
 	}

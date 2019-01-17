@@ -22,6 +22,9 @@
     <select id="getVideoIntroduceByVideoID" parameterType="int" resultType="VideoIntroduce">
         select id, title, videoID from video_introduce where videoID=#{videoID}
     </select>
+    <select id="getVideoIntroduceContentByVideoID" parameterType="int" resultType="VideoIntroduce">
+        select * from video_introduce where videoID=#{videoID}
+    </select>
     <select id="getVideoIntroduceByID" parameterType="int" resultType="VideoIntroduce">
         select * from video_introduce where id = #{videoIntroduceID}
     </select>

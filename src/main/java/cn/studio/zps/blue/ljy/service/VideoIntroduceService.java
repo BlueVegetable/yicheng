@@ -13,6 +13,8 @@ public interface VideoIntroduceService {
 
 	VideoIntroduce getVideoIntroduceByVideoID(int videoID);
 
+	VideoIntroduce getVideoIntroduceContentByVideoID(int videoID);
+
 	VideoIntroduce getVideoIntroduceByID(int videoIntroduceID);
 
 	List<VideoIntroduce> getVideoIntroduces(String title, String content, Integer videoID);
