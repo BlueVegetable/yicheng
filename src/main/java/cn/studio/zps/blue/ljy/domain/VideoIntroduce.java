@@ -1,3 +1,5 @@
+package cn.studio.zps.blue.ljy.domain;
+
 public class VideoIntroduce {
 
 	private int id;

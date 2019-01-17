@@ -37,6 +37,10 @@ public class VideoController {
             return Response.getResponseMap(1,"删除失败",null);
         }
     }
+    @ResponseBody@RequestMapping("getVideosByCourseIDWithIntroduce")
+    public List<Video> getVideosByCourseIDWithIntroduce(int courseID) {
+        return videoService.getVideosByCourseIDWithIntroduce(courseID);
+    }
     @ResponseBody@RequestMapping("getVideosDeal")
     public Map getVideosDeal(@RequestParam("page")Integer page,@RequestParam("limit")Integer limit,
                              @RequestParam(value = "courseID",required = false)Integer courseID) {

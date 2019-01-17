@@ -37,6 +37,11 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
+    public List<Video> getVideosByCourseIDWithIntroduce(int courseID) {
+        return videoDao.getVideosByCourseIDWithIntroduce(courseID);
+    }
+
+    @Override
     public Long getVideosNumber(Integer courseID) {
         return videoDao.getVideosNumber(courseID);
     }

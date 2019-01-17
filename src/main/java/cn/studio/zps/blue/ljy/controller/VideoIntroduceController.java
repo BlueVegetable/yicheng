@@ -1,18 +1,28 @@
+package cn.studio.zps.blue.ljy.controller;
+
+import cn.studio.zps.blue.ljy.domain.VideoIntroduce;
+import cn.studio.zps.blue.ljy.service.VideoIntroduceService;
+import cn.studio.zps.blue.ljy.utils.Response;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.Map;
 import java.util.List;
 
-@Controller@RequestMapping("videoIntroduce")
+@Controller
+@RequestMapping("videoIntroduce")
 public class VideoIntroduceController{
 
 	@Autowired
 	private VideoIntroduceService videoIntroduceService;
 
-	@ResponseBody@RequestMapping("addVideoIntroduce")
-	public Map<String,Object> addVideoIntroduce(VideoIntroduce videoIntroduce) {
-		if(videoIntroduceService.addVideoIntroduce(videoIntroduce))
-			return Response.getResponseMap(0,"添加成功",null);
-		else
-			return Response.getResponseMap(1,"添加失败",null);
+	@ResponseBody @RequestMapping("addVideoIntroduce")
+	public Map<String,Object> addVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
+		return videoIntroduceService.addVideoIntroduce(videoIntroduce);
 	}
 
 	@ResponseBody@RequestMapping("deletevideoIntroduce")
@@ -22,6 +32,16 @@ public class VideoIntroduceController{
 		}
 		else {
 			return Response.getResponseMap(1,"修改失败",null);
+		}
+	}
+
+	@ResponseBody@RequestMapping("getVideoIntroduceByVideoID")
+	public Map getVideoIntroduceByVideoID(int videoID) {
+		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceByVideoID(videoID);
+		if(videoIntroduce!=null) {
+			return Response.getResponseMap(0,"",videoIntroduce);
+		} else {
+			return Response.getResponseMap(1,"不存在",null);
 		}
 	}
 
@@ -36,12 +56,14 @@ public class VideoIntroduceController{
 	}
 
 	@ResponseBody@RequestMapping("getVideoIntroducesDeal")
-	public Map<String,Object> getVideoIntroducesDeal(@RequestParam(value = "id",required=false)int id,@RequestParam(value = "content",required=false)String content,@RequestParam(value = "articleID",required=false)int articleID) {
-		return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(id,content,articleID));
+	public Map<String,Object> getVideoIntroducesDeal(@RequestParam(value = "title",required=false)String title,
+													 @RequestParam(value = "content",required=false)String content,
+													 @RequestParam(value = "videoID",required=false)Integer videoID) {
+		return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(title,content,videoID));
 	}
 
 	@ResponseBody@RequestMapping("updateVideoIntroduce")
-	public Map<String,Object> updateVideoIntroduce(VideoIntroduce videoIntroduce) {
+	public Map<String,Object> updateVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
 		if(videoIntroduceService.updateVideoIntroduce(videoIntroduce)) {
 			return Response.getResponseMap(0,"",null);
 		} else {

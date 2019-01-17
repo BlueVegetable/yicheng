@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="cn.studio.zps.blue.ljy.dao.VideoDao">
-    <resultMap id="VideoMap" type="Video" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.VideoIntroduceDao">
+    <resultMap id="VideoIntroduceMap" type="VideoIntroduce" >
         <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="url" property="url" />
-        <result column="courseID" property="courseID" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="videoID" property="videoID" />
     </resultMap>
-    <insert id="addVideo" parameterType="Video">
-        insert into video
-        (name, url, courseID)
+    <insert id="addVideoIntroduce" parameterType="VideoIntroduce">
+        insert into video_introduce
+        (title, content, videoID)
         values
-        (#{name},#{url},#{courseID})
+        (#{title},#{content},#{videoID})
     </insert>
-    <delete id="deleteVideo" parameterType="int">
-        delete from video where id = #{id}
+    <delete id="deleteVideoIntroduceByID" parameterType="int">
+        delete from video_introduce where id = #{videoIntroduceID}
     </delete>
-    <select id="getVideo" parameterType="int" resultType="Video">
-        select * from video where id = #{id}
+    <select id="count" parameterType="int" resultType="Long">
+        select count(id) from video_introduce where videoID = #{videoID}
     </select>
-    <select id="getVideosByCourseID" parameterType="int" resultMap="VideoMap">
-        select * from video where courseID = #{courseID}
+    <select id="getVideoIntroduceByVideoID" parameterType="int" resultType="VideoIntroduce">
+        select id, title, videoID from video_introduce where videoID=#{videoID}
     </select>
-    <select id="getVideos" parameterType="Map" resultMap="VideoMap">
-        select * from video where 1=1
-        <if test="courseID!=null">
-            and courseID = #{courseID}
+    <select id="getVideoIntroduceByID" parameterType="int" resultType="VideoIntroduce">
+        select * from video_introduce where id = #{videoIntroduceID}
+    </select>
+    <select id="getVideoIntroduces" parameterType="Map" resultMap="VideoIntroduceMap">
+        select
+        id, title, videoID
+        from video_introduce where 1=1
+        <if test="title!=null">
+            and title = #{title}
+        </if>
+        <if test="content!=null">
+            and content = #{content}
+        </if>
+        <if test="videoID!=null">
+            and videoID = #{videoID}
         </if>
         <if test="start!=null">
             limit #{start},#{number}
         </if>
     </select>
-    <select id="getVideosNumber" parameterType="Map" resultType="Long">
-        select count(id) from video where 1=1
-        <if test="courseID!=null">
-            and courseID = #{courseID}
-        </if>
-    </select>
-    <update id="updateVideo" parameterType="Video">
-        update video
-        set name=#{name},url=#{url},courseID=#{courseID}
+    <update id="updateVideoIntroduce" parameterType="VideoIntroduce">
+        update video_introduce
+        set title=#{title},content=#{content}
         where id=#{id}
     </update>
 </mapper>

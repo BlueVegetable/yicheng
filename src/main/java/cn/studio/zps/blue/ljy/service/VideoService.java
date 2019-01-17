@@ -9,6 +9,7 @@ public interface VideoService {
     boolean deleteVideo(int videoID);
     Video getVideoByID(int videoID);
     List<Video> getVideos(Integer courseID,Integer page,Integer number);
+    List<Video> getVideosByCourseIDWithIntroduce(int courseID);
     Long getVideosNumber(Integer courseID);
     boolean updateVideo(Video video);
 }

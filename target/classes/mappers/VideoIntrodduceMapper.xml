@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.studio.zps.blue.ljy.dao.VideoIntroduceDao">
+    <resultMap id="VideoIntroduceMap" type="VideoIntroduce" >
+        <id column="id" property="id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="videoID" property="videoID" />
+    </resultMap>
+    <insert id="addVideoIntroduce" parameterType="VideoIntroduce">
+        insert into video_introduce
+        (title, content, videoID)
+        values
+        (#{title},#{content},#{videoID})
+    </insert>
+    <delete id="deleteVideoIntroduceByID" parameterType="int">
+        delete from video_introduce where id = #{videoIntroduceID}
+    </delete>
+    <select id="count" parameterType="int" resultType="Long">
+        select count(id) from video_introduce where videoID = #{videoID}
+    </select>
+    <select id="getVideoIntroduceByVideoID" parameterType="int" resultType="VideoIntroduce">
+        select id, title, videoID from video_introduce where videoID=#{videoID}
+    </select>
+    <select id="getVideoIntroduceByID" parameterType="int" resultType="VideoIntroduce">
+        select * from video_introduce where id = #{videoIntroduceID}
+    </select>
+    <select id="getVideoIntroduces" parameterType="Map" resultMap="VideoIntroduceMap">
+        select
+        id, title, videoID
+        from video_introduce where 1=1
+        <if test="title!=null">
+            and title = #{title}
+        </if>
+        <if test="content!=null">
+            and content = #{content}
+        </if>
+        <if test="videoID!=null">
+            and videoID = #{videoID}
+        </if>
+        <if test="start!=null">
+            limit #{start},#{number}
+        </if>
+    </select>
+    <update id="updateVideoIntroduce" parameterType="VideoIntroduce">
+        update video_introduce
+        set title=#{title},content=#{content}
+        where id=#{id}
+    </update>
+</mapper>

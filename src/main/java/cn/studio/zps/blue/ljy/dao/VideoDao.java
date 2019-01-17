@@ -10,6 +10,7 @@ public interface VideoDao {
     int deleteVideo(int videoID);
     Video getVideo(int videoID);
     List<Video> getVideosByCourseID(int courseID);
+    List<Video> getVideosByCourseIDWithIntroduce(int courseID);
     List<Video> getVideos(@Param("courseID")Integer courseID,@Param("start")Integer start,@Param("number")Integer number);
     Long getVideosNumber(@Param("courseID")Integer courseID);
     int updateVideo(Video video);

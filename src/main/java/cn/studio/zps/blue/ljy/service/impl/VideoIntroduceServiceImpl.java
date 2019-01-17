@@ -1,14 +1,40 @@
+package cn.studio.zps.blue.ljy.service.impl;
+
+import cn.studio.zps.blue.ljy.dao.VideoIntroduceDao;
+import cn.studio.zps.blue.ljy.domain.VideoIntroduce;
+import cn.studio.zps.blue.ljy.service.VideoIntroduceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
-public class VideoIntroduceServiceImpl implements VideoIntroduceService{
+public class VideoIntroduceServiceImpl implements VideoIntroduceService {
 
 	@Autowired
 	private VideoIntroduceDao videoIntroduceDao;
 
 	@Override
-	public boolean addVideoIntroduce(VideoIntroduce videoIntroduce) {
-		return videoIntroduceDao.addVideoIntroduce(videoIntroduce)>0;
+	public Map<String,Object> addVideoIntroduce(VideoIntroduce videoIntroduce) {
+		Map<String,Object> result = new HashMap<>();
+		if(videoIntroduceDao.count(videoIntroduce.getVideoID())!=0) {
+			result.put("code",1);
+			result.put("msg","已经存在文章");
+			result.put("data",null);
+			return result;
+		}
+		if(videoIntroduceDao.addVideoIntroduce(videoIntroduce) > 0) {
+			result.put("code",0);
+			result.put("msg","");
+			result.put("data",null);
+		} else {
+			result.put("code",1);
+			result.put("msg","添加失败");
+			result.put("data",null);
+		}
+		return result;
 	}
 
 	@Override
@@ -17,13 +43,18 @@ public class VideoIntroduceServiceImpl implements VideoIntroduceService{
 	}
 
 	@Override
+	public VideoIntroduce getVideoIntroduceByVideoID(int videoID) {
+		return videoIntroduceDao.getVideoIntroduceByVideoID(videoID);
+	}
+
+	@Override
 	public VideoIntroduce getVideoIntroduceByID(int videoIntroduceID) {
 		return videoIntroduceDao.getVideoIntroduceByID(videoIntroduceID);
 	}
 
 	@Override
-	public List<VideoIntroduce> getVideoIntroduces(int id,String title,String content,int videoID) {
-		return videoIntroduceDao.getVideoIntroduces(id,title,content,videoID);
+	public List<VideoIntroduce> getVideoIntroduces(String title,String content,Integer videoID) {
+		return videoIntroduceDao.getVideoIntroduces(title,content,videoID);
 	}
 
 	@Override

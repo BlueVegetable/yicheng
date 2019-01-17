@@ -22,6 +22,9 @@
     <select id="getVideosByCourseID" parameterType="int" resultMap="VideoMap">
         select * from video where courseID = #{courseID}
     </select>
+    <select id="getVideosByCourseIDWithIntroduce" parameterType="int" resultMap="VideoMap">
+        SELECT * FROM video WHERE id NOT IN (SELECT videoID FROM video_introduce) and courseID = #{courseID}
+    </select>
     <select id="getVideos" parameterType="Map" resultMap="VideoMap">
         select * from video where 1=1
         <if test="courseID!=null">
