@@ -7,4 +7,6 @@ import java.util.List;
 public interface CourseService {
     Course getCourseByID(int courseID);
     List<Course> getCourseByCourseTypeID(int courseTypeID);
+    List<Course> getAllCourses();
+    boolean updateCourse(Course course);
 }

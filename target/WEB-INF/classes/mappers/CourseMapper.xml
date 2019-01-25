@@ -18,4 +18,12 @@
     <select id="getCoursesByCourseTypeID" resultMap="CourseMap" parameterType="int">
         select * from course where courseTypeID = #{courseTypeID}
     </select>
+    <select id="getAllCourses" resultMap="CourseMap">
+        select * from course
+    </select>
+    <update id="updateCourse" parameterType="Course">
+        update course
+        set title=#{title},imgUrl=#{imgUrl}
+        where id=#{id}
+    </update>
 </mapper>

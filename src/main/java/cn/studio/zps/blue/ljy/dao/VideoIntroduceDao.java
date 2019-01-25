@@ -11,15 +11,15 @@ public interface VideoIntroduceDao {
 
 	int deleteVideoIntroduceByID(int videoIntroduceID);
 
-	Long count(int videoID);
+	Long count(int courseID);
 
-	VideoIntroduce getVideoIntroduceByVideoID(int videoID);
+	VideoIntroduce getVideoIntroduceByCourseID(int courseID);
 
-	VideoIntroduce getVideoIntroduceContentByVideoID(int videoID);
+	VideoIntroduce getVideoIntroduceContentByCourseID(int courseID);
 
 	VideoIntroduce getVideoIntroduceByID(int videoIntroduceID);
 
-	List<VideoIntroduce> getVideoIntroduces(@Param("title") String title, @Param("content") String content, @Param("videoID") Integer videoID);
+	List<VideoIntroduce> getVideoIntroduces(@Param("title") String title, @Param("content") String content, @Param("courseID") Integer courseID);
 
 	int updateVideoIntroduce(VideoIntroduce videoIntroduce);
 

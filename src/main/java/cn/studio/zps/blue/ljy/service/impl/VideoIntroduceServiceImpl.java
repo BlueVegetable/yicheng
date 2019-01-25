@@ -19,7 +19,7 @@ public class VideoIntroduceServiceImpl implements VideoIntroduceService {
 	@Override
 	public Map<String,Object> addVideoIntroduce(VideoIntroduce videoIntroduce) {
 		Map<String,Object> result = new HashMap<>();
-		if(videoIntroduceDao.count(videoIntroduce.getVideoID())!=0) {
+		if(videoIntroduceDao.count(videoIntroduce.getCourseID())!=0) {
 			result.put("code",1);
 			result.put("msg","已经存在文章");
 			result.put("data",null);
@@ -43,13 +43,13 @@ public class VideoIntroduceServiceImpl implements VideoIntroduceService {
 	}
 
 	@Override
-	public VideoIntroduce getVideoIntroduceByVideoID(int videoID) {
-		return videoIntroduceDao.getVideoIntroduceByVideoID(videoID);
+	public VideoIntroduce getVideoIntroduceByCourseID(int courseID) {
+		return videoIntroduceDao.getVideoIntroduceByCourseID(courseID);
 	}
 
 	@Override
-	public VideoIntroduce getVideoIntroduceContentByVideoID(int videoID) {
-		return videoIntroduceDao.getVideoIntroduceContentByVideoID(videoID);
+	public VideoIntroduce getVideoIntroduceContentByCourseID(int courseID) {
+		return videoIntroduceDao.getVideoIntroduceContentByCourseID(courseID);
 	}
 
 	@Override
@@ -58,8 +58,8 @@ public class VideoIntroduceServiceImpl implements VideoIntroduceService {
 	}
 
 	@Override
-	public List<VideoIntroduce> getVideoIntroduces(String title,String content,Integer videoID) {
-		return videoIntroduceDao.getVideoIntroduces(title,content,videoID);
+	public List<VideoIntroduce> getVideoIntroduces(String title,String content,Integer courseID) {
+		return videoIntroduceDao.getVideoIntroduces(title,content,courseID);
 	}
 
 	@Override

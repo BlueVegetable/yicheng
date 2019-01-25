@@ -7,4 +7,6 @@ import java.util.List;
 public interface CourseDao {
     Course getCourseByID(int courseID);
     List<Course> getCoursesByCourseTypeID(int courseTypeID);
+    List<Course> getAllCourses();
+    int updateCourse(Course course);
 }

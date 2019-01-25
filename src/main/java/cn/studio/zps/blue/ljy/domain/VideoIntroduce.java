@@ -5,7 +5,7 @@ public class VideoIntroduce {
 	private int id;
 	private String title;
 	private String content;
-	private int videoID;
+	private int courseID;
 
 	public int getId() {
 		return this.id;
@@ -31,12 +31,12 @@ public class VideoIntroduce {
 		this.content=content;
 	}
 
-	public int getVideoID() {
-		return this.videoID;
+	public int getCourseID() {
+		return this.courseID;
 	}
 
-	public void setVideoID(int videoID) {
-		this.videoID=videoID;
+	public void setCourseID(int courseID) {
+		this.courseID=courseID;
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class VideoIntroduce {
 		if(id != videoIntroduce.id) return false;
 		if(title != null ? !title.equals(videoIntroduce.title) : videoIntroduce.title !=null) return false;
 		if(content != null ? !content.equals(videoIntroduce.content) : videoIntroduce.content !=null) return false;
-		if(videoID != videoIntroduce.videoID) return false;
+		if(courseID != videoIntroduce.courseID) return false;
 
 		return true;
 	}
@@ -59,7 +59,7 @@ public class VideoIntroduce {
 		int result = id;
 		result = 31 * result + (title!=null ? title.hashCode() : 0);
 		result = 31 * result + (content!=null ? content.hashCode() : 0);
-		result = 31 * result + videoID;
+		result = 31 * result + courseID;
 		return result;
 	}
 }

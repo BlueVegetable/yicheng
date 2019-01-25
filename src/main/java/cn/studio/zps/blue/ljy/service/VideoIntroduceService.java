@@ -11,13 +11,13 @@ public interface VideoIntroduceService {
 
 	boolean deleteVideoIntroduceByID(int videoIntroduceID);
 
-	VideoIntroduce getVideoIntroduceByVideoID(int videoID);
+	VideoIntroduce getVideoIntroduceByCourseID(int courseID);
 
-	VideoIntroduce getVideoIntroduceContentByVideoID(int videoID);
+	VideoIntroduce getVideoIntroduceContentByCourseID(int courseID);
 
 	VideoIntroduce getVideoIntroduceByID(int videoIntroduceID);
 
-	List<VideoIntroduce> getVideoIntroduces(String title, String content, Integer videoID);
+	List<VideoIntroduce> getVideoIntroduces(String title, String content, Integer courseID);
 
 	boolean updateVideoIntroduce(VideoIntroduce videoIntroduce);
 

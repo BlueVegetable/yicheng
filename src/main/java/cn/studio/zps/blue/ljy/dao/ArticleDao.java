@@ -18,6 +18,8 @@ public interface ArticleDao {
     List<Article> getAllArticles(@Param("start") int start,@Param("number") int number,
                                  @Param("articleTypeID")Integer articleTypeID, @Param("title")String title);
 
+    List<Article> getAllArticlesByModuleID(@Param("moduleID")int moduleID);
+
     Integer getPreviousArticleTypeID(@Param("articleID") int id, @Param("articleTypeID") int articleTypeID);
 
     Integer getNextArticleTypeID(@Param("articleID") int id, @Param("articleTypeID") int articleTypeID);

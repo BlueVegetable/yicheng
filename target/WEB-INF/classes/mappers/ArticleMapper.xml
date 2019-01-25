@@ -40,6 +40,10 @@
         ORDER BY topest DESC,lastModify DESC limit #{start},#{number}
     </select>
 
+    <select id="getAllArticlesByModuleID" parameterType="int" resultMap="ArticleMap">
+        select * from article where typeID in (select id from module where "module".id = #{moduleID})
+    </select>
+
     <select id="getPreviousArticleTypeID" parameterType="Map" resultType="Integer">
         SELECT id FROM article WHERE typeID = #{articleTypeID} AND id &lt; #{articleID} ORDER BY id desc LIMIT 1
     </select>

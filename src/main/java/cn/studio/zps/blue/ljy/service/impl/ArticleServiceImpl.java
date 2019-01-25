@@ -19,6 +19,10 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
     private ArticleDao articleDao;
+    /**
+     * 资讯文章的数量
+     */
+    private final static int CONSULT_NUMBER = 10;
 
     @Override
     public boolean addArticle(Article article,int adminID) {
@@ -107,9 +111,24 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> getAllArticlesByConsult(Integer moduleID) {
         List<Article> result = articleDao.getAllArticlesByConsult(moduleID);
         int number = 10-result.size();
-        if(number > 0) {
+        if(number > 0 && number< CONSULT_NUMBER) {
             for (int i=0;i<number;i++) {
                 result.add(result.get(i));
+            }
+        } else if(number==CONSULT_NUMBER) {
+            List<Article> notConsultArticle = articleDao.getArticlesByModuleID(moduleID);
+            if(notConsultArticle.size()>CONSULT_NUMBER) {
+                for (int i=0;i<CONSULT_NUMBER;i++) {
+                    result.add(notConsultArticle.get(i));
+                }
+            } else if(notConsultArticle.size() == CONSULT_NUMBER) {
+                result = notConsultArticle;
+            } else {
+                result = notConsultArticle;
+                number = 10 - result.size();
+                for (int i=0;i<number;i++) {
+                    result.add(result.get(i));
+                }
             }
         }
         for (Article article:result) {

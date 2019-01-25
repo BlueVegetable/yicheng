@@ -21,4 +21,14 @@ public class CourseServiceImpl implements CourseService {
     public List<Course> getCourseByCourseTypeID(int courseTypeID) {
         return courseDao.getCoursesByCourseTypeID(courseTypeID);
     }
+
+    @Override
+    public List<Course> getAllCourses() {
+        return courseDao.getAllCourses();
+    }
+
+    @Override
+    public boolean updateCourse(Course course) {
+        return courseDao.updateCourse(course) > 0;
+    }
 }

@@ -27,7 +27,7 @@ public class HomePageBannerController{
 	private static final String DIRECTORY="/homePageBanner";
 
 	public @ResponseBody @RequestMapping("uploadHomePageBanner") Map uploadHomeBannerPicture(MultipartFile file){
-		Map<String,Object> value = FileUpload.copyPicture(file,DIRECTORY+"/");
+		Map<String,Object> value = FileUpload.copyPicture(file,DIRECTORY);
 		String name = (String) value.get("fileName");
 		String msg = value.get("code").equals("SUCCESS")?"":"上传失败";
 		int code = value.get("code").equals("SUCCESS")?0:1;

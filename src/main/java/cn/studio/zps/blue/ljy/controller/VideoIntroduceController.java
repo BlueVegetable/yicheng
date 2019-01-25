@@ -35,9 +35,9 @@ public class VideoIntroduceController{
 		}
 	}
 
-	@ResponseBody@RequestMapping("getVideoIntroduceByVideoID")
-	public Map getVideoIntroduceByVideoID(int videoID) {
-		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceByVideoID(videoID);
+	@ResponseBody@RequestMapping("getVideoIntroduceByCourseID")
+	public Map getVideoIntroduceByCourseID(int courseID) {
+		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceByCourseID(courseID);
 		if(videoIntroduce!=null) {
 			return Response.getResponseMap(0,"",videoIntroduce);
 		} else {
@@ -45,9 +45,9 @@ public class VideoIntroduceController{
 		}
 	}
 
-	@ResponseBody@RequestMapping("getVideoIntroduceContentByVideoID")
-	public Map getVideoIntroduceContentByVideoID(@RequestParam("videoID") int videoID) {
-		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceContentByVideoID(videoID);
+	@ResponseBody@RequestMapping("getVideoIntroduceContentByCourseID")
+	public Map getVideoIntroduceContentByCourseID(@RequestParam("courseID") int courseID) {
+		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceContentByCourseID(courseID);
 		if(videoIntroduce!=null) {
 			return Response.getResponseMap(0,"",videoIntroduce);
 		} else {
@@ -68,8 +68,8 @@ public class VideoIntroduceController{
 	@ResponseBody@RequestMapping("getVideoIntroducesDeal")
 	public Map<String,Object> getVideoIntroducesDeal(@RequestParam(value = "title",required=false)String title,
 													 @RequestParam(value = "content",required=false)String content,
-													 @RequestParam(value = "videoID",required=false)Integer videoID) {
-		return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(title,content,videoID));
+													 @RequestParam(value = "courseID",required=false)Integer courseID) {
+		return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(title,content,courseID));
 	}
 
 	@ResponseBody@RequestMapping("updateVideoIntroduce")

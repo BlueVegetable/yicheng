@@ -20,7 +20,9 @@ public class FileUpload {
     //本地主服务器的路径
 //    private final static String PATH = "D:/Application/apache-tomcat-main/upload";
 //    网络服务器路径
-    private final static String PATH = "C:/servers/apache-tomcat1/upload";
+//    private final static String PATH = "C:/servers/apache-tomcat1/upload";
+
+    private final static String PATH = "/root/yicheng/apache-tomcat-9.0.14/upload";
 
     private final static String BANNER_PATH = "/banner-image/";
     private final static String BANNER_PC_PATH = "/banner-pc-image/";
@@ -148,7 +150,7 @@ public class FileUpload {
     }
 
     public static Map<String,Object> copyPicture(MultipartFile file,String relativePath) {
-        Map<String,Object> result = copyFile(file,PATH+relativePath);
+        Map<String,Object> result = copyFile(file,PATH+relativePath+"/");
         result.put("relativePath",relativePath+result.get("file Name"));
         return result;
     }
