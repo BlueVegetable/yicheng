@@ -12,6 +12,12 @@ import java.util.List;
 public class CourseServiceImpl implements CourseService {
     @Autowired
     private CourseDao courseDao;
+
+    @Override
+    public boolean addCourse(Course course) {
+        return courseDao.addCourse(course) > 0;
+    }
+
     @Override
     public Course getCourseByID(int courseID) {
         return courseDao.getCourseByID(courseID);

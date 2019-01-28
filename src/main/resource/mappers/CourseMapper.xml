@@ -12,6 +12,12 @@
         <result column="courseTypeID" property="courseTypeID" />
         <association property="videoes" select="cn.studio.zps.blue.ljy.dao.VideoDao.getVideosByCourseID" column="id" />
     </resultMap>
+    <insert id="addCourse" parameterType="Course">
+        insert into course
+        (title, "date", teacher, imgUrl, teacherPic1, teacherPic2, courseTypeID)
+        values
+        (#{title},#{date},#{teacher},#{imgUrl},#{teacherPic1},#{teacherPic2},#{courseTypeID})
+    </insert>
     <select id="getCourseByID" resultMap="CourseMap" parameterType="int">
         select * from course where id = #{courseID}
     </select>
@@ -23,7 +29,7 @@
     </select>
     <update id="updateCourse" parameterType="Course">
         update course
-        set title=#{title},imgUrl=#{imgUrl}
+        set title=#{title},imgUrl=#{imgUrl},date=#{date},teacherPic1=#{teacherPic1},teacherPic2=#{teacherPic2}
         where id=#{id}
     </update>
 </mapper>

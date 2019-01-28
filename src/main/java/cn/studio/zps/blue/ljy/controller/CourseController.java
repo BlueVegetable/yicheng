@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +43,15 @@ public class CourseController {
         result.put("msg",msg);
         result.put("data",data);
         return result;
+    }
+
+    @ResponseBody@RequestMapping("addCourse")
+    public Map addCourse(@RequestBody Course course) {
+        if(courseService.addCourse(course)) {
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"添加失败",null);
+        }
     }
 
     @ResponseBody@RequestMapping("getCourseByID")

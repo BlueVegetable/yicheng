@@ -17,68 +17,68 @@ import java.util.List;
 @RequestMapping("videoIntroduce")
 public class VideoIntroduceController{
 
-	@Autowired
-	private VideoIntroduceService videoIntroduceService;
+    @Autowired
+    private VideoIntroduceService videoIntroduceService;
 
-	@ResponseBody @RequestMapping("addVideoIntroduce")
-	public Map<String,Object> addVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
-		return videoIntroduceService.addVideoIntroduce(videoIntroduce);
-	}
+    @ResponseBody @RequestMapping("addVideoIntroduce")
+    public Map<String,Object> addVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
+        return videoIntroduceService.addVideoIntroduce(videoIntroduce);
+    }
 
-	@ResponseBody@RequestMapping("deletevideoIntroduce")
-	public Map<String,Object> deleteVideoIntroduce(@RequestParam("videoIntroduceID")int videoIntroduceID) {
-		if(videoIntroduceService.deleteVideoIntroduceByID(videoIntroduceID)) {
-			return Response.getResponseMap(0,"修改成功",null);
-		}
-		else {
-			return Response.getResponseMap(1,"修改失败",null);
-		}
-	}
+    @ResponseBody@RequestMapping("deletevideoIntroduce")
+    public Map<String,Object> deleteVideoIntroduce(@RequestParam("videoIntroduceID")int videoIntroduceID) {
+        if(videoIntroduceService.deleteVideoIntroduceByID(videoIntroduceID)) {
+            return Response.getResponseMap(0,"修改成功",null);
+        }
+        else {
+            return Response.getResponseMap(1,"修改失败",null);
+        }
+    }
 
-	@ResponseBody@RequestMapping("getVideoIntroduceByCourseID")
-	public Map getVideoIntroduceByCourseID(int courseID) {
-		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceByCourseID(courseID);
-		if(videoIntroduce!=null) {
-			return Response.getResponseMap(0,"",videoIntroduce);
-		} else {
-			return Response.getResponseMap(1,"不存在",null);
-		}
-	}
+    @ResponseBody@RequestMapping("getVideoIntroduceByCourseID")
+    public Map getVideoIntroduceByCourseID(int courseID) {
+        VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceByCourseID(courseID);
+        if(videoIntroduce!=null) {
+            return Response.getResponseMap(0,"",videoIntroduce);
+        } else {
+            return Response.getResponseMap(1,"不存在",null);
+        }
+    }
 
-	@ResponseBody@RequestMapping("getVideoIntroduceContentByCourseID")
-	public Map getVideoIntroduceContentByCourseID(@RequestParam("courseID") int courseID) {
-		VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceContentByCourseID(courseID);
-		if(videoIntroduce!=null) {
-			return Response.getResponseMap(0,"",videoIntroduce);
-		} else {
-			return Response.getResponseMap(1,"数据不存在",null);
-		}
-	}
+    @ResponseBody@RequestMapping("getVideoIntroduceContentByCourseID")
+    public Map getVideoIntroduceContentByCourseID(@RequestParam("courseID") int courseID) {
+        VideoIntroduce videoIntroduce = videoIntroduceService.getVideoIntroduceContentByCourseID(courseID);
+        if(videoIntroduce!=null) {
+            return Response.getResponseMap(0,"",videoIntroduce);
+        } else {
+            return Response.getResponseMap(1,"数据不存在",null);
+        }
+    }
 
-	@ResponseBody@RequestMapping("getVideoIntroduceByID")
-	public VideoIntroduce getVideoIntroduceByID(int videoIntroduceID) {
-		return videoIntroduceService.getVideoIntroduceByID(videoIntroduceID);
-	}
+    @ResponseBody@RequestMapping("getVideoIntroduceByID")
+    public VideoIntroduce getVideoIntroduceByID(int videoIntroduceID) {
+        return videoIntroduceService.getVideoIntroduceByID(videoIntroduceID);
+    }
 
-	@ResponseBody@RequestMapping("getVideoIntroduces")
-	public List<VideoIntroduce> getVideoIntroduces() {
-		return videoIntroduceService.getVideoIntroduces(null,null,null);
-	}
+    @ResponseBody@RequestMapping("getVideoIntroduces")
+    public List<VideoIntroduce> getVideoIntroduces() {
+        return videoIntroduceService.getVideoIntroduces(null,null,null);
+    }
 
-	@ResponseBody@RequestMapping("getVideoIntroducesDeal")
-	public Map<String,Object> getVideoIntroducesDeal(@RequestParam(value = "title",required=false)String title,
-													 @RequestParam(value = "content",required=false)String content,
-													 @RequestParam(value = "courseID",required=false)Integer courseID) {
-		return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(title,content,courseID));
-	}
+    @ResponseBody@RequestMapping("getVideoIntroducesDeal")
+    public Map<String,Object> getVideoIntroducesDeal(@RequestParam(value = "title",required=false)String title,
+                                                     @RequestParam(value = "content",required=false)String content,
+                                                     @RequestParam(value = "courseID",required=false)Integer courseID) {
+        return Response.getResponseMap(0,"",videoIntroduceService.getVideoIntroduces(title,content,courseID));
+    }
 
-	@ResponseBody@RequestMapping("updateVideoIntroduce")
-	public Map<String,Object> updateVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
-		if(videoIntroduceService.updateVideoIntroduce(videoIntroduce)) {
-			return Response.getResponseMap(0,"",null);
-		} else {
-			return Response.getResponseMap(1,"",null);
-		}
-	}
+    @ResponseBody@RequestMapping("updateVideoIntroduce")
+    public Map<String,Object> updateVideoIntroduce(@RequestBody VideoIntroduce videoIntroduce) {
+        if(videoIntroduceService.updateVideoIntroduce(videoIntroduce)) {
+            return Response.getResponseMap(0,"",null);
+        } else {
+            return Response.getResponseMap(1,"",null);
+        }
+    }
 
 }
